@@ -666,6 +666,42 @@
                                 "FALSE",
                                 "FALSE"
                             ]
+                        },
+                        {
+                            "id": "question_set_2",
+                            "type": "matching_information",
+                            "question": [
+                                "Reading Passage 3 has eight sections, A-H.",
+                                "Which section contains the following information?",
+                                "1: mention of specialists who can make use of the research findings",
+                                "2: a reference to a potential benefit of the research findings",
+                                "3: scientific support for a traditional saying",
+                                "4: a reference to people traditionally making plans based on plant behaviour",
+                                "5: a reference to where the research has been reported"
+                            ],
+                            "answers": [
+                                "H",
+                                "D",
+                                "G",
+                                "C",
+                                "A"
+                            ]
+                        },
+                        {
+                            "id": "question_set_3",
+                            "type": "sentence_completion",
+                            "question": [
+                                "Complete the sentences below.",
+                                "Choose NO MORE THAN TWO WORDS from the passage for each answer.",
+                                "1: Daffodils are likely to flower early in response to .......... weather.",
+                                "2: If ash trees come into leaf before oak trees, the weather in .......... will probably be wet.",
+                                "3: The research was carried out using a particular species of .......... ."
+                            ],
+                            "answers": [
+                                "warm (winter)",
+                                "summer",
+                                "mustard plant(s) / mustard"
+                            ]
                         }
                     ]
                 }
