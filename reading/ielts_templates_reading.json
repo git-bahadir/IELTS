@@ -1,0 +1,102 @@
+{
+    "reading": {
+        "description": [
+            "Texts come from books, journals, magazines, newspapers and online resources, written for a non-specialist audience. All the topics are of general interest to students at undergraduate or postgraduate level. The texts may be written in different styles, for example, narrative, descriptive or discursive/argumentative. At least one text contains detailed logical argument. Texts may also contain diagrams, graphs or illustrations. If texts use technical vocabulary, then a simple dictionary definition is provided.",
+            "Students will need to transfer their answers to an answer sheet. Students must transfer their answers during the hour they are given for the Reading test. Unlike the Listening test, no extra transfer time is given. Students should be careful when writing their answers on the answer sheet because they will lose marks for incorrect spelling and grammar."
+        ],
+        "summary": {
+            "time_allowed": "60 minutes",
+            "number_of_sections": [
+                3,
+                "the total text length is 2,150-2,750 words"
+            ],
+            "number_of_questions": 40,
+            "marking": "Each correct answer receives 1 mark. Students' final score is given as a band score from 1-9 in whole or half bands, e.g. 4 or 6.5."
+        },
+        "types_of_questions": {
+            "multiple_choice": {
+                "what_is_involved": [
+                    "This type of question may be a question with three possible answers or the first half of a sentence with three possible sentence endings. Students have to choose one correct answer, A, B or C, then write the correct letter on the answer sheet.",
+                    "Sometimes students are given a longer list of possible answers and they have to choose more than one answer. Students should read the question carefully to check how many answers they need to choose.",
+                    "The questions are in the same order as the information in the text: that is, the answer to the first question will be before the answer to the second question, and so on."
+                ],
+                "tested_skills": "This type of question tests many different reading skills including: detailed understanding of specific points or general understanding of the main points of the text.",
+                "number_of_questions": "Varies"
+            },
+            "identifying_information": {
+                "what_is_involved": "In this type of question, students are given a number of statements and are asked: 'Do the following statements agree with the information in the text?' Students have to write 'True', 'False' or 'Not given' in the boxes on their answer sheet. It is important to understand the difference between 'False' and 'Not given'. 'False' means that the statement contradicts the information in the text. 'Not given' means that the statement neither agrees with nor contradicts the information in the text. Students must be careful not to use any information they already know about the topic of the text when choosing their answer.",
+                "tested_skills": [
+                    "This type of question tests students ability to recognise specific information given in the text."
+                ],
+                "number_of_questions": "Varies"
+            },
+            "identifying_writer_opinion": {
+                "what_is_involved": "In this type of question, students are given a number of statements and asked: 'Do the following statements agree with the views of the writer?' or 'Do the following statements agree with the claims of the writer?' Students have to write 'Yes', 'No' or 'Not given' in the boxes on their answer sheet. It is important to understand the difference between 'no' and 'not given'. 'No' means that the statement contradicts the writer's view or claim. 'Not given' means that the statement neither agrees with nor contradicts the writer's view or claim. Students must be careful not to use any information they already know about the topic of the text when choosing their answer.",
+                "tested_skills": "This type of question tests students' ability to recognise opinions or ideas.",
+                "number_of_questions": "Varies"
+            },
+            "matching_information": {
+                "what_is_involved": "In this type of question, students have to find specific information in the paragraphs (or sections) of a text. The paragraphs (or sections) are identified by letters (A, B, C, etc.). Students will need to write the letters of the correct paragraphs (or sections) in the boxes on their answer sheet. Not every paragraph (or section) may be used and some paragraphs (or sections) may be used more than once. When the paragraphs (or sections) may be used more than once, the instructions will say: 'Students may use any letter more than once'.",
+                "tested_skills": "This type of question assesses students' ability to scan a text in order to find specific information. Unlike Task Type 5 (Matching headings), it focuses on specific information rather than the main idea. Students may have to find: specific details, an example, reason, description, comparison, summary or explanation.",
+                "number_of_questions": "Varies"
+            },
+            "matching_headings": {
+                "what_is_involved": "In this type of question, there is a list of headings which are identified by Roman numerals (i, ii, iii, etc.). A heading summarises the main idea of a paragraph or section of the text. Students must match the heading to the correct paragraph or section. Students will need to write the correct Roman numerals in the boxes on their answer sheet. There will always be more headings than paragraphs or sections, so some headings will not be used. It is also possible that some paragraphs or sections may not be included in the task. One or more paragraphs or sections may already be matched with a heading as an example on the question paper. No heading may be used more than once.",
+                "tested_skills": "This type of question tests students' ability to identify the general topic of a paragraph (or section) and to recognise the difference between the main idea and a supporting idea.",
+                "number_of_questions": "Varies"
+            },
+            "matching_features": {
+                "what_is_involved": "In this type of question, students have to match a set of statements or pieces of information to a list of options. The options are a group of features from the text, and letters (A, B, C, etc.) are used to identify them. Students will need to write the correct letter on the answer sheet. Students may, for example, have to match descriptions of inventions to the people who invented them. It is possible that some options will not be used, and that others may be used more than once. When it is possible to use any option more than once, the instructions will say: 'Students may use any option more than once'.",
+                "tested_skills": "This type of question tests students' ability to recognise relationships and connections between facts in the text and their ability to recognise opinions and theories. Students need to be able to skim and scan the text to find the information quickly so that they can then read that part more carefully for detail.",
+                "number_of_questions": "Varies"
+            },
+            "matching_sentence_endings": {
+                "what_is_involved": "In this type of question, students are given the first half of a sentence based on information in the text and they have to choose the best way to complete the sentence by choosing from a list of possible endings. The endings are identified by letters (A, B, C, etc.). There will be more sentence endings than beginnings, so students will not use all of them. Students must write the letter they choose on the answer sheet. The sentence beginnings are in the same order as the information in the text.",
+                "tested_skills": "This type of question tests students' ability to understand the main ideas in the text.",
+                "number_of_questions": "Varies"
+            },
+            "sentence_completion": {
+                "what_is_involved": [
+                    "In this type of question, students have to fill in a gap in each sentence by choosing words from the text. Students must write the words they choose on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "The questions are in the same order as the information in the text."
+                ],
+                "tested_skills": "This type of question tests students' ability to find detail/specific information in a text.",
+                "number_of_questions": "Varies"
+            },
+            "summary/note/table/flow_chart_completion": {
+                "what_is_involved": [
+                    "In this type of question, students are given a summary of a part of the text, and have to complete it using words taken from the text. Note that the summary is not normally of the whole text. The summary may be in the form of:",
+                    "a continuous text (called 'a summary' in the instructions)",
+                    "several notes (called 'notes' in the instructions)",
+                    "a table with some parts of it left empty or partially empty (called 'a table' in the instructions)",
+                    "a series of boxes or steps linked by arrows to show the order of events, with some of the boxes or steps empty or partially empty (called 'a flow chart' in the instructions).",
+                    "The answers may not come in the same order as in the text. However, they will usually come from one part of the text rather than the whole text.",
+                    "There are two variations of this task type. In the first variation, students need to select words from the text which fit into gaps on the question paper. Students must write the words they choose on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "In the second variation, students have to choose from a list of words to fill the gaps. The words are identified by letters (A, B, C, etc.).",
+                    "Students must write the letter they choose on the answer sheet."
+                ],
+                "tested_skills": "This type of question tests students' ability to understand details and/or the main ideas of a part of the text. When completing this type of question, students will need to think about the type of word(s) that will fit into a gap (for example, whether a noun is needed, or a verb, etc.).",
+                "number_of_questions": "Varies"
+            },
+            "diagram_label_completion": {
+                "what_is_involved": [
+                    "In this type of question, students have to complete the labels on a diagram. The diagram is based on a description given in the text. The diagram may be a type of machine, part of a building or of other information in the text that can be shown through pictures. Students must write the words that fit into the gap on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "The answers may not come in the same order as in the text. However, they will usually come from one part of the text rather than the whole text."
+                ],
+                "tested_skills": "This type of question tests students' ability to understand a detailed description in the text, and then relate that description to information given in a diagram.",
+                "number_of_questions": "Varies"
+            },
+            "short_answer_questions": {
+                "what_is_involved": [
+                    "In this type of question, students have to answer questions about factual details in the text. Students must write their answers in words or numbers on the answer sheet.",
+                    "Answers must be taken from words in the text. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Numbers can be written using figures (1, 2, etc.) or words (one, two, etc.). Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words. The answers come in the same order as the information in the text."
+                ],
+                "tested_skills": "This type of question tests students' ability to find and understand specific information in the text.",
+                "number_of_questions": "Varies"
+            }
+        }
+    }
+}

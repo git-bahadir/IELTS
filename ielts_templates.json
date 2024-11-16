@@ -1,0 +1,247 @@
+{
+    "listening": {
+        "description": [
+            "The paper has four parts, with ten questions in each part. The questions are in the same order as the information in the recording, so the answer to the first question will be before the answer to the second question, and so on.",
+            "Parts 1 and 2 deal with everyday, social situations. There is a conversation between two speakers in Part 1 (for example, a conversation about travel arrangements). Only one person speaks in Part 2 (for example, a speech about local facilities).",
+            "Parts 3 and 4 deal with educational and training situations. In Part 3 there is a conversation between two main speakers (for example, two university students in discussion, perhaps guided by a tutor). In Part 4 only one person speaks on an academic subject.",
+            "Students will hear the recordings once only. Different accents, including British, Australian, New Zealand and North American, are used.",
+            "Students will need to transfer their answers to an answer sheet. Students will have 10 minutes at the end of the test to do this. Students should be careful when writing their answers on the answer sheet because they will lose marks for incorrect spelling and grammar."
+        ],
+        "summary": {
+            "time_allowed": "Approximately 30 minutes",
+            "number_of_parts": 4,
+            "number_of_questions": 40,
+            "marking": "Each correct answer receives 1 mark. Students' final score is given as a band score in whole or half bands, e.g. 5.5 or 7.0."
+        },
+        "types_of_questions": {
+            "multiple_choice": {
+                "what_is_involved": [
+                    "This type of question may be a question with three possible answers or the first half of a sentence with three possible sentence endings. Students have to choose one correct answer, A, B or C, then write the correct letter on the answer sheet.",
+                    "Sometimes students are given a longer list of possible answers and they have to choose more than one answer. Students should read the question carefully to check how many answers they need to choose."
+                ],
+                "tested_skills": "This type of question tests many listening skills, e.g. a detailed understanding of specific points, or general understanding of the main points of the recording.",
+                "number_of_questions": "Varies"
+            },
+            "matching": {
+                "what_is_involved": "In this type of question, students have to match a list of items from the recording to a list of options on the question paper, then write the correct letter on the answer sheet.",
+                "tested_skills": [
+                    "This type of question tests students' ability to listen for detailed information. For example, whether students can understand information about the type of hotel or guest house accommodation in an everyday conversation.",
+                    "This type of question also tests students' ability to follow a conversation between two people.",
+                    "This type of question may also require students to recognise how facts in the recording are connected to each other."
+                ],
+                "number_of_questions": "Varies"
+            },
+            "plan/map/diagram/labelling": {
+                "what_is_involved": [
+                    "In this type of question, students have to complete labels on a visual which may be:",
+                    "a diagram (e.g. a piece of equipment)",
+                    "a set of pictures",
+                    "a plan (e.g. of a building)",
+                    "a map (e.g. of part of a town)",
+                    "Students may have to:",
+                    "select their answers from a list on the question paper, then write the correct letter on the answer sheet",
+                    "select words from the recording which fit into gaps on the question paper. In this case, students will need to keep to the word limit given in the instructions. Students do not have to change the words in the recording in any way.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "Students should write the words that fit into the gap on the answer sheet."
+                ],
+                "tested_skills": [
+                    "This type of question tests students' ability to understand, for example, a description of a place, and how this description relates to the visual. It may also test students' ability to understand explanations of where things are and follow directions (e.g. straight on/through the far door)."
+                ],
+                "number_of_questions": "Varies"
+            },
+            "form/note/table/flow_chart/summary_completion": {
+                "what_is_involved": [
+                    "In this type of question, students have to fill in gaps in an outline of part or all of the recording. The outline will focus on the main ideas/facts in the recording and may be:",
+                    "a form: often used for facts, such as names",
+                    "a set of notes: used to summarise information and show how different points relate to one another",
+                    "a table: used to summarise information that can be divided into clear categories, e.g. place/time/price",
+                    "a flow chart: used to summarise the stages in a process, with the direction of the process shown by arrows.",
+                    "Students may have to:",
+                    "select their answers from a list on the question paper, then write the correct letter on the answer sheet",
+                    "select words from the recording which fit into gaps on the question paper. In this case, students will need to keep to the word limit given in the instructions. Students do not have to change the words in the recording in any way.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "Students should write the words that fit into the gap on the answer sheet."
+                ],
+                "tested_skills": [
+                    "This type of question focuses on their ability to identify the important information in a recording. Students may also need to understand relationships between ideas/facts/events, such as cause and effect."
+                ],
+                "number_of_questions": "Varies"
+            },
+            "short_answer_questions": {
+                "what_is_involved": [
+                    "In this type of question, students have to read a question and write a short answer using information from the recording.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "Students should write their answer on the answer sheet.",
+                    "Sometimes students are given a question which asks students to write two or three different answers."
+                ],
+                "tested_skills": "This type of question tests students' ability to listen for specific information, such as names, numbers and facts.",
+                "number_of_questions": "Varies"
+            }
+        }
+    },
+    "reading": {
+        "description": [
+            "Texts come from books, journals, magazines, newspapers and online resources, written for a non-specialist audience. All the topics are of general interest to students at undergraduate or postgraduate level. The texts may be written in different styles, for example, narrative, descriptive or discursive/argumentative. At least one text contains detailed logical argument. Texts may also contain diagrams, graphs or illustrations. If texts use technical vocabulary, then a simple dictionary definition is provided.",
+            "Students will need to transfer their answers to an answer sheet. Students must transfer their answers during the hour they are given for the Reading test. Unlike the Listening test, no extra transfer time is given. Students should be careful when writing their answers on the answer sheet because they will lose marks for incorrect spelling and grammar."
+        ],
+        "summary": {
+            "time_allowed": "60 minutes",
+            "number_of_sections": [
+                3,
+                "the total text length is 2,150-2,750 words"
+            ],
+            "number_of_questions": 40,
+            "marking": "Each correct answer receives 1 mark. Students' final score is given as a band score from 1-9 in whole or half bands, e.g. 4 or 6.5."
+        },
+        "types_of_questions": {
+            "multiple_choice": {
+                "what_is_involved": [
+                    "This type of question may be a question with three possible answers or the first half of a sentence with three possible sentence endings. Students have to choose one correct answer, A, B or C, then write the correct letter on the answer sheet.",
+                    "Sometimes students are given a longer list of possible answers and they have to choose more than one answer. Students should read the question carefully to check how many answers they need to choose.",
+                    "The questions are in the same order as the information in the text: that is, the answer to the first question will be before the answer to the second question, and so on."
+                ],
+                "tested_skills": "This type of question tests many different reading skills including: detailed understanding of specific points or general understanding of the main points of the text.",
+                "number_of_questions": "Varies"
+            },
+            "identifying_information": {
+                "what_is_involved": "In this type of question, students are given a number of statements and are asked: 'Do the following statements agree with the information in the text?' Students have to write 'True', 'False' or 'Not given' in the boxes on their answer sheet. It is important to understand the difference between 'False' and 'Not given'. 'False' means that the statement contradicts the information in the text. 'Not given' means that the statement neither agrees with nor contradicts the information in the text. Students must be careful not to use any information they already know about the topic of the text when choosing their answer.",
+                "tested_skills": [
+                    "This type of question tests students ability to recognise specific information given in the text."
+                ],
+                "number_of_questions": "Varies"
+            },
+            "identifying_writer_opinion": {
+                "what_is_involved": "In this type of question, students are given a number of statements and asked: 'Do the following statements agree with the views of the writer?' or 'Do the following statements agree with the claims of the writer?' Students have to write 'Yes', 'No' or 'Not given' in the boxes on their answer sheet. It is important to understand the difference between 'no' and 'not given'. 'No' means that the statement contradicts the writer's view or claim. 'Not given' means that the statement neither agrees with nor contradicts the writer's view or claim. Students must be careful not to use any information they already know about the topic of the text when choosing their answer.",
+                "tested_skills": "This type of question tests students' ability to recognise opinions or ideas.",
+                "number_of_questions": "Varies"
+            },
+            "matching_information": {
+                "what_is_involved": "In this type of question, students have to find specific information in the paragraphs (or sections) of a text. The paragraphs (or sections) are identified by letters (A, B, C, etc.). Students will need to write the letters of the correct paragraphs (or sections) in the boxes on their answer sheet. Not every paragraph (or section) may be used and some paragraphs (or sections) may be used more than once. When the paragraphs (or sections) may be used more than once, the instructions will say: 'Students may use any letter more than once'.",
+                "tested_skills": "This type of question assesses students' ability to scan a text in order to find specific information. Unlike Task Type 5 (Matching headings), it focuses on specific information rather than the main idea. Students may have to find: specific details, an example, reason, description, comparison, summary or explanation.",
+                "number_of_questions": "Varies"
+            },
+            "matching_headings": {
+                "what_is_involved": "In this type of question, there is a list of headings which are identified by Roman numerals (i, ii, iii, etc.). A heading summarises the main idea of a paragraph or section of the text. Students must match the heading to the correct paragraph or section. Students will need to write the correct Roman numerals in the boxes on their answer sheet. There will always be more headings than paragraphs or sections, so some headings will not be used. It is also possible that some paragraphs or sections may not be included in the task. One or more paragraphs or sections may already be matched with a heading as an example on the question paper. No heading may be used more than once.",
+                "tested_skills": "This type of question tests students' ability to identify the general topic of a paragraph (or section) and to recognise the difference between the main idea and a supporting idea.",
+                "number_of_questions": "Varies"
+            },
+            "matching_features": {
+                "what_is_involved": "In this type of question, students have to match a set of statements or pieces of information to a list of options. The options are a group of features from the text, and letters (A, B, C, etc.) are used to identify them. Students will need to write the correct letter on the answer sheet. Students may, for example, have to match descriptions of inventions to the people who invented them. It is possible that some options will not be used, and that others may be used more than once. When it is possible to use any option more than once, the instructions will say: 'Students may use any option more than once'.",
+                "tested_skills": "This type of question tests students' ability to recognise relationships and connections between facts in the text and their ability to recognise opinions and theories. Students need to be able to skim and scan the text to find the information quickly so that they can then read that part more carefully for detail.",
+                "number_of_questions": "Varies"
+            },
+            "matching_sentence_endings": {
+                "what_is_involved": "In this type of question, students are given the first half of a sentence based on information in the text and they have to choose the best way to complete the sentence by choosing from a list of possible endings. The endings are identified by letters (A, B, C, etc.). There will be more sentence endings than beginnings, so students will not use all of them. Students must write the letter they choose on the answer sheet. The sentence beginnings are in the same order as the information in the text.",
+                "tested_skills": "This type of question tests students' ability to understand the main ideas in the text.",
+                "number_of_questions": "Varies"
+            },
+            "sentence_completion": {
+                "what_is_involved": [
+                    "In this type of question, students have to fill in a gap in each sentence by choosing words from the text. Students must write the words they choose on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "The questions are in the same order as the information in the text."
+                ],
+                "tested_skills": "This type of question tests students' ability to find detail/specific information in a text.",
+                "number_of_questions": "Varies"
+            },
+            "summary/note/table/flow_chart_completion": {
+                "what_is_involved": [
+                    "In this type of question, students are given a summary of a part of the text, and have to complete it using words taken from the text. Note that the summary is not normally of the whole text. The summary may be in the form of:",
+                    "a continuous text (called 'a summary' in the instructions)",
+                    "several notes (called 'notes' in the instructions)",
+                    "a table with some parts of it left empty or partially empty (called 'a table' in the instructions)",
+                    "a series of boxes or steps linked by arrows to show the order of events, with some of the boxes or steps empty or partially empty (called 'a flow chart' in the instructions).",
+                    "The answers may not come in the same order as in the text. However, they will usually come from one part of the text rather than the whole text.",
+                    "There are two variations of this task type. In the first variation, students need to select words from the text which fit into gaps on the question paper. Students must write the words they choose on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "In the second variation, students have to choose from a list of words to fill the gaps. The words are identified by letters (A, B, C, etc.).",
+                    "Students must write the letter they choose on the answer sheet."
+                ],
+                "tested_skills": "This type of question tests students' ability to understand details and/or the main ideas of a part of the text. When completing this type of question, students will need to think about the type of word(s) that will fit into a gap (for example, whether a noun is needed, or a verb, etc.).",
+                "number_of_questions": "Varies"
+            },
+            "diagram_label_completion": {
+                "what_is_involved": [
+                    "In this type of question, students have to complete the labels on a diagram. The diagram is based on a description given in the text. The diagram may be a type of machine, part of a building or of other information in the text that can be shown through pictures. Students must write the words that fit into the gap on the answer sheet.",
+                    "Students should read the instructions very carefully as the number of words or numbers they may use to fill the gaps can change. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words.",
+                    "The answers may not come in the same order as in the text. However, they will usually come from one part of the text rather than the whole text."
+                ],
+                "tested_skills": "This type of question tests students' ability to understand a detailed description in the text, and then relate that description to information given in a diagram.",
+                "number_of_questions": "Varies"
+            },
+            "short_answer_questions": {
+                "what_is_involved": [
+                    "In this type of question, students have to answer questions about factual details in the text. Students must write their answers in words or numbers on the answer sheet.",
+                    "Answers must be taken from words in the text. A word limit is given, for example, 'NO MORE THAN TWO WORDS AND/OR A NUMBER'. Students will lose the mark for writing more than the word limit. Numbers can be written using figures (1, 2, etc.) or words (one, two, etc.). Contracted words such as 'they`re' will not be tested. Hyphenated words such as 'check-in' count as single words. The answers come in the same order as the information in the text."
+                ],
+                "tested_skills": "This type of question tests students' ability to find and understand specific information in the text.",
+                "number_of_questions": "Varies"
+            }
+        }
+    },
+    "writing": {
+        "description": [
+            "There are two Writing tasks and BOTH must be completed.",
+            "In Task 1, students have to describe some visual information in their own words (a graph, table, chart or diagram). Students need to write at least 150 words in about 20 minutes.",
+            "In Task 2, students are given a point of view, argument or problem which they need to discuss. Students need to write at least 250 words in about 40 minutes.",
+            "Students must write their answers using full sentences. Students must not write their answers as notes or bullet points. Students must write their answers on the answer sheet. Students are allowed to write notes on the question paper, but these will not be seen by the examiner."
+        ],
+        "summary": {
+            "time_allowed": "60 minutes",
+            "number_of_tasks": 2,
+            "marking": [
+                "Certificated IELTS examiners assess students' performance on each Writing task. There are four assessment criteria (things which the examiner thinks about when deciding what score to give students):",
+                "Task achievement/response",
+                "Coherence and cohesion",
+                "Lexical resource",
+                "Grammatical range and accuracy",
+                "Task achievement (in Task 1) and Task response (in Task 2) assesses how accurately, appropriately and relevantly students' response covers the task requirements, using the minimum of 150 words for Task 1 and 250 words for Task 2.",
+                "In Task 1, all the information students require is given in the diagram. In Task 2, Task response includes how well students develop their argument in response to the task, giving evidence and examples which may be from students' own experience.",
+                "Coherence and cohesion assesses how clear and fluent students' writing is, and how students organise ideas and information. It includes giving students' ideas in a logical order, and using a range of cohesive devices (for example, linking words, pronouns and conjunctions, etc.) appropriately.",
+                "Lexical resource assesses the range of vocabulary students have used, and how accurately and appropriately they use it.",
+                "Grammatical range and accuracy assesses the range of grammar students have used and how accurately and appropriately they have used it.",
+                "Task 2 contributes twice as much as Task 1 to the Writing score."
+            ]
+        },
+        "types_of_questions": {
+            "academic_writing_task_1": {
+                "what_is_involved": [
+                    "In Academic Writing Task 1, students may be asked to describe:",
+                    "one or more graphs, charts or tables",
+                    "a diagram of an object, device, process or event. Students have to include the most important points in the diagram. Some minor points or details may be left out.",
+                    "Students should write in an academic or semi-formal/neutral style.",
+                    "Students should spend no more than 20 minutes on this task. Students must write at least 150 words and will be penalised if their answer is too short. While students will not be penalised for writing more than 150 words, they should remember that a longer Task 1 answer may mean that they have less time to spend on Task 2, which contributes twice as much to their Writing band score.",
+                    "Students should remember that they will be penalised if what they write does not relate to the topic. They will also be penalised if their answer is not written as a whole piece of connected text (i.e. they must not use notes or bullet points). They will be severely penalised if their writing is plagiarised (i.e. copied from another source).",
+                    "Students must write their answer on the answer sheet."
+                ],
+                "tested_skills": [
+                    "This task tests if students can give a well-organised overview of the visual information using language that is appropriate in its register and style.",
+                    "Depending on the task type, students will be assessed on their ability to:",
+                    "organise, present and possibly compare data",
+                    "describe stages of a process or procedure",
+                    "describe an object, event or sequence of events",
+                    "explain how something works."
+                ],
+                "minimum_words": 150
+            },
+            "academic_writing_task_2": {
+                "what_is_involved": [
+                    "In Academic Writing Task 2, students are given a topic to write about. Students' answer should discuss the most relevant issues. Students must read the task carefully so that they can write a full answer that is relevant. For example, if the topic is a particular aspect of the wider topic of computers, students should focus on this aspect only in their answer. Students should not simply write about computers in general.",
+                    "Students should write in an academic or semi-formal/neutral style. Students will need to organise their ideas clearly and make sure they use relevant examples (which can be from their own experience, if relevant) or evidence.",
+                    "Students should spend no more than 40 minutes on this task. Students must write at least 250 words and will be penalised if their answer is too short. While students will not be penalised for writing more than 250 words, if they write a very long answer they may not have time for checking and correcting at the end, and some ideas may not be directly relevant to the question. Students may also produce handwriting which is unclear.",
+                    "Students should remember that they will be penalised if what they write is not related to the topic. They will also be penalised if their answer is not written as a whole piece of connected text (i.e. they must not use notes or bullet points). They will be severely penalised if their writing is plagiarised (i.e. copied from another source).",
+                    "Students must write their answer on the answer sheet."
+                ],
+                "tested_skills": [
+                    "This task tests if students can write a clear, relevant, well-organised argument, giving evidence or examples to support their ideas, and use language accurately.",
+                    "Depending on the task type, students will be assessed on their ability to:",
+                    "present a solution to a problem",
+                    "present and justify an opinion",
+                    "compare and contrast evidence, opinions and implications",
+                    "evaluate and challenge ideas, evidence or an argument."
+                ],
+                "minimum_words": 250
+            }
+        }
+    }
+}

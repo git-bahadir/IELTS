@@ -1,0 +1,126 @@
+{
+    "A1": {
+        "level_name": "Beginner",
+        "general_description": "Can understand and use familiar everyday expressions and very basic phrases aimed at the satisfaction of needs of a concrete type. Can introduce themselves and others and can ask and answer questions about personal details such as where someone lives, people they know and things they have. Can interact in a simple way provided the other person talks slowly and clearly and is prepared to help.",
+        "skills": {
+            "reading": [
+                "Can understand short texts and simple signs, such as labels and instructions. They can recognize familiar words and phrases."
+            ],
+            "writing": [
+                "Can write simple sentences about personal information, such as their name, age, and likes. They can fill out forms with basic details."
+            ],
+            "speaking": [
+                "Can use basic phrases to introduce themselves, ask simple questions, and express needs or preferences in familiar contexts."
+            ],
+            "listening": [
+                "Can understand simple spoken language when it is slow and clear. They can follow basic instructions and identify familiar words in conversations."
+            ]
+        },
+        "ielts_equivalent": "Below 4.0"
+    },
+    "A2": {
+        "level_name": "Elementary",
+        "general_description": "Can understand sentences and frequently used expressions related to areas of most immediate relevance (e.g. very basic personal and family information, shopping, local geography, employment). Can communicate in simple and routine tasks requiring a simple and direct exchange of information on familiar and routine matters. Can describe in simple terms aspects of their background, immediate environment and matters in areas of immediate need.",
+        "skills": {
+            "reading": [
+                "Can understand sentences and frequently used expressions related to everyday situations, such as personal information, shopping, and places of interest. They can read short texts on familiar subjects."
+            ],
+            "writing": [
+                "Can write short texts and simple messages about familiar topics, such as personal experiences, daily routines, and immediate needs. They can also write basic emails and notes."
+            ],
+            "speaking": [
+                "Can communicate in simple and routine tasks that require a direct exchange of information. They can describe their background, environment, and past experiences using simple language."
+            ],
+            "listening": [
+                "Can understand spoken language in everyday contexts when it is slow and clear. They can follow basic instructions and recognize common expressions related to familiar topics."
+            ]
+        },
+        "ielts_equivalent": "Up to 4.0"
+    },
+    "B1": {
+        "level_name": "Intermediate",
+        "general_description": "Can understand the main points of clear standard input on familiar matters regularly encountered in work, school, leisure, etc. Can deal with most situations likely to arise whilst travelling in an area where the language is spoken. Can produce simple connected text on topics, which are familiar, or of personal interest. Can describe experiences and events, dreams, hopes & ambitions and briefly give reasons and explanations for opinions and plans.",
+        "skills": {
+            "reading": [
+                "Can read straightforward texts on subjects related to their interests.",
+                "Can understand descriptions of events, feelings, and wishes in personal letters."
+            ],
+            "writing": [
+                "Can write simple connected text on topics that are familiar or of personal interest.",
+                "Can write personal letters describing experiences and impressions."
+            ],
+            "speaking": [
+                "Can deal with most situations likely to arise whilst traveling in an area where the language is spoken.",
+                "Can produce simple connected text on topics that are familiar or of personal interest.",
+                "Can describe experiences and events, dreams, hopes, and ambitions, and briefly give reasons and explanations for opinions and plans."
+            ],
+            "listening": [
+                "Can understand the main points of clear standard speech on familiar matters regularly encountered in work, school, leisure, etc.",
+                "Can follow the main points of discussions that take place in familiar contexts."
+            ]
+        },
+        "ielts_equivalent": "4.5-5.5"
+    },
+    "B2": {
+        "level_name": "Upper-Intermediate",
+        "general_description": "Can understand the main ideas of complex text on both concrete and abstract topics, including technical discussions in their field of specialisation. Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party. Can produce clear, detailed text on a wide range of subjects and explain a viewpoint on a topical issue giving the advantages and disadvantages of various options.",
+        "skills": {
+            "reading": [
+                "Can read articles and reports concerned with contemporary problems in which the writers adopt particular attitudes or viewpoints.",
+                "Can understand a wide range of texts, including some that are more complex or specialized."
+            ],
+            "writing": [
+                "Can write clear, detailed text on a variety of subjects related to their interests.",
+                "Can write essays or reports that present a case with an effective logical structure which helps the reader to notice and remember significant points."
+            ],
+            "speaking": [
+                "Can interact with a degree of fluency and spontaneity that makes regular interaction with native speakers quite possible without strain for either party.",
+                "Can produce clear, detailed text on a wide range of subjects related to their interests or areas of expertise.",
+                "Can explain a viewpoint on a topical issue, giving the advantages and disadvantages of various options."
+            ],
+            "listening": [
+                "Can understand the main ideas of complex texts on both concrete and abstract topics, including technical discussions in their field of specialization.",
+                "Can follow extended speech even when it is not clearly structured and when relationships are only implied and not signaled explicitly."
+            ]
+        },
+        "ielts_equivalent": "5.5-6.5"
+    },
+    "C1": {
+        "level_name": "Advanced",
+        "general_description": "Can understand a wide range of demanding, longer texts, and recognise implicit meaning. Can express themself fluently and spontaneously without much obvious searching for expressions. Can use language flexibly and effectively for social, academic and professional purposes. Can produce clear, well-structured, detailed text on complex subjects, showing controlled use of organisational patterns, connectors and cohesive devices.",
+        "skills": {
+            "reading": [
+                "Can understand a wide range of demanding texts, including abstract topics and implicit meanings. They can analyze and interpret complex materials effectively."
+            ],
+            "writing": [
+                "Can write clear, well-structured texts on complex subjects, using a variety of organizational patterns and cohesive devices. They can express nuanced ideas and arguments with precision and depth."
+            ],
+            "speaking": [
+                "Can express ideas fluently and spontaneously, with minimal searching for expressions. They can engage in discussions on various topics, adapting their language to suit different contexts."
+            ],
+            "listening": [
+                "Can understand lengthy speech on abstract topics with relative ease. They can follow complex discussions and recognize implicit meanings in conversations."
+            ]
+        },
+        "ielts_equivalent": "7.0-8.0"
+    },
+    "C2": {
+        "level_name": "Proficient",
+        "general_description": "Can understand with ease virtually everything heard or read. Can summarise information from different spoken and written sources, reconstructing arguments and accounts in a coherent presentation. Can express themself spontaneously, very fluently and precisely, differentiating finer shades of meaning even in more complex situations.",
+        "skills": {
+            "reading": [
+                "Can understand virtually everything read with ease, including complex texts and literary works. They can analyze and interpret nuanced meanings and implicit themes in a variety of genres."
+            ],
+            "writing": [
+                "Can write clear, well-structured texts on complex subjects, demonstrating a high degree of fluency and precision. They can produce various types of documents, including reports, essays, and formal correspondence, with appropriate style and tone."
+            ],
+            "speaking": [
+                "Can express themselves fluently and spontaneously without much obvious searching for expressions. They can articulate complex ideas clearly and effectively in discussions or presentations, adapting their language to suit different audiences."
+            ],
+            "listening": [
+                "Can understand spoken language in all its forms, including abstract discussions and specialized topics. They can follow complex arguments and identify subtle nuances in conversations or lectures."
+            ]
+        },
+        "ielts_equivalent": "8.0-9.0"
+    }
+}
