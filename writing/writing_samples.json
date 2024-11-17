@@ -1,0 +1,218 @@
+{
+    "ielts_writing_task_1": {
+      "description": "IELTS Writing Task 1 typically involves describing visual information presented in various formats.",
+      "visual_types": [
+        "bar graph",
+        "line graph",
+        "pie chart",
+        "table",
+        "map",
+        "process diagram",
+        "mixed charts"
+      ],
+      "question_examples": [
+        {
+          "id": "LG001",
+          "type": "line graph",
+          "description": "Changes in ownership of electrical appliances and amount of time spent doing housework in households in one country between 1920 and 2019",
+          "details": {
+            "number_of_graphs": 2,
+            "graph_1": {
+              "title": "Percentage of households with electrical appliances",
+              "x_axis": "Years from 1920 to 2019",
+              "y_axis": "Percentage",
+              "data_points": ["refrigerator", "washing machine", "dishwasher"]
+            },
+            "graph_2": {
+              "title": "Number of hours of housework",
+              "x_axis": "Years from 1920 to 2019",
+              "y_axis": "Hours per week",
+              "data_points": ["average hours of housework"]
+            }
+          },
+          "key_features": [
+            "Comparison of two related trends over time",
+            "Correlation between appliance ownership and housework hours",
+            "Long time span (nearly a century)"
+          ]
+        },
+        {
+            "id": "PD001",
+            "type": "process diagram",
+            "description": "The manufacturing process of producing sugar from sugar cane",
+            "details": {
+              "number_of_stages": 7,
+              "process_type": "cyclical manufacturing",
+              "stages": [
+                {
+                  "stage_number": 1,
+                  "name": "Growing",
+                  "details": "Sugar canes are grown for 12-18 months"
+                },
+                {
+                  "stage_number": 2,
+                  "name": "Harvesting",
+                  "details": "Sugar canes are harvested both mechanically and manually"
+                },
+                {
+                  "stage_number": 3,
+                  "name": "Crushing",
+                  "details": "Sugar canes are crushed to extract juice"
+                },
+                {
+                  "stage_number": 4,
+                  "name": "Purifying juice",
+                  "details": "Juice is filtered through limestone filter"
+                },
+                {
+                  "stage_number": 5,
+                  "name": "Evaporator",
+                  "details": "Juice is heated and becomes syrup"
+                },
+                {
+                  "stage_number": 6,
+                  "name": "Centrifuge",
+                  "details": "Separates sugar crystals from syrup"
+                },
+                {
+                  "stage_number": 7,
+                  "name": "Drying and cooling",
+                  "details": "Final stage to produce sugar"
+                }
+              ]
+            },
+            "key_features": [
+              "Linear process with clear numbered stages",
+              "Combination of agricultural and industrial processes",
+              "Both mechanical and manual operations",
+              "Multiple transformation stages (juice to syrup to crystals)",
+              "Technical equipment involved (centrifuge, evaporator, crushing machine)",
+              "Time specification only for initial growing stage"
+            ]
+          },
+          {
+            "id": "MP001",
+            "type": "map",
+            "description": "Floor plans showing the current layout of Southwest Airport and its planned redevelopment for the following year",
+            "details": {
+              "number_of_plans": 2,
+              "comparison_type": "before and after development",
+              "plan_1": {
+                "title": "NOW",
+                "key_elements": {
+                  "gates": "8 gates (numbered 1-8)",
+                  "facilities": [
+                    "Check-in area",
+                    "Café",
+                    "Walkway",
+                    "Security checkpoints",
+                    "Passport control",
+                    "Customs"
+                  ],
+                  "sections": [
+                    "Departures area",
+                    "Arrivals area"
+                  ]
+                }
+              },
+              "plan_2": {
+                "title": "AFTER DEVELOPMENT",
+                "key_elements": {
+                  "gates": "18 gates (numbered 1-18)",
+                  "facilities": [
+                    "Check-in area",
+                    "Bag drop",
+                    "Café",
+                    "ATM",
+                    "Sky train",
+                    "Car hire",
+                    "Shops",
+                    "Security checkpoints",
+                    "Passport control",
+                    "Customs"
+                  ],
+                  "sections": [
+                    "Departures area",
+                    "Arrivals area"
+                  ]
+                }
+              }
+            },
+            "key_features": [
+              "Expansion from 8 to 18 gates",
+              "Addition of new facilities (ATM, car hire, sky train, bag drop)",
+              "Introduction of shopping area",
+              "Maintained basic structure with departures and arrivals sections",
+              "More complex gate arrangement in new design",
+              "Enhanced passenger services and amenities",
+              "Integration of modern transport systems"
+            ]
+          },
+          {
+            "id": "PD002",
+            "type": "process diagram",
+            "description": "The recycling process of plastic bottles from collection to new products",
+            "details": {
+              "number_of_stages": 9,
+              "process_type": "circular manufacturing/recycling",
+              "stages": [
+                {
+                  "stage_number": 1,
+                  "name": "Collection",
+                  "details": "Initial collection of plastic bottles in waste bins"
+                },
+                {
+                  "stage_number": 2,
+                  "name": "Transportation",
+                  "details": "Bottles are transported by truck to recycling center"
+                },
+                {
+                  "stage_number": 3,
+                  "name": "Sorting",
+                  "details": "Manual sorting at recycling centre to separate suitable materials"
+                },
+                {
+                  "stage_number": 4,
+                  "name": "Compressing",
+                  "details": "Bottles are compressed into compact blocks"
+                },
+                {
+                  "stage_number": 5,
+                  "name": "Crushing",
+                  "details": "Compressed blocks are crushed and washed"
+                },
+                {
+                  "stage_number": 6,
+                  "name": "Producing pellets",
+                  "details": "Crushed material is formed into plastic pellets"
+                },
+                {
+                  "stage_number": 7,
+                  "name": "Heating",
+                  "details": "Pellets are heated to form raw material"
+                },
+                {
+                  "stage_number": 8,
+                  "name": "Raw material",
+                  "details": "Processed material ready for manufacturing"
+                },
+                {
+                  "stage_number": 9,
+                  "name": "End products",
+                  "details": "Creation of new products (bottles, clothing, bags, etc.)"
+                }
+              ]
+            },
+            "key_features": [
+              "Circular process showing complete recycling cycle",
+              "Multiple transformation stages of materials",
+              "Combination of mechanical and chemical processes",
+              "Both manual and automated operations",
+              "Various end products from single source material",
+              "Integration of cleaning (washing) stage",
+              "Multiple physical state changes (solid to pellets to raw material)"
+            ]
+          }
+      ]
+    }
+  }
