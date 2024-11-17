@@ -12,7 +12,7 @@
       ],
       "question_examples": [
         {
-          "id": "LG001",
+          "id": "16_1",
           "type": "line graph",
           "description": "Changes in ownership of electrical appliances and amount of time spent doing housework in households in one country between 1920 and 2019",
           "details": {
@@ -34,10 +34,27 @@
             "Comparison of two related trends over time",
             "Correlation between appliance ownership and housework hours",
             "Long time span (nearly a century)"
-          ]
+          ],
+          "answers": {
+            "example_answer": {
+              "text": [
+                "This charts shows about percentage of households with electrical appliances and Number of hour at housework per week, per household between 1920 and 2019.",
+                "In the first chart washing machine, Refrigerator, Vacuum cleaner all rise from 1920 to 2019. Refrigerator and Vacuum cleaner increase faster than washing machine. In 1920, Refrigerator just zero percentage of households and Refrigerator is 30 percentage of households, but in 2019 they all increase 100 percentage of household. Washing machine is 10 percantage of households in 1920, however in 2019 is just increase about 15 percantage at households, and washing machine is overed by Refrigerator and Vacuum cleaner in 1940 and 1960. Vacuum cleaner is overed by Refrigerator in 1942.",
+                "In the second chart Houses per week is 50 Number of hours per week, but it decline to 10 Number of hours per week in 2019.",
+                "Over than, percentang of households with elecitcal appliance increase however Number of hours per week decline from 1920 to 2019."
+              ],
+              "score": "5.0"
+            },
+            "examiner_comments": [
+              "Here is the examiner's comment:",
+              "This is an attempt to present the information from both graphs. However, there is inaccurate data, e.g. washing machine use increased by 15%. It actually increased from 40% in 1920 to just over 70% in 2019. The response focuses on the detail of when the lines on the graph intersect but there is a lack of clarity in these details. The description of the second chart lacks detail. This limits the task achievement.",
+              "There is an attempt to present the information in order, and the last line attempts an overview. However, there is a lack of coherence caused by missing or inaccurate cohesive features [Over than] and there is repetition [percentage of household | number of hours per week] caused by the lack of cohesion.",
+              "Vocabulary is minimally adequate for the task but there are errors in word choice [overed by / overtaken by] which mean the response is difficult to understand. The frequency of errors in spelling is also high [percantage / percentang / percentage | mashine / machine | Pefrigerator / refrigerator | electical / electrical]. The range of grammatical structures is limited. There are some correct examples [all rise from 1920 to 2019 | they all increase (to) 100 percentage]; however, the errors in grammar and punctuation mean the response is not clear."
+            ]
+          }
         },
         {
-            "id": "PD001",
+            "id": "16_2",
             "type": "process diagram",
             "description": "The manufacturing process of producing sugar from sugar cane",
             "details": {
@@ -88,10 +105,26 @@
               "Multiple transformation stages (juice to syrup to crystals)",
               "Technical equipment involved (centrifuge, evaporator, crushing machine)",
               "Time specification only for initial growing stage"
-            ]
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The diagram illustrates the process by which sugar is produced from sugar cane. The process consists of seven steps of various time length, starting by farming sugar canes and ending by dry sugar ready to use.",
+                  "First, sugarcane is farmed and nurished for a period of 12 to 18 months, which is the longest step in the whole process. Second, sugar cane get harvested by the means of two ways, either manually or using specialized vehicles. Third, the harvested sugar cane go through the step of crushing, resulting in liquid form called juice.",
+                  "The fourth step involves purifying the juice through Limestone filters. The purified juice now goes through the fifth step, which put it under extreme heat to allow it to evaporate to get syrup out from it. Then the syrup is centrifuged to separate sugar crystals from syrup. Once that happend the sugar is taken into the last phase of drying and cooling, which finalise the process and produce ready-to-use sugar that is packed and ready for sale."
+                ],
+                "score": "6.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "There is an overview presented in the first paragraph which summarises the process into the farming stages and the drying stages. This summary could be more detailed, e.g. farming, crushing, separating and drying stages. The ideas are presented in three paragraphs and follow the logical sequence of the process. Cohesive devices are basic [First | Second | Third | fourth] and there is some repetition, but there is a clear progression.",
+                "Spelling is generally accurate and the vocabulary conveys the message well, with some range [the longest step | specialized vehicles | liquid]. Grammatical range is weaker and there are a number of errors [get harvested / is harvested] including third-person endings [go through / goes through | put / puts].",
+                "This response could be improved by a more detailed overview and more accuracy in grammatical structures."
+              ]
+            }
           },
           {
-            "id": "MP001",
+            "id": "16_3",
             "type": "map",
             "description": "Floor plans showing the current layout of Southwest Airport and its planned redevelopment for the following year",
             "details": {
@@ -146,10 +179,25 @@
               "More complex gate arrangement in new design",
               "Enhanced passenger services and amenities",
               "Integration of modern transport systems"
-            ]
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The South West airport had some changes after its redevelopment. The departures area was modified to have a bag drop service, along with a cafe and check-in module that were already there before the redevelopment. However, both the cafe and the check-in module changed places to make room for the bag drop. After going through security passport control, passengers and airport staff will be able to purchase stuff at the new stores before their flight. After doing some shopping, the boarding gates wait ahead. There are now 18 gates, which were 8 before the redevelopment. For this reason, the walkaway installed between the gates has been replaced for a sky train, which will be able to transport people along the different gates. But if you're not leaving the South West airport, you'll be glad to know the arrivals area has also been redeveloped. After going through passport control customs, passengers and airport staff will be able to hire different services. This area was empty before the redevelopment, but now it has an ATM, a cafe and a car hire service that will gladly take you to your destination."
+                ],
+                "score": "6.5"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "This response covers the key details required; however, it describes the changes in the past tense instead of using future verb forms for the development 'next year'. Overall, it could be improved by adding a summary of the main changes.",
+                "The response has been organised logically by describing the changes to the journey through the redeveloped airport: firstly departures, then arrivals. There are some good cohesive features [However | After | But] and some referencing [which | This area]. Organisation could be improved by breaking the response down into two or three paragraphs.",
+                "Vocabulary is a strength, with some effective collocation [changed places | take you to your destination] and flexibility [modified | installed between].",
+                "In terms of grammar, this response has a variety of structures, but it describes some of the changes in the past simple [was modified] and in the present perfect [has been replaced by] whereas the question asked for a description of the future changes. To improve the score, there should be a wider range of future structures to address the changes 'next year'."
+              ]
+            }
           },
           {
-            "id": "PD002",
+            "id": "16_4",
             "type": "process diagram",
             "description": "The recycling process of plastic bottles from collection to new products",
             "details": {
@@ -211,8 +259,338 @@
               "Various end products from single source material",
               "Integration of cleaning (washing) stage",
               "Multiple physical state changes (solid to pellets to raw material)"
-            ]
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "Plastic bottles are one of the most materials used in the world, and recycling is a really important subject to try to minimize the waste.",
+                  "Around the streets, in front off houses and restaurants is possible to see some bins, to collect organic and recycle waste. The yellow in is the correct one to trash recycle things, such as plastic bottles. After trashed, a truck collects at least once a week and leave in a specific place to separate what is recyclable and what is not. For that reason, is really important to separate before trash, this means someone will not spend to many time separating.",
+                  "Recycling is a big process, after separated the waste should be compressing in blocks to facilitat the crushing and washing process, that should be done because to many durty come with the bottles and crushing it makes easier to produce a new material.",
+                  "Crushed, washed and then going to the production of plastic pellets, it is can be finally heated to form a raw material.",
+                  "But what can be produced using recycled bottles? New bottles, containers, bags, T-shirts, pen, toys and to many other things.",
+                  "Searching, it is possible to see how big is the waste problem around the world and how not to many governments invests in this situation. Starting into the houses, avoiding to use plastics in excess and separating the correct things in the correct bins, is a good way to keep the environment safe."
+                ],
+                "score": "5.5"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "In this process task, the response includes an introduction and covers the main stages of the recycling process. However, there is significant irrelevant detail included, e.g. in the last paragraph, which reduces the score.",
+                "The stages are set out in order and there is good overall progression with some effective linking devices [such as | For that reason] and cohesion [what is ... what is not | that] but the errors reduce the band score here. The candidate tends to use lists rather than a full range of cohesive devices.",
+                "Vocabulary is adequate with some original vocabulary [minimize the waste | separated | containers | environment]; however, much is taken directly from the task [compressing | to form a raw material]. There are errors in spelling [in / bin | durty / dirty] but they do not reduce communication.",
+                "Grammatical structures are limited and level of error is high [after separated / after separating | should be compressing / should be compressed | it is can be / it can be]. For a higher score, improved accuracy is needed.",
+                "The score for this response could be improved by including a summary of the main stages of the process, e.g. plastic bottles are collected, sorted, broken down and made into new products."
+              ]
+            }
+          },
+          {
+            "id": "15_1",
+            "type": "bar graph",
+            "description": "Survey results showing coffee and tea consumption habits in five Australian cities",
+            "details": {
+              "number_of_graphs": 1,
+              "time_period": "last 4 weeks",
+              "x_axis": {
+                "label": "Australian cities",
+                "categories": ["Sydney", "Melbourne", "Brisbane", "Adelaide", "Hobart"]
+              },
+              "y_axis": {
+                "label": "Percentage of city residents",
+                "range": "20-70%",
+                "interval": "5%"
+              },
+              "data_categories": [
+                {
+                  "name": "Bought fresh coffee",
+                  "type": "solid bars"
+                },
+                {
+                  "name": "Bought instant coffee",
+                  "type": "crosshatched bars"
+                },
+                {
+                  "name": "Went to a café for coffee or tea",
+                  "type": "grey bars"
+                }
+              ],
+              "value_ranges": {
+                "fresh_coffee": "34-44%",
+                "instant_coffee": "45-55%",
+                "cafe_visits": "50-64%"
+              }
+            },
+            "key_features": [
+              "Comparison across three different coffee/tea consumption behaviors",
+              "Data from five major Australian cities",
+              "Café visits generally show highest percentages",
+              "Variations in preferences between cities",
+              "All measurements in percentage format",
+              "Clear distinction between fresh and instant coffee consumption",
+              "Recent time frame (4-week period)",
+              "Consistent pattern of higher café attendance across most cities"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The table depicts the outcomes of a questionare of how often people buy and drink a different types of coffee in Sydney, Melbourne, Brisbane, Adelaide, and Hobart of Australia.",
+                  "The first option is bought fresh coffee in last 4 weeks. In Sydney has 43.7 per cent of city residents and has almost the same amount as Melbourne which is 42.2 per cent. Brisbane and Adelaide have a nearly same amount, 34.2 per cent and 34.4 per cent. Next, Hobart has 38.3 per cent.",
+                  "The second line is bought instant coffee in last 4 weeks. Brisbane has 52.6 per cent. Other two cities that have almost the same number are Adelaide, 49.8 per cent, and Melbourne, 48.3 per cent. The lowest number is 45.5 per cent of Sydney and The highest number is 54.1 per cent of Hobart.",
+                  "The last option of the survey shows the percentage of city residents that went to a cafe' for coffee or tea in last 4 weeks. In Sydney, people went to a cafe' for coffee or tea in last 4 weeks 61 per cent of city residents. In Brisbane, citizens went to a cafe' for coffee of tea in last 4 weeks 55.4 per cent. The lowest is Adelaide that shows 49.9 per cent of city residents. In Hobart, people went to a cafe' for coffee of tea in last 4 weeks 62.7 per cent. The highest is Melbourne that shows 63.3 per cent.",
+                  "In conclusion, the highest number of the survey is the percentage of city residents that went to a cafe' for coffee or tea in last 4 weeks because it shows almost the highest percentage in 3 types."
+                ],
+                "score": "6.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "This answer covers all three categories and shows a good level of grouping and comparison of information in each category. The descriptions are supported by accurate data. Organisation is clear (introduction and overview, one paragraph per category) and there is evidence of cohesive devices [The first option | The second line | The last option]. Vocabulary is generally adequate and appropriate for the task, in spite of occasional errors [questionare / questionnaire | amost / almost]. Grammar shows a mix of simple and complex sentence structures with a reasonable level of accuracy. A wider range of vocabulary and/or grammatical range would help to improve the score here."
+              ]
+            }
+          },
+          {
+            "id": "15_2",
+            "type": "line graph",
+            "description": "Number of tourists visiting a Caribbean island from 2010 to 2017, showing breakdown between cruise ship visitors and island-stay visitors",
+            "details": {
+              "number_of_lines": 3,
+              "time_span": {
+                "start_year": 2010,
+                "end_year": 2017,
+                "interval": "yearly"
+              },
+              "y_axis": {
+                "label": "Millions of visitors",
+                "range": "0-4",
+                "interval": "0.5"
+              },
+              "data_lines": [
+                {
+                  "name": "Total visitors",
+                  "marker_type": "circles",
+                  "line_style": "solid",
+                  "range": "1.0-3.5 million"
+                },
+                {
+                  "name": "Visitors staying on island",
+                  "marker_type": "triangles",
+                  "line_style": "dashed",
+                  "range": "0.75-1.5 million"
+                },
+                {
+                  "name": "Visitors staying on cruise ships",
+                  "marker_type": "squares",
+                  "line_style": "dotted",
+                  "range": "0.2-2.0 million"
+                }
+              ]
+            },
+            "key_features": [
+              "Overall upward trend in total visitors",
+              "Dramatic increase in cruise ship visitors after 2012",
+              "Relatively stable numbers for island-stay visitors after 2013",
+              "Crossover point between cruise and island visitors around 2016",
+              "Total visitors more than tripled over the period",
+              "Clear distinction between three types of visitor data",
+              "Most significant growth in cruise ship tourism",
+              "Eight-year time span showing long-term trends"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The graph displays the statistics of (the number at tourists visiting a particular carribean island between (the years) 2010 and 2017). In the year 2010, there were a quarter of a million visitors that stayed on cruise ships, while another 750000 visitors were staying on island that totals up to a million of visitors during that year. The following year, which is 2011, half a million visitors stayed on cruise ships for the visitors who were staying on the island, the graph doesn't show and decrease or an increase because the number was the same as the previous year, which is 750000 visitors. Total visitors for that year was 1 million and a quarter visitors. Moving on, the number of visitors staying on cruise ships decreased to 250000 visitors in the year 2012 while the number of visitors staying on island increased to 1250000 people. This sums up to an amount of 1500000 visitors that year.",
+                  "In the year 2013, 500000 visitors stayed on cruise ships while 1500000 visitors stayed on island that adds up to 2 million visitors that year. During the next year which is 2014, a total at one million visitors stayed on cruise ships while the same number of visitors staying on island remained consistent which is 1500000 people, totalling up to two million and a half visitors that year. For the year 2015, 1250000 visitors were staying on cruise ships and 1500000 tourists were staying on island, showing no changes from the previous year. The total of tourists in that year increased to 2750000 visitors. The total number of visitors remained the same in the following year which is 2016 where it summed up 1500000 visitors staying on cruise ships and 1250000 visitors staying on island. In the final year, 2017, the number of visitors staying on cruise ships and staying on island increase to three and a half million of visitors. The graph showed an increase of half a million for the number of visitors staying on cruise ships which totals up to two million visitors. As for the number of visitors staying on island, the graph also increased for a quarter million which adds up to a total of 1500000 visitors that year.",
+                  "Through the years, the number of visitors staying on cruise ships showed an unstable increase and decrease for the first four years, but continued to increase in the next year onwards. As for the number of visitors staying on island, there was no progress of increase or decrease in the first two years which are 2010 and 2011 but the graph rose until it remained constant for three consecutive years in a row. The number of visitors then slacked off in the year 2016, but managed to increase to the same level as the year before the previous in 2017. All in all, the graph showed an outstanding performance for the total number of visitors throughout 2011 to 2017, where it increased gradually every single year except from 2015 to 2016 where it remained constant."
+                ],
+                "score": "7.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "This is a full and detailed description of the data contained in the graph, supplemented by a comparison of the variations in the numbers for the two types of visitors (staying on cruise ships or staying on the island). There is a clear overview at the end of the description. Organisation is fairly clear and progresses logically across the time period, although it could be improved by subdividing the rather long second paragraph. The range of vocabulary is wide enough to show some variety of expression [adds up to | totals up to] and some use of collocation [three ... years in a row]. There is a high level of accuracy in grammatical control, in both simple and complex structures, but there is an omission of a full stop between the first and second sentences and no capital letter to indicate the beginning of the new sentence."
+              ]
+            }
+          },
+          {
+            "id": "15_3",
+            "type": "process diagram",
+            "description": "The manufacturing process of instant noodles from raw ingredients to final packaged product",
+            "details": {
+              "number_of_stages": 8,
+              "process_type": "linear manufacturing",
+              "stages": [
+                {
+                  "stage_number": 1,
+                  "name": "Storage silos",
+                  "details": "Storage of flour and delivery by truck"
+                },
+                {
+                  "stage_number": 2,
+                  "name": "Mixer",
+                  "details": "Combining flour with water and oil using rollers"
+                },
+                {
+                  "stage_number": 3,
+                  "name": "Dough sheets",
+                  "details": "Formation of flat sheets of dough"
+                },
+                {
+                  "stage_number": 4,
+                  "name": "Dough strips",
+                  "details": "Cutting dough sheets into noodle strips"
+                },
+                {
+                  "stage_number": 5,
+                  "name": "Noodles discs",
+                  "details": "Forming noodle strips into circular disc shapes"
+                },
+                {
+                  "stage_number": 6,
+                  "name": "Cooking and drying",
+                  "details": "Noodles are cooked in oil and dried"
+                },
+                {
+                  "stage_number": 7,
+                  "name": "Vegetables and spices",
+                  "details": "Addition of seasonings and dried vegetables"
+                },
+                {
+                  "stage_number": 8,
+                  "name": "Labelling and sealing",
+                  "details": "Final packaging with cups and labels"
+                }
+              ],
+              "inputs": [
+                "Flour",
+                "Water",
+                "Oil",
+                "Vegetables",
+                "Spices",
+                "Packaging materials"
+              ]
+            },
+            "key_features": [
+              "Linear production line process",
+              "Automated manufacturing system",
+              "Multiple transformation stages of dough",
+              "Integration of both ingredients and packaging",
+              "Continuous flow production",
+              "Combination of mechanical and thermal processes",
+              "Final quality control through labeling and sealing",
+              "Clear progression from raw materials to finished product"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The given scheme explains the process of instant noodles production. Moreover it reveals how this product appears on super market shelves. In general, there are eight stages of manufacturing before the final product is being delivered to the store.",
+                  "The first operation consists of putting flour into storage silos. Then the flour is mixed with some other ingredients into dough in a special machine. The substance is further stretched into sheets which a cut into thin strips during the fourth stage. The following operation involves the strips too. At this moment the noodles are formed into discs. After that the round-shaped figures are cooked in oil and dried. The seventh stage consists of placing the product into cups and adding some vegetables and spices to it. The final part of production process is mainly about the packaging. At this moment freshly printed lables are added to the cups which are sealed after that. As soon as the product (instant noodles) is ready to leave the factory, it is shipped to a shopping facility.",
+                  "Overall, it takes a considerably long time for a product to get to a super market."
+                ],
+                "score": "6.5"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "This response addresses the task fully and provides a description for each stage of the process, along with supporting details. A stronger overview would help to raise the overall score. Information is logically organised and the reader is guided through the answer by a range of cohesive devices [Moreover | In general | The first operation | Then | further | too | At this moment | After that | The seventh stage | The final part | Overall]. There is also use of reference [this] and substitution [product] to add variety to the description. There is some flexibility in the use of vocabulary [Labelling + sealing → lables / labels are added to the cups which are sealed] and there is good use of less common items [The substance | round-shaped figures | the product | packaging]. There is a variety of complex structures used and most of these are accurate; there is an error in line 6 [which a cut / which are cut]."
+              ]
+            }
+          },
+          {
+            "id": "15_4",
+            "type": "mixed charts",
+            "description": "Employment destinations of Anthropology graduates and their salaries after five years",
+            "details": {
+              "chart_1": {
+                "type": "pie chart",
+                "title": "Destination of Anthropology graduates (from one university)",
+                "segments": [
+                  {
+                    "category": "Full-time work",
+                    "percentage": 52
+                  },
+                  {
+                    "category": "Part-time work",
+                    "percentage": 15
+                  },
+                  {
+                    "category": "Part-time work + postgrad study",
+                    "percentage": 5
+                  },
+                  {
+                    "category": "Full-time postgrad study",
+                    "percentage": 8
+                  },
+                  {
+                    "category": "Unemployed",
+                    "percentage": 12
+                  },
+                  {
+                    "category": "Not known",
+                    "percentage": 8
+                  }
+                ]
+              },
+              "chart_2": {
+                "type": "table",
+                "title": "Salaries of Anthropology graduates (after 5 years' work)",
+                "salary_ranges": [
+                  "$25,000-49,999",
+                  "$50,000-74,999",
+                  "$75,000-99,999",
+                  "$100,000+"
+                ],
+                "employment_sectors": [
+                  {
+                    "sector": "Freelance consultants",
+                    "salary_distribution": {
+                      "25000-49999": "5%",
+                      "50000-74999": "15%",
+                      "75000-99999": "40%",
+                      "100000+": "40%"
+                    }
+                  },
+                  {
+                    "sector": "Government sector",
+                    "salary_distribution": {
+                      "25000-49999": "5%",
+                      "50000-74999": "15%",
+                      "75000-99999": "30%",
+                      "100000+": "50%"
+                    }
+                  },
+                  {
+                    "sector": "Private companies",
+                    "salary_distribution": {
+                      "25000-49999": "10%",
+                      "50000-74999": "35%",
+                      "75000-99999": "25%",
+                      "100000+": "30%"
+                    }
+                  }
+                ]
+              }
+            },
+            "key_features": [
+              "Majority (52%) enter full-time work",
+              "Significant portion (15%) work part-time",
+              "Notable unemployment rate (12%)",
+              "Government sector offers highest proportion of top salaries",
+              "Freelance consultants show strong earning potential",
+              "Private companies have more evenly distributed salary ranges",
+              "Most graduates in all sectors earn above $50,000 after 5 years",
+              "Combined work and study represents smallest group (5%)"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The chart demonstrates what Anthropology graduates from one university did after finishing their undergraduate degree course. The table indicates the salaries of the anthropologists in work after 5 years.",
+                  "As we can see from the pie chart, majority of Anthropology graduates are employed. Fifty-two per cent of them have a full-time job. Almost twenty per cent of graduates have either a part-time work or it is combined with post grad study. Eight per cent of students continue their full-time education. Only twelve per cent of graduates are unemployed. The information about all the rest graduates is unknown.",
+                  "Thus, most of Anthropology graduates have a job. Half of those who work in Government sector earn more than a hundred thousand dollars. It is less than proportion of freelance concultantants who get the same amount of money. Besides, it is only one-third of those who work for private companies. We can see nearly the same percentage of those who get from fifty thousand dollars to ninty-nine thousand dollars as freelance consultants and in government sector. The situation is different in private companies. More of them get from fifty thousand to seventy-four thousand dollars than from seventy-five to ninety-nine thousand dollars. The proportion of those who work for private companies for from twenty-five thousand to forty-nine thousand dollars is half bigger than the same one in government sector and as freelancers.",
+                  "So, the chart and the table show us that most of Anthropology graduates are employed and a salary more than twenty-five thousand dollars after five year's work."
+                ],
+                "score": "6.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "The candidate has described all the key features and has supported these with relevant figures. There is some comparison of the figures in both the chart and the table. Information is presented coherently and there is a clear overall progression (introduction, description of the pie chart information, description of the information in the table and conclusion). Some cohesive devices are used to organise the description [As we can see | Thus | Besides | So]. The range of vocabulary is adequate for the task [combined with | earn | proportion of | freelancers], but there are some errors [all the rest graduates / all the rest of the graduates | it is less / more than (the) proportion of freelance ... same amount of money | concultantants / consultants | ninty / ninety | half bigger than / twice as big as]. There is a mix of simple and complex sentence structures, with some errors [(the) majority | a part-time work | all the rest (of the) graduates | in (the) Government sector]."
+              ]
+            }
           }
-      ]
-    }
+        ]
+      }
   }
