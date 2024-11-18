@@ -12,6 +12,403 @@
       ],
       "question_examples": [
         {
+          "id": "17_1",
+          "type": "map",
+          "description": "Comparison of current industrial area and planned future development in Norbiton",
+          "details": {
+            "number_of_maps": 2,
+            "comparison_type": "current vs planned development",
+            "map_1": {
+              "title": "Norbiton industrial area now",
+              "features": {
+                "geographical": [
+                  {
+                    "name": "River",
+                    "location": "North boundary"
+                  },
+                  {
+                    "name": "Farmland",
+                    "location": "North of river"
+                  },
+                  {
+                    "name": "Town",
+                    "location": "West side",
+                    "connection": "Dashed line"
+                  }
+                ],
+                "industrial": {
+                  "type": "Factories",
+                  "count": "6",
+                  "arrangement": "Around roundabout and along roads"
+                },
+                "infrastructure": {
+                  "main_road": "South",
+                  "roundabout": "Central",
+                  "access_roads": "Radiating from roundabout"
+                }
+              }
+            },
+            "map_2": {
+              "title": "Planned future development",
+              "features": {
+                "geographical": [
+                  {
+                    "name": "River",
+                    "location": "North boundary"
+                  },
+                  {
+                    "name": "Farmland",
+                    "location": "North of river"
+                  },
+                  {
+                    "name": "Town",
+                    "location": "West side",
+                    "connection": "Dashed line"
+                  }
+                ],
+                "new_development": [
+                  {
+                    "name": "Housing",
+                    "type": "Residential blocks",
+                    "locations": "Multiple locations around site"
+                  },
+                  {
+                    "name": "Shops",
+                    "location": "Southwest of roundabout"
+                  },
+                  {
+                    "name": "Medical centre",
+                    "location": "Southeast of roundabout"
+                  },
+                  {
+                    "name": "School",
+                    "location": "East side"
+                  },
+                  {
+                    "name": "Playground",
+                    "location": "Central east"
+                  }
+                ],
+                "infrastructure": {
+                  "main_road": "South with additional roundabout",
+                  "primary_roundabout": "Central",
+                  "secondary_roundabout": "South",
+                  "access_roads": "Modified layout"
+                }
+              }
+            }
+          },
+          "key_features": [
+            "Complete transformation from industrial to residential/community use",
+            "Retention of basic road layout with improvements",
+            "Addition of community facilities",
+            "Maintenance of river and farmland boundaries",
+            "Introduction of mixed-use development",
+            "Enhanced road infrastructure",
+            "Integration of recreational spaces",
+            "Preservation of town connection"
+          ],
+          "orientation": "North arrow provided",
+          "answers": {
+            "example_answer": {
+              "text": [
+                "The two maps illustrates the norbiton area in the present days, as well as, the planned development.",
+                "Overall, the norbiton industrial area is located at the east side of the town, with a river on the north, separating the farmland from the industrial area, which is located in the center of the map, represented by a few factory biuldings and roads, followed by the main road at the extreme south of the map.",
+                "the planned development shows a substantially growth and modifications of the overall infrastructure of the area between the farmland and the main road.",
+                "Firstly, the planned development of the norbiton area replaces what once were factories for housings.",
+                "Moreover, the roads have been developed to acomodate all the new biuldings that have been planned for the area, which are, a school and a playground to the east side of the roundabout located in the center of the map, as well as shops and a medical center around the round about.",
+                "Secondly, a bridge is planned for the north of the map to cross the river and provide acess to the housing that will be located in farmland."
+              ],
+              "score": "6.0"
+            },
+            "examiner_comments": [
+              "Here is the examiner's comment:",
+              "This response covers the key changes to be made to the industrial area, although more detail could be provided, for example, housing to the west of the roundabout. There is an overview in the second paragraph and the response could be improved by adding a summary of the main changes.",
+              "Ideas are arranged coherently, with some effective use of cohesive devices [what once were], sequencing adverbs [Firstly | Secondly] and referencing [which | that].",
+              "There is some less common vocabulary but spelling is often inaccurate [acomodate / accommodate | biuldings / buildings] and word formation is incorrect [substantially growth / substantial growth].",
+              "To achieve a higher score, the candidate would need to reduce the number of errors in vocabulary and sentence structure."
+            ]
+          }
+        },
+        {
+          "id": "17_2",
+          "type": "mixed charts",
+          "description": "Police Budget analysis for 2017-2018 in a British area, showing sources and expenditure",
+          "details": {
+            "table": {
+              "title": "Police Budget 2017-2018 (in £m)",
+              "sources": [
+                {
+                  "name": "National Government",
+                  "2017": 175.5,
+                  "2018": 177.8,
+                  "change": "+2.3"
+                },
+                {
+                  "name": "Local Taxes",
+                  "2017": 91.2,
+                  "2018": 102.3,
+                  "change": "+11.1"
+                },
+                {
+                  "name": "Other sources (eg grants)",
+                  "2017": 38.0,
+                  "2018": 38.5,
+                  "change": "+0.5"
+                },
+                {
+                  "name": "Total",
+                  "2017": 304.7,
+                  "2018": 318.6,
+                  "change": "+13.9"
+                }
+              ]
+            },
+            "pie_charts": {
+              "title": "How the money was spent",
+              "categories": [
+                {
+                  "name": "Salaries (officers and staff)",
+                  "2017": "75%",
+                  "2018": "69%",
+                  "change": "-6%"
+                },
+                {
+                  "name": "Technology",
+                  "2017": "8%",
+                  "2018": "14%",
+                  "change": "+6%"
+                },
+                {
+                  "name": "Buildings and transport",
+                  "2017": "17%",
+                  "2018": "17%",
+                  "change": "0%"
+                }
+              ]
+            }
+          },
+          "key_features": [
+            "Overall budget increase of £13.9m from 2017 to 2018",
+            "National Government remains largest funding source",
+            "Significant increase in Local Taxes contribution",
+            "Salaries represent largest expenditure in both years",
+            "Notable shift from salaries to technology spending",
+            "Consistent buildings and transport expenditure",
+            "Technology spending showed largest percentage increase",
+            "Balanced distribution between three main expense categories"
+          ],
+          "significant_changes": {
+            "income": "Largest increase in local taxes",
+            "expenditure": "Shift from salaries to technology",
+            "stable_elements": "Buildings and transport percentage",
+            "total_budget": "4.6% increase year-over-year"
+          },
+          "answers": {
+            "example_answer": {
+              "text": [
+                "The table illustrates the data on the police budget in which the money came from and the two pie charts describe the distribution of the amount of money in the two of year 2017 and 2018 in an area of Britain. Overall, there was an upward trend in all three different sources while the money spent on salaries was always the majority of contribution.",
+                "Looking into more details, the highest amount of money on the police budget belonged to 'National Government', 175.5 million pounds in 2017 and it kept rising to 177.8 million pounds. This was followed by 'Local Taxes', at 91.2 million pounds in 2017, after one year, it increase significantly to 102.3 million pounds.",
+                "In term of the how the money was spent, the majority of police budget goes to salaries which was for officers and staff, dropping slightly from 75% in 2017 to 69% in 2018. Meanwhile, the proportion of 'Buildings and transport' remained constantly, at 17% each year. An opposite pattern can be seen in the category of technology, its figure rose sharply from 8% in 2017 to 14% in 2018, which was always the lowest rate during the given period."
+              ],
+              "score": "7.5"
+            },
+            "examiner_comments": [
+              "Here is the examiner's comment:",
+              "This is a strong response. The candidate provides a clear overview at the end of the first paragraph which highlights the consistently increasing trend from the table and identifies the largest category from the pie charts. Full details are given for the first two sources of the budget but, to achieve a higher rating, key features in the table could be more fully extended.",
+              "Information is presented in the order of the table first and then the charts, in a logical manner. The test taker demonstrates a good range of cohesive devices [while | which was] and uses three paragraphs appropriately to organise and sequence the required data.",
+              "There is a wide range of vocabulary [figure rose sharply | during the given period] with accurate spelling, although there are occasional errors in word choice. The range of grammatical structures is wide, including modal [can] and continuous forms [kept rising] – although there are occasional errors e.g. using present tenses [goes on] to describe data from 2017 and 2018.",
+              "To improve this response, the key features presented from the table could be more fully extended. The candidate could also reduce the few errors in sentence structure."
+            ]
+          }
+        },
+        {
+          "id": "17_3",
+          "type": "bar chart",
+          "description": "Comparison of average weekly family spending patterns between 1968 and 2018",
+          "details": {
+            "unit": "Percentage of weekly income",
+            "years_compared": [1968, 2018],
+            "categories": [
+              {
+                "name": "Food",
+                "1968": 35,
+                "2018": 15,
+                "change": -20
+              },
+              {
+                "name": "Housing",
+                "1968": 10,
+                "2018": 20,
+                "change": 10
+              },
+              {
+                "name": "Fuel and power",
+                "1968": 5,
+                "2018": 3,
+                "change": -2
+              },
+              {
+                "name": "Clothing and footware",
+                "1968": 8,
+                "2018": 3,
+                "change": -5
+              },
+              {
+                "name": "Household goods",
+                "1968": 8,
+                "2018": 7,
+                "change": -1
+              },
+              {
+                "name": "Personal goods",
+                "1968": 8,
+                "2018": 4,
+                "change": -4
+              },
+              {
+                "name": "Transport",
+                "1968": 8,
+                "2018": 12,
+                "change": 4
+              },
+              {
+                "name": "Leisure",
+                "1968": 10,
+                "2018": 22,
+                "change": 12
+              }
+            ]
+          },
+          "key_features": [
+            "Dramatic decrease in food expenditure (35% to 15%)",
+            "Significant increase in leisure spending (10% to 22%)",
+            "Housing costs doubled (10% to 20%)",
+            "Reduction in clothing and personal goods spending",
+            "Transport spending increased moderately",
+            "Relatively stable household goods expenditure",
+            "Shift from necessities to lifestyle expenses",
+            "Most categories show notable changes over 50-year period"
+          ],
+          "major_trends": {
+            "increases": [
+              "Leisure",
+              "Housing",
+              "Transport"
+            ],
+            "decreases": [
+              "Food",
+              "Clothing and footware",
+              "Personal goods",
+              "Fuel and power"
+            ],
+            "relatively_stable": [
+              "Household goods"
+            ]
+          },
+          "visualization_format": {
+            "chart_type": "Horizontal bar chart",
+            "comparison_method": "Side-by-side bars",
+            "years_distinguished": "1968 (black), 2018 (grey)"
+          },
+          "answers": {
+            "example_answer": {
+              "text": [
+                "The chart describes the data about families weekly expenditure prospects in 1968 and in 2018.",
+                "The most significant spent rate is on food with a 35% ratio in the year 1968. Housing and clothing come next with the same prospect of 10% of the weekly income. Expenditure on leisure, transport, personal goods and household goods are almost same percentage, the former one is slightly more. Lastly, spent rates on fuel and the others are recorded the least with a 6% in the year of 1968.",
+                "Turning to 2018, food expenditure of families had dropped dramatically to a percentage between 15 to 20. On the other hand, housing spent had rised significantly with an almost 20% slightly more than food expenditures. The most crucial rise was recorded on leisure spent rates. It had soared abut 10% in 50 years. Transportation expeditures comes after and followed by Household goods and the othe categories respetively. Last three had remained the least just as in 1968 which is fuel and power, clothing and footware and personal goods.",
+                "Overall, weekly expenditure averages of families had dramatically changed over 50 years. Some spent rates had remained the same whereas some of the alterations are quite noticable."
+              ],
+              "score": "5.5"
+            },
+            "examiner_comments": [
+              "Here is the examiner's comment:",
+              "This response identifies the key features of household spending in both years, including main areas of spending and changes over time. The overview in the final paragraph notes both what has changed and what has remained similar over the 50-year period. The information is logically organized, with spending in 1968 described first, followed by 2018, and ending with a clear summary. The range of vocabulary is adequate for the task, though there are some spelling errors (rised/risen, expeditures/expenditures, respetively/respectively, noticable/noticeable). The writer uses varied sentence structures but makes some grammatical errors (spent rate/spending rate, the former one/the former, comes/come). These errors do not significantly impede understanding but prevent the response from achieving a higher band score."
+            ]
+          }
+        },
+        {
+          "id": "17_4",
+          "type": "line graph",
+          "description": "Number of shop closures and openings from 2011 to 2018",
+          "details": {
+            "time_span": {
+              "start_year": 2011,
+              "end_year": 2018,
+              "interval": "yearly"
+            },
+            "y_axis": {
+              "label": "Number of shops",
+              "range": "0-9,000",
+              "interval": 1000
+            },
+            "data_lines": [
+              {
+                "name": "Closures",
+                "style": "solid line with dots",
+                "key_points": {
+                  "2011": 6500,
+                  "2012": 6000,
+                  "2013": 7200,
+                  "2014": 6500,
+                  "2015": 700,
+                  "2016": 5200,
+                  "2017": 5000,
+                  "2018": 5300
+                }
+              },
+              {
+                "name": "Openings",
+                "style": "dashed line with dots",
+                "key_points": {
+                  "2011": 8500,
+                  "2012": 4000,
+                  "2013": 5000,
+                  "2014": 6200,
+                  "2015": 4000,
+                  "2016": 4000,
+                  "2017": 4200,
+                  "2018": 3000
+                }
+              }
+            ]
+          },
+          "key_features": [
+            "Sharp decline in shop openings from 2011 to 2012",
+            "Dramatic drop in closures during 2015",
+            "Overall downward trend in openings",
+            "Recovery in closures after 2015",
+            "Widening gap between closures and openings by 2018",
+            "Peak of closures in 2013",
+            "Initial high number of openings in 2011",
+            "Relative stabilization of both trends after 2016"
+          ],
+          "significant_patterns": {
+            "openings": "Steady decline from 8,500 to 3,000",
+            "closures": "Volatile pattern with significant drop in 2015",
+            "net_effect": "More closures than openings in later years",
+            "stability": "More consistent patterns after 2016"
+          },
+          "answers": {
+            "example_answer": {
+              "text": [
+                "The line graph shows trends in shop closures and openings of new shops in a particular country between the years 2011 and 2018.",
+                "In 2011 approximately 6,400 shops closed. The number of closures fluctuated over the next four years until 2015, when there was a dramatic fall in closures to roughly 700 shops. The following year the number of shops closing their doors rose sharply, reaching over 5,000. The figures remained steady for the next two years, with just over 5,000 closures in 2018.",
+                "The number of new shops opening decreased dramatically between 2011 (approximately 8,500) and 2012 (just under 4,000) but rebounded by roughly 50% by 2014. In 2015, the number of openings then fell to the 2012 level, but remained stable for the next two years. The last recorded year, 2018, saw a further fall to 3,000 new openings, the lowest point in this seven year period.",
+                "Overall, the number of shop closures has remained within the 5,000 to 7,000 range (with the exception of 2015). In contrast, new shop openings have shown a wider range of figures, but generally indicate a downward trend over the same period."
+              ],
+              "score": "7.5"
+            },
+            "examiner_comments": [
+              "Here is the examiner's comment:",
+              "This is a strong response which provides a clear overview in the final paragraph. Data is presented and key features are highlighted appropriately. Closures are dealt with first, and the details are clearly presented, including the [dramatic fall] key feature. Shop openings are dealt with separately, in similar detail. Key peaks and low points are appropriately flagged.",
+              "For the highest task score, there could be more detail provided during the periods of [fluctuation] between 2011 to 2014 and 2016 to 2018.",
+              "Ideas are logically organised, taking each line on the graph in turn, and paragraphing is used appropriately, apart from the single sentence first paragraph. Cohesion is well managed.",
+              "The range of vocabulary is wide, with some skilful use [rebounded by roughly | further fall | exception of]. The grammar includes a variety of complex structures, with numerous long sentences containing a number of clauses. This is a good example of a higher-level response to this Task 1 question."
+            ]
+          }
+        },
+        {
           "id": "16_1",
           "type": "line graph",
           "description": "Changes in ownership of electrical appliances and amount of time spent doing housework in households in one country between 1920 and 2019",
@@ -588,6 +985,795 @@
               "examiner_comments": [
                 "Here is the examiner's comment:",
                 "The candidate has described all the key features and has supported these with relevant figures. There is some comparison of the figures in both the chart and the table. Information is presented coherently and there is a clear overall progression (introduction, description of the pie chart information, description of the information in the table and conclusion). Some cohesive devices are used to organise the description [As we can see | Thus | Besides | So]. The range of vocabulary is adequate for the task [combined with | earn | proportion of | freelancers], but there are some errors [all the rest graduates / all the rest of the graduates | it is less / more than (the) proportion of freelance ... same amount of money | concultantants / consultants | ninty / ninety | half bigger than / twice as big as]. There is a mix of simple and complex sentence structures, with some errors [(the) majority | a part-time work | all the rest (of the) graduates | in (the) Government sector]."
+              ]
+            }
+          },
+          {
+            "id": "14_1",
+            "type": "pie charts",
+            "description": "Average percentages of sodium, saturated fats and added sugars in typical meals consumed in the USA",
+            "details": {
+              "number_of_charts": 3,
+              "meal_categories": ["Breakfast", "Lunch", "Dinner", "Snacks"],
+              "nutrients": [
+                {
+                  "name": "Sodium",
+                  "distribution": {
+                    "breakfast": "14%",
+                    "lunch": "29%",
+                    "dinner": "43%",
+                    "snacks": "14%"
+                  }
+                },
+                {
+                  "name": "Saturated fat",
+                  "distribution": {
+                    "breakfast": "16%",
+                    "lunch": "26%",
+                    "dinner": "37%",
+                    "snacks": "21%"
+                  }
+                },
+                {
+                  "name": "Added sugar",
+                  "distribution": {
+                    "breakfast": "16%",
+                    "lunch": "19%",
+                    "dinner": "23%",
+                    "snacks": "42%"
+                  }
+                }
+              ]
+            },
+            "key_features": [
+              "Dinner contains highest percentage of sodium (43%) and saturated fat (37%)",
+              "Snacks contribute highest percentage of added sugar (42%)",
+              "Lunch consistently represents moderate percentages across all nutrients",
+              "Breakfast shows lowest or near-lowest percentages for all nutrients",
+              "Different distribution patterns for each nutrient",
+              "Snacks vary significantly in importance across nutrients (14-42%)",
+              "All three nutrients are identified as potentially unhealthy in excess",
+              "Clear contrast between meal-time consumption patterns for different nutrients"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The diagrams illustrate the average proportions of three types of nutrients in typical meals, which can be unhealthy if consumed too much. The three types include sodium, saturated fats and added sugar. The data is taken from the United States of America.",
+                  "The first chart shows the average percentages of sodium. Dinner contains the most sodium (43%). Breakfast and snacks include an equal proportion of sodium consumed, with each of them adding up 14% of sodium. Through eating lunch, 29% sodium is consumed. The second chart shows the percentages of saturated fat in meals. By eating dinner, 37% saturated fat is consumed. Lunch contributes to a consumption of 26% saturated fat, followed by snacks with 21% and breakfast with 16%. The last chart illustrates the proportions of added sugar. Snacks contain the highest amount of added sugar (42%). Dinner includes 23% A typical dinner includes 23% added sugar, while lunch contains 19% and breakfast includes 16%.",
+                  "All in all, the diagrams show that every typical meal consumed in the USA contains a percentage of at least 14% of nutrients that can be unhealthy if eaten too much."
+                ],
+                "score": "6.5"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "The candidate has accurately reported the data for each chart and has presented a summary of the information, but could achieve a higher score by making comparisons across the charts, e.g. breakfast contains the lowest amounts of sodium, saturated fats and added sugar. The information is logically organised and there is a clear progression throughout the script. The main points are clearly signalled [The first chart | The second chart | All in all] and there are examples of other cohesive devices [each of them]. The range of vocabulary is varied [data | contains | an equal proportion of | consumed | consumption | illustrates]. Minor errors do not cause misunderstanding [adding up 14% of sodium]. There is a mix of simple and complex sentence structures, using active, passive and modal verb forms and there is also subordination through the use of participles [Through eating lunch | By eating dinner | followed by]. More variety in grammatical structures would perhaps achieve a higher score."
+              ]
+            }
+          },
+          {
+            "id": "14_2",
+            "type": "mixed charts",
+            "description": "Export earnings by product category in 2015-2016 and their percentage changes",
+            "details": {
+              "chart_1": {
+                "type": "bar graph",
+                "title": "Export Earnings (2015-2016)",
+                "y_axis": {
+                  "label": "$ billions",
+                  "range": "0-70",
+                  "interval": 10
+                },
+                "x_axis": {
+                  "label": "Product Category",
+                  "categories": [
+                    "Petroleum products",
+                    "Engineered goods",
+                    "Gems and jewellery",
+                    "Agricultural products",
+                    "Textiles"
+                  ]
+                },
+                "data": {
+                  "2015": {
+                    "Petroleum products": 60,
+                    "Engineered goods": 56,
+                    "Gems and jewellery": 42,
+                    "Agricultural products": 31,
+                    "Textiles": 25
+                  },
+                  "2016": {
+                    "Petroleum products": 62,
+                    "Engineered goods": 61,
+                    "Gems and jewellery": 40,
+                    "Agricultural products": 31.5,
+                    "Textiles": 31
+                  }
+                }
+              },
+              "chart_2": {
+                "type": "table",
+                "title": "Percentage change in values (2015-2016)",
+                "data": [
+                  {
+                    "category": "Petroleum products",
+                    "change": "+3.00%",
+                    "trend": "increase"
+                  },
+                  {
+                    "category": "Engineered goods",
+                    "change": "+8.50%",
+                    "trend": "increase"
+                  },
+                  {
+                    "category": "Gems and jewellery",
+                    "change": "-5.18%",
+                    "trend": "decrease"
+                  },
+                  {
+                    "category": "Agricultural products",
+                    "change": "+0.81%",
+                    "trend": "increase"
+                  },
+                  {
+                    "category": "Textiles",
+                    "change": "+15.24%",
+                    "trend": "increase"
+                  }
+                ]
+              }
+            },
+            "key_features": [
+              "Petroleum products remain highest value export",
+              "Textiles show highest percentage increase (15.24%)",
+              "Only Gems and jewellery show decline (-5.18%)",
+              "Engineered goods show significant growth in both value and percentage",
+              "Agricultural products show minimal change (0.81%)",
+              "Most categories show positive growth",
+              "Clear hierarchy in export values across categories",
+              "Value ranges from approximately 25 to 62 billion dollars"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The value of a country's exports may vary in various categories in different years. Usually, the percentage of changes of exports earning will differ by year and category. Here is some information about a country's exports earning based on the year 2015 and 2016.",
+                  "First, I will start with the country's most money-making export which is petroleum products. By the year 2016, the country gained 3% more in the category than the year 2015. However, for gems and jewellery, the percentage of the export earning decreased by 5.18% by the year 2016.",
+                  "Next, engineered goods earnings also follow the foot steps of petroleum product earnings by gaining more than 8% on 2016 than 2015. The value increases from more than 50 billions to more than 60 billions in just a year. This statistic also conclude that the engineers in the country have gained more by the year 2016.",
+                  "Besides that, agricultural products and textiles also earned more with 0.81% and 15.24% respectively. Even though, agricultural products does not gain more than 1%, it stills conclude that the products are still wanted by many people as it earned about more than 30 billions for both years.",
+                  "While for textures, it is seen that it gains it popularity in the year 2016. This is proved when the statistic states that the earning was increased by more than 15.24% in the year 2016 based on the year 2015. Textiles products earned about more than 25 billions in 2015 and earned more than 30 billions in the next year.",
+                  "In conclusion, we can see that this country has overall succeed in the year 2016 than the year 2015. The country managed to gain about more than 22% in the year 2016. Even though gems and jewellery had a decreasing of earnings by 5.18%, it is still the third money-making export product from the country."
+                ],
+                "score": "6.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "The response covers all the key features and presents an overview in the final paragraph. However, the rating could be improved by providing data in $ billions for earnings for each product (not just engineered goods and textiles). One of the comments is debatable [This statistic also conclude that the engineers in the country have gained more by the year 2016]. Organisation follows the order of the bar chart, providing an overall progression, and there is some use of cohesive devices to signal a change of topic. The vocabulary used provides some variety of expression [differ | gained | decreased], even if it is not always appropriate [money-making / profitable | textures / textiles]. Errors occur [earning(s) | foot step / footstep | stills], but the intended meaning is clear. The candidate uses both simple and complex sentence forms, but better control of both grammar and punctuation might result in a higher rating here."
+              ]
+            }
+          },
+          {
+            "id": "14_3",
+            "type": "process diagram",
+            "description": "The process of electricity generation in a hydroelectric power station with day and night operations",
+            "details": {
+              "components": [
+                {
+                  "name": "High-level reservoir",
+                  "function": "Stores water at elevation",
+                  "connection": "Connected to dam"
+                },
+                {
+                  "name": "Dam",
+                  "function": "Controls water flow",
+                  "features": "Large concrete structure"
+                },
+                {
+                  "name": "Intake",
+                  "function": "Controls water entry",
+                  "operation": {
+                    "day": "open",
+                    "night": "closed"
+                  }
+                },
+                {
+                  "name": "Power station",
+                  "components": [
+                    {
+                      "name": "Generator",
+                      "function": "Converts mechanical energy to electricity"
+                    },
+                    {
+                      "name": "Reversible turbines",
+                      "operation": {
+                        "day": "operate generator",
+                        "night": "pump water into high-level reservoir"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "name": "Low-level reservoir",
+                  "function": "Collects water after power generation"
+                }
+              ],
+              "water_flow_patterns": [
+                {
+                  "time": "Day",
+                  "direction": "High to low reservoir",
+                  "purpose": "Generate electricity"
+                },
+                {
+                  "time": "Night",
+                  "direction": "Low to high reservoir",
+                  "purpose": "Pumping for storage"
+                }
+              ],
+              "output": "Power lines to National grid"
+            },
+            "key_features": [
+              "Dual operation cycle (day/night)",
+              "Reversible turbine system",
+              "Two-reservoir design (high and low level)",
+              "Controlled water flow through dam",
+              "Integration with national power grid",
+              "Energy storage capability through pumping",
+              "Automated intake control system",
+              "Sustainable energy generation process"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "A hydroelectric power station can generate electric power by using the energy of water flowing from high level to low level. It works different functions in day and night.",
+                  "In the day time, water in the high-level reservoir go through the intake under the dam which is only open in day time. Then the water flow into the power station in which there is a generator. The generator is operated by a reversible turbines that can transfer the water flowing force to the mechanical force which is the power of the generator. The generated electricity then goes to the national grid through the power lines.",
+                  "On the other hand in the night time, the power station works in a reversed way. It pumps water from the low-level reservoir to high-level reservoir to provide the enough water for day time's work. The water is pumped by the same reversible turbines from low-level reservoir. So the power station actually consumes energy at night. But that is in order to generate more power in the day time.",
+                  "In a conclusion, a hydroelectric power station can generate power is based on the differce heighth of water level. In day time, it uses the natural water energy. Meanwhile in the night, it transfers the water to create and store the energy for the next day."
+                ],
+                "score": "6.0"
+              },
+              "examiner_comments": [
+                "Here is the examiner's comment:",
+                "The answer covers the key features of the process and provides an overview of this process in the final paragraph. The detail is not always clear, but the key features are adequately highlighted. Information is arranged coherently and there is a clear overall progression. Cohesive devices are used to signal different stages of the process [Then | On the other hand | So | In a conclusion | Meanwhile], and there is some use of pronouns for reference [It | which | that]. The range of vocabulary is adequate for the task [energy | operated by | transfer | mechanical], in spite of some errors in word form [a reversed way] and spelling [differce heighth]. There is a mix of simple and complex sentence forms and grammatical control is generally adequate, though there are some errors in the use of articles."
+              ]
+            }
+          },
+          {
+            "id": "14_4",
+            "type": "map",
+            "description": "Comparison of Grange Park's layout in 1920 and present day",
+            "details": {
+              "number_of_plans": 2,
+              "comparison_type": "temporal - historical vs current",
+              "plan_1": {
+                "year": 1920,
+                "features": {
+                  "entrances": [
+                    {
+                      "location": "Arnold Avenue",
+                      "type": "main entrance"
+                    },
+                    {
+                      "location": "Eldon Street",
+                      "type": "main entrance"
+                    }
+                  ],
+                  "facilities": [
+                    {
+                      "name": "Stage for musicians",
+                      "location": "West side"
+                    },
+                    {
+                      "name": "Fountain",
+                      "location": "Central"
+                    },
+                    {
+                      "name": "Glasshouse",
+                      "location": "Southeast"
+                    },
+                    {
+                      "name": "Pond for water plants",
+                      "location": "Northeast"
+                    }
+                  ],
+                  "gardens": {
+                    "type": "Rose gardens",
+                    "count": 3,
+                    "locations": ["Northwest", "Northeast", "Southwest"]
+                  },
+                  "seating": "Multiple seating areas along boundaries"
+                }
+              },
+              "plan_2": {
+                "year": "Present day",
+                "features": {
+                  "entrances": [
+                    {
+                      "location": "Arnold Avenue",
+                      "type": "main entrance"
+                    },
+                    {
+                      "location": "Eldon Street",
+                      "type": "main entrance"
+                    },
+                    {
+                      "location": "Underground car park",
+                      "type": "new entrance"
+                    }
+                  ],
+                  "facilities": [
+                    {
+                      "name": "Amphitheatre for concerts",
+                      "location": "West side"
+                    },
+                    {
+                      "name": "Café",
+                      "location": "Northeast"
+                    },
+                    {
+                      "name": "Children's play area",
+                      "location": "East side"
+                    },
+                    {
+                      "name": "Water feature",
+                      "location": "Southeast"
+                    }
+                  ],
+                  "gardens": {
+                    "type": "Rose gardens",
+                    "count": 2,
+                    "locations": ["Northwest", "Central"]
+                  },
+                  "modern_additions": [
+                    "Underground car park",
+                    "Modern amphitheatre",
+                    "Café facilities"
+                  ]
+                }
+              }
+            },
+            "key_features": [
+              "Modernization of entertainment facilities (stage to amphitheatre)",
+              "Addition of child-friendly facilities",
+              "Introduction of commercial elements (café)",
+              "Improved accessibility (underground parking)",
+              "Reduction in number of rose gardens",
+              "Transformation of water elements (pond to water feature)",
+              "Retention of basic layout with two main entrances",
+              "More structured seating arrangements in modern design"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "Grange Park was opened in 1920, a rectangular area with access from Arnold Avenue on the north side and from Eldon Street on the south side. There was a fountain in the centre, with a stage for musicians situated centre left, a glasshouse to the right of the Eldon Street entrance and a pond for water plants in the north east corner opposite. Around the edges of the park there were rose gardens, with seats nearby for people to smell the flowers and listen to music.",
+                  "The park has altered considerably since then. Now there is one large-ish rose garden, occupying the central area where the fountain stood, and with seats all around it. One of the smaller rose gardens remains on the north side of the park. The bandstand (stage for musicians) has also been replaced, by an amphitheatre for concerts and associated seating. The glasshouse has gone and in its places is a water feature; similarly, where the pond for water plants stood there is now a children's play area with a café nearby. Access to the park is still via the two original entrances, but there is now a third entrance near the water feature from an underground car park.",
+                  "Despite the apparently significant changes, the park retains the basic elements of flowers, water, seating and music, with the addition of a café and a children's play area."
+                ],
+                "score": "9.0"
+              },
+              "examiner_comments": [
+                "Clearly describes both the original and current layout of the park",
+                "Uses precise spatial language to indicate locations (north side, centre left, etc.)",
+                "Maintains logical organization by first describing the original park, then systematically covering the changes",
+                "Includes a thoughtful concluding paragraph that identifies the continuity of basic elements despite the changes",
+                "Uses appropriate transitions and cohesive devices to connect ideas",
+                "Employs varied vocabulary and grammatical structures accurately",
+                "Effectively combines description of physical features with their functions/purposes",
+                "Maintains clarity while handling complex comparative information",
+                "The writing demonstrates strong control of language and organization while providing comprehensive coverage of all key details from both time periods."
+              ]
+            }
+          },
+          {
+            "id": "13_1",
+            "type": "map",
+            "description": "Comparison of road access to a city hospital between 2007 and 2010",
+            "details": {
+              "number_of_maps": 2,
+              "comparison_type": "temporal - infrastructure changes",
+              "map_1": {
+                "year": 2007,
+                "features": {
+                  "roads": [
+                    {
+                      "name": "Ring Road",
+                      "location": "Around hospital"
+                    },
+                    {
+                      "name": "City Road",
+                      "location": "South of hospital"
+                    },
+                    {
+                      "name": "Hospital Road",
+                      "location": "Access road"
+                    }
+                  ],
+                  "facilities": [
+                    {
+                      "name": "Car park",
+                      "type": "Combined staff and public",
+                      "location": "East side"
+                    },
+                    {
+                      "name": "Bus stops",
+                      "count": 6,
+                      "location": "Along Hospital Road"
+                    }
+                  ],
+                  "traffic_management": "Simple intersection"
+                }
+              },
+              "map_2": {
+                "year": 2010,
+                "features": {
+                  "roads": [
+                    {
+                      "name": "Ring Road",
+                      "location": "Around hospital"
+                    },
+                    {
+                      "name": "City Road",
+                      "location": "South of hospital"
+                    },
+                    {
+                      "name": "Hospital Road",
+                      "location": "Access road"
+                    }
+                  ],
+                  "facilities": [
+                    {
+                      "name": "Public car park",
+                      "location": "Northeast"
+                    },
+                    {
+                      "name": "Staff car park",
+                      "location": "Southeast"
+                    },
+                    {
+                      "name": "Bus station",
+                      "location": "West side"
+                    }
+                  ],
+                  "traffic_management": {
+                    "type": "Roundabout",
+                    "location": "Main intersection"
+                  }
+                }
+              }
+            },
+            "key_features": [
+              "Separation of staff and public parking facilities",
+              "Upgrade from bus stops to dedicated bus station",
+              "Introduction of roundabout for better traffic flow",
+              "Maintained basic road structure but improved access",
+              "More organized parking arrangement",
+              "Enhanced public transport facilities",
+              "Better traffic management system",
+              "More efficient use of space around hospital"
+            ],
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "Two maps illustrate the way to get to a city hospital of two different years (2007 and 2010).",
+                  "According to both maps, the main features which is city hospital is sourrounded by Ring Road. In these two maps, there have been two features that still remained. This two features are City Hospital and staff car park. Apart from these two features there are some features that shows on 2010 map but haven't shown on 2007 map. The additional features that appear on the map of 2010 are public car park which located on the east-side of the city hospital. The further additional features are two around-turn on the hospital Rd. which can lead to the bus station.",
+                  "Overall, there are two major features that never change on both 2007 and 2010 map. These features are city hospital and staff car park. However, there are some additional features that appear on the map of 2010 but not on 2007. These features are public car park, bus station and two around-turns."
+                ],
+                "score": "5.5"
+              },
+              "examiner_comments": [
+                "The candidate has identified all the key features (hospital, ring road, new public car park, staff car park and bus station in 2010) but the descriptions are not always accurate e.g. [two features that still remained. This two features are City Hospital and staff car park] whereas the staff car park was formerly a car park for both staff and public, while the mention of the bus station is not developed. Organisation is clear, however, with some good use of cohesive devices [According to | Apart from | The further additional features], although there is an error in the use of reference pronouns [This/These two features]. The range of vocabulary is sufficient for the task [two different years | features | remained | additional], though [features] is over-used. A spelling error is noted in the second line [sourrounded] but this does not cause any difficulty for the reader; similarly, the use of [around-turn] can be easily understood as 'roundabout'. There is a mix of simple and complex sentences, mainly used accurately."
+              ]
+            }
+          },
+          {
+            "id": "13_2",
+            "type": "bar graph",
+            "description": "Percentage of households in owned and rented accommodation in England and Wales from 1918 to 2011",
+            "details": {
+              "time_span": {
+                "start_year": 1918,
+                "end_year": 2011,
+                "data_points": [1918, 1939, 1953, 1961, 1971, 1981, 1991, 2001, 2011]
+              },
+              "y_axis": {
+                "label": "% of households",
+                "range": "0-90",
+                "interval": 10
+              },
+              "data_categories": [
+                {
+                  "name": "Owned accommodation",
+                  "color": "light grey",
+                  "values": {
+                    "1918": 23,
+                    "1939": 32,
+                    "1953": 32,
+                    "1961": 41,
+                    "1971": 50,
+                    "1981": 60,
+                    "1991": 68,
+                    "2001": 69,
+                    "2011": 65
+                  }
+                },
+                {
+                  "name": "Rented accommodation",
+                  "color": "dark grey",
+                  "values": {
+                    "1918": 77,
+                    "1939": 68,
+                    "1953": 68,
+                    "1961": 59,
+                    "1971": 50,
+                    "1981": 40,
+                    "1991": 32,
+                    "2001": 31,
+                    "2011": 35
+                  }
+                }
+              ]
+            },
+            "key_features": [
+              "Complete reversal of ownership patterns over 93 years",
+              "Crossover point around 1971 (50-50 split)",
+              "Steady increase in home ownership from 1918 to 2001",
+              "Slight reversal of trend between 2001 and 2011",
+              "Most dramatic change occurred between 1918 and 1961",
+              "Peak of home ownership in 2001 (69%)",
+              "Lowest rental rates in 2001 (31%)",
+              "Regular data collection intervals throughout the period"
+            ],
+            "significant_trends": {
+              "early_period": "Dominance of rented accommodation",
+              "mid_period": "Transition to home ownership",
+              "recent_period": "Slight increase in renting post-2001",
+              "overall_pattern": "Long-term shift from renting to owning"
+            },
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The provided bar chart depicts the comprssion of buying or renting houses in England and Wales from 1918 to 2011.",
+                  "1918 the rented households was raised about 78 percentage. Then it leveled of between 1939 to 1953. From 1961 to 1981 it dramaticly droped to 35 percentage. This accommodation stated the same until 2001. In 2011 there was a slight increase in rented households and it was up to 38%.",
+                  "The same yeas the owned ones has raise from 21% to 32% in 1918 to1953. In 1939 to 1953 the was a graduate stade in the percentage. Then it starts to leveled up to 69% in 1991. At 2001 to 2011 there was a decline in the owned accommodation and it was 62%.",
+                  "Genarally, both of the rented and owned households has raised and droped throug the years from 1918 to 2011. The was a year that the were the same prectarge and it was 1971 which 50%."
+                ],
+                "score": "5.5"
+              },
+              "examiner_comments": [
+                "The candidate has identified all the main features and trends, including the fact that in 1971 the number of households in owned and rented households was the same. Comments are supported by dates and percentages of households and there is a short overview at the end of the script. Organisation is clear as the writer deals with each category in turn. The range of vocabulary is adequate but there are frequent spelling errors [comprssion/comparison | dramaticly droped/dramatically dropped | stated/stayed | yeas/year | leveled/levelled | Genarally/Generally | prectarge/percentage]. These do not noticeably impede communication, however. There is a mix of grammatical structures and some complex sentence forms, though these are not always accurate: the meaning is still clear, however."
+              ]
+            }
+          },
+          {
+            "id": "13_3",
+            "type": "bar graph",
+            "description": "Top ten countries for electricity production and consumption in 2014",
+            "details": {
+              "unit": "billion kWh",
+              "categories": [
+                {
+                  "name": "Production",
+                  "color": "dark grey"
+                },
+                {
+                  "name": "Consumption",
+                  "color": "light grey"
+                }
+              ],
+              "countries": [
+                {
+                  "rank": 1,
+                  "name": "China",
+                  "production": 5398.0,
+                  "consumption": 5322.0,
+                  "net_difference": 76.0
+                },
+                {
+                  "rank": 2,
+                  "name": "United States",
+                  "production": 4099.0,
+                  "consumption": 3866.0,
+                  "net_difference": 233.0
+                },
+                {
+                  "rank": 3,
+                  "name": "Russia",
+                  "production": 1057.0,
+                  "consumption": 1038.0,
+                  "net_difference": 19.0
+                },
+                {
+                  "rank": 4,
+                  "name": "Japan",
+                  "production": 936.2,
+                  "consumption": 856.7,
+                  "net_difference": 79.5
+                },
+                {
+                  "rank": 5,
+                  "name": "India",
+                  "production": 871.0,
+                  "consumption": 698.8,
+                  "net_difference": 172.2
+                },
+                {
+                  "rank": 6,
+                  "name": "Canada",
+                  "production": 618.9,
+                  "consumption": 499.9,
+                  "net_difference": 119.0
+                },
+                {
+                  "rank": 7,
+                  "name": "France",
+                  "production": 561.2,
+                  "consumption": 462.9,
+                  "net_difference": 98.3
+                },
+                {
+                  "rank": 8,
+                  "name": "Brazil",
+                  "production": 530.7,
+                  "consumption": 455.8,
+                  "net_difference": 74.9
+                },
+                {
+                  "rank": 9,
+                  "name": "Germany",
+                  "production": 526.6,
+                  "consumption": 582.5,
+                  "net_difference": -55.9
+                },
+                {
+                  "rank": 10,
+                  "name": "Korea, Rep.",
+                  "production": 485.1,
+                  "consumption": 449.5,
+                  "net_difference": 35.6
+                }
+              ]
+            },
+            "key_features": [
+              "China and US significantly lead other countries",
+              "Most countries produce more than they consume",
+              "Germany is the only net importer among top 10",
+              "Large gap between top 2 and remaining countries",
+              "China produces over 5 times more than 10th ranked Korea",
+              "Top 3 countries account for majority of production",
+              "Notable production-consumption gaps in US and India",
+              "Asian countries represent 4 of top 10 positions"
+            ],
+            "data_characteristics": {
+              "measurement_year": 2014,
+              "data_format": "Paired bars",
+              "scale": "Linear",
+              "ranking_criterion": "Production volume"
+            },
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "From the bar chart that show the top ten countries for the production and consumption of electricity in 2014. For the production of electricity, the 1st rank is China that have 5,398 billion kwh, the 2nd rank is United States that have 4,099 billion kwh, the 3rd rank is Russia that have 1,059 billion kwh, the 4th rank is Japan that have 936.2 billion kwh, the 5th rank is India that have 841 billion kwh, the 6th rank is Canada that have 618.9 billion kwh, the 7th rank is France that have 561.2 billion kwh, the 8th rank is Brazil that have 530.9 billion kwh, the 9th rank is Germany that have 526.6 billion kwh and the 10th rank is Republic of Korea that have 485.1 billion kwh. For the consumption of electricity, the 1st rank is China that have 5,322 billion kwh, the 2nd rank is United States that have 3,866 billion kwh, the 3rd is Russia that have 1,038 billion kwh, the 4th rank is Japan that have 856.9 billion kwh, the 5th rank is India that have 698.8 billion kwh, the 6th rank is Germany that have 582.5 billion kwh, the 7th rank is Canada that have 499.9 kwh, the 8th rank is France that have 462.9 billion kwh, the 9th rank is Brazil that have 455.8 kwh and the 10th is Republic of Korea that have 449.5 billion kwh.",
+                  "From the information, The country that have the most in production and consumption is China. The country that have the least in production and consumption is Republic of Korea.",
+                  "Almost all the country have production more than consumption, exept Germany that have consumption more than production."
+                ],
+                "score": "5.0"
+              },
+              "examiner_comments": [
+                "This response is rather mechanical as it lists the countries in order of production and consumption of electricity, identifies the countries that produce and consume most and least and notes the fact that all the countries except Germany produce more than they consume. However, the writing is supported by data, although there are some errors in the figures (the figures for production in Russia, India and Brazil are inaccurate as is the figure for consumption in Japan). Organisation is limited and there are few examples of cohesive devices; similarly the range of vocabulary is limited although just adequate for the task. There is a mix of simple and complex sentence structures, but complex forms are mainly inaccurate [that have/has | Almost all the country have/Almost all the countries have]."
+              ]
+            }
+          },
+          {
+            "id": "13_4",
+            "type": "map",
+            "description": "Comparison of university sports centre layout - present and future plans",
+            "details": {
+              "number_of_plans": 2,
+              "comparison_type": "current vs planned development",
+              "plan_1": {
+                "title": "Present Layout",
+                "features": {
+                  "main_facilities": [
+                    {
+                      "name": "25m Pool",
+                      "location": "Central"
+                    },
+                    {
+                      "name": "Gym",
+                      "location": "North"
+                    },
+                    {
+                      "name": "Outdoor courts",
+                      "location": "East and West wings",
+                      "count": 2
+                    }
+                  ],
+                  "support_facilities": [
+                    {
+                      "name": "Reception",
+                      "location": "South entrance"
+                    },
+                    {
+                      "name": "Changing room",
+                      "location": "West side"
+                    },
+                    {
+                      "name": "Seating",
+                      "location": "East side"
+                    }
+                  ]
+                }
+              },
+              "plan_2": {
+                "title": "Future Plans",
+                "features": {
+                  "main_facilities": [
+                    {
+                      "name": "25m Pool",
+                      "location": "Central"
+                    },
+                    {
+                      "name": "Leisure pool",
+                      "location": "Northwest",
+                      "type": "New facility"
+                    },
+                    {
+                      "name": "Sports hall",
+                      "location": "Northeast",
+                      "type": "New facility"
+                    },
+                    {
+                      "name": "Dance studio",
+                      "location": "East",
+                      "type": "New facility"
+                    },
+                    {
+                      "name": "Gym",
+                      "location": "North"
+                    }
+                  ],
+                  "support_facilities": [
+                    {
+                      "name": "Reception",
+                      "location": "South entrance"
+                    },
+                    {
+                      "name": "Changing rooms",
+                      "location": "Multiple locations",
+                      "count": 2
+                    },
+                    {
+                      "name": "Sports shop",
+                      "location": "Southwest",
+                      "type": "New facility"
+                    },
+                    {
+                      "name": "Café",
+                      "location": "Southeast",
+                      "type": "New facility"
+                    }
+                  ]
+                }
+              }
+            },
+            "key_features": [
+              "Replacement of outdoor courts with indoor facilities",
+              "Addition of leisure pool alongside competition pool",
+              "Introduction of commercial facilities (café, sports shop)",
+              "Expanded changing facilities",
+              "New specialized areas (dance studio, sports hall)",
+              "Maintained central pool and reception layout",
+              "More efficient use of space",
+              "Enhanced indoor sporting options"
+            ],
+            "orientation": "North arrow provided on both plans",
+            "answers": {
+              "example_answer": {
+                "text": [
+                  "The following plans illustrate the layout of the university's sports centre at the present moment and the way it will look after a reconstruction.",
+                  "According to the new layout, the redeveloped sports centre is going to become bigger. First, the gym is going to be larger and an additional changing room is going to appear. Besides, there is going to be a sports shop and a cafe in the reception zone. Apart from that, 2 dance studios are going to work opposite the gym. Finally, the sports centre is going to get a new leisure pool. It is going to be located in the place where the outdoor courts used to be. As can be seen from the new layout, both outdoor courts are going to be replaced by other facilities in the renovated sports centre. Furthermore, a sports hall is going to appear in the university sports centre. It is also clear from the second layout that the redeveloped sports centre is going to be a fully indoor one."
+                ],
+                "score": "6.5"
+              },
+              "examiner_comments": [
+                "This answer addresses the main features of the redeveloped sports centre, but it could be improved by adding a brief description of the centre as it is at present. Another aspect of the response that could be improved would be to indicate where the various facilities will be situated in relation to each other: from the description above the reader cannot know where for example the gym, the leisure pool and the dance studios will be located. The range of vocabulary is above average, however: [illustrate | reconstruction | redeveloped | additional | replaced by other facilities | renovated] and shows flexibility and precision. There is a variety of complex structures such as present and future verb forms, passive forms and relative clauses [the place where... | It is also clear... that]. There could be more variety in the language used to express future plans: [going to] is over-used."
               ]
             }
           }
