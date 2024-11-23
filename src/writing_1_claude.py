@@ -5,8 +5,21 @@ import os
 import matplotlib.pyplot as plt
 import numpy as np
 import traceback
+from dotenv import load_dotenv
+import logging
 
-ANTHROPIC_API_KEY='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'
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+# Load environment variables
+load_dotenv()
+
+# Validate API key
+ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
+if not ANTHROPIC_API_KEY:
+    raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
+
 MODEL = "claude-3-opus-20240229"
 
 class IELTSWritingAgent:
@@ -67,6 +80,10 @@ class IELTSWritingAgent:
         
         prompt = f"""You are an IELTS Writing Task 1 question generator. Create a new unique question for visual type: {visual_type}.
 
+        {
+        'For mixed charts, create two related charts (bar and line) about the same topic.' if visual_type == 'mixed charts' else ''
+        }
+
         Here's a sample question structure to follow:
         {json.dumps(sample_question, indent=2) if sample_question else 'No sample available'}
 
@@ -122,58 +139,6 @@ class IELTSWritingAgent:
             ]
         }}"""
 
-        if visual_type == "mixed charts":
-            prompt += """
-            You are an IELTS Writing Task 1 question generator. Create a new unique question showing two related charts (one bar chart and one line graph) about the same topic.
-
-            The response must be a valid JSON object with this exact structure:
-            {{
-                "description": "Write a detailed description of what the two charts show",
-                "details": {{
-                    "time_span": {{
-                        "start_year": "YYYY",
-                        "end_year": "YYYY"
-                    }},
-                    "categories": ["category1", "category2", "category3"],
-                    "measurements": {{
-                        "unit": "specify unit",
-                        "range": "specify range"
-                    }}
-                }},
-                "data": {{
-                    "title": "Overall title for both charts",
-                    "x_axis": {{
-                        "label": "Time period"
-                    }},
-                    "y_axis": {{
-                        "label": "Values (specify unit)"
-                    }},
-                    "series": [
-                        {{
-                            "name": "Bar Chart Title",
-                            "type": "bar",
-                            "categories": ["2019", "2020", "2021"],
-                            "values": [100, 150, 200]
-                        }},
-                        {{
-                            "name": "Line Graph Title",
-                            "type": "line",
-                            "categories": ["2019", "2020", "2021"],
-                            "values": [80, 120, 160]
-                        }}
-                    ]
-                }},
-                "key_features": [
-                    "Key feature 1",
-                    "Key feature 2",
-                    "Key feature 3"
-                ]
-            }}
-
-            Create realistic data that shows clear trends or patterns. Make sure both charts are related and tell a coherent story.
-            IMPORTANT: Return ONLY the JSON object with no additional text."""
-
-
         try:
             response = self.anthropic.messages.create(
                 model=MODEL,
@@ -205,19 +170,18 @@ class IELTSWritingAgent:
                 print(response_text)
                 raise
             
-            # Generate visualization
-            visual = self._generate_visualization(visual_type, question_data)
+            # Generate visualization and store it with the question
+            fig = self._generate_visualization(visual_type, question_data)
             
-            # Store current question with additional metadata
+            # Store current question with visualization
             self.current_question = {
                 "type": visual_type,
                 "data": question_data,
-                "visual": visual,
-                "sample_reference": sample_question['id'] if sample_question else None,
+                "figure": fig,  # Store the matplotlib figure
                 "expected_band_descriptors": self._get_band_descriptors_for_type(visual_type)
             }
             
-            # Display question and visual
+            # Display question and visual together
             self._display_question()
             
             return self._format_question_display()
@@ -369,9 +333,15 @@ class IELTSWritingAgent:
     def _generate_visualization(self, visual_type, question_data):
         """Generate visualization based on type and data"""
         plt.style.use('classic')
-        plt.close('all')
+        plt.close('all')  # Close any existing plots
         
         try:
+            # Validate data before visualization
+            if not question_data.get('data') or not question_data['data'].get('series'):
+                logger.error("Invalid data structure for visualization")
+                return None
+                
+            # Generate appropriate visualization
             if visual_type == "bar graph":
                 fig = self._generate_bar_graph(question_data)
             elif visual_type == "line graph":
@@ -380,15 +350,20 @@ class IELTSWritingAgent:
                 fig = self._generate_pie_chart(question_data)
             elif visual_type == "mixed charts":
                 fig = self._generate_mixed_charts(question_data)
-            # elif visual_type == "map":
-                # fig = self._generate_map_comparison(question_data)
+            else:
+                logger.error(f"Unsupported visual type: {visual_type}")
+                return None
             
             if fig:
-                plt.show()
+                # Set figure size and adjust layout
+                fig.set_size_inches(12, 6)
+                fig.tight_layout()
                 return fig
             return None
+            
         except Exception as e:
-            print(f"Error in visualization generation: {e}")
+            logger.error(f"Error in visualization generation: {str(e)}")
+            traceback.print_exc()
             return None
 
     def _generate_line_graph(self, question_data):
@@ -433,7 +408,8 @@ class IELTSWritingAgent:
             series = data['series']
             
             # Print debug information
-            print("Debug - Series data:", series)
+            logger.debug("Series data: %s", series)
+            logger.debug("Question data: %s", json.dumps(question_data, indent=2))
             
             # Convert data to proper format
             categories = series[0]['categories']
@@ -604,36 +580,43 @@ class IELTSWritingAgent:
             return None
 
     def _display_question(self):
-        """Display the current question and visualization"""
-        print("\n=== IELTS Writing Task 1 ===")
-        print("\nQuestion:")
-        print(self.current_question['data']['description'])
-        print("\nKey Features to Consider:")
-        for i, feature in enumerate(self.current_question['data']['key_features'], 1):
-            print(f"{i}. {feature}")
+        """Display the current question and visualization together"""
+        # First show the formatted question
+        print(self._format_question_display())
         
-        # Display visualization if available
-        if self.current_question['visual']:
-            plt.show()  # This should display the graph
+        # Then display the visualization if available
+        if self.current_question.get('figure'):
+            try:
+                plt.figure(self.current_question['figure'].number)
+                plt.show()
+            except Exception as e:
+                logger.error(f"Error displaying visualization: {e}")
 
     def _format_feedback(self, feedback):
         """Format the evaluation feedback in a clear, readable way"""
         formatted = """
-╔══════════════════════════════════════════════════════════════════════════════╗
+╔════════════════════════════════════════════════════════════════════════════╗
 ║                           IELTS Writing Task 1 Evaluation                     ║
-╠═══════════════════════════════════════════════════════════════════════════════╣
+╠════════════════════════════════════════════════════════════════════════════╣
 {}
-╚══════════════════════════════════════════��═══════════════════════════════════╝
+╚═══════════════════════════════════════════════════════════════════════════════╝
 """
         # Format the feedback content to fit within the box
         content = feedback.replace('\n', '\n║ ')
         return formatted.format(content)
 
+    def _handle_error(self, error_type, error, response_text=None):
+        """Centralized error handling"""
+        error_message = f"Error ({error_type}): {str(error)}"
+        if response_text:
+            error_message += f"\nRaw response: {response_text}"
+        logger.error(error_message)
+        return f"Error: {error_type}"
+
 # Initialize the agent
 agent = IELTSWritingAgent()
 
-# Or get a random type
-question = agent.get_new_question(visual_type="mixed charts")
+question = agent.get_new_question()
 
 # # Later, when the student has written their answer:
 # answer = """
