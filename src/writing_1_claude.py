@@ -593,17 +593,26 @@ class IELTSWritingAgent:
                 logger.error(f"Error displaying visualization: {e}")
 
     def _format_feedback(self, feedback):
-        """Format the evaluation feedback in a clear, readable way"""
-        formatted = """
-╔════════════════════════════════════════════════════════════════════════════╗
-║                           IELTS Writing Task 1 Evaluation                     ║
-╠════════════════════════════════════════════════════════════════════════════╣
-{}
-╚═══════════════════════════════════════════════════════════════════════════════╝
-"""
-        # Format the feedback content to fit within the box
-        content = feedback.replace('\n', '\n║ ')
-        return formatted.format(content)
+        """
+        Format the feedback with nice borders
+        """
+        # Handle TextBlock from Claude-3 response
+        if hasattr(feedback, 'text'):
+            content = feedback.text
+        elif isinstance(feedback, list) and hasattr(feedback[0], 'text'):
+            content = feedback[0].text
+        else:
+            # Fallback for string or list of strings
+            content = feedback if isinstance(feedback, str) else '\n'.join(str(f) for f in feedback)
+        
+        # Format with borders
+        content = content.replace('\n', '\n║ ')
+        formatted = (
+            "╔════════════════════════ IELTS Writing Evaluation ════════════════════════╗\n"
+            f"║ {content}\n"
+            "╚════════════════════════════════════════════════════════════════════════╝"
+        )
+        return formatted
 
     def _handle_error(self, error_type, error, response_text=None):
         """Centralized error handling"""
@@ -616,11 +625,50 @@ class IELTSWritingAgent:
 # Initialize the agent
 agent = IELTSWritingAgent()
 
-question = agent.get_new_question()
+def get_user_answer():
+    """
+    Get answer input from user with proper instructions and formatting.
+    Allows for multiple lines of input until user indicates they're done.
+    """
+    print("\n╔════════════════════════════════════════════════════════════════════════════╗")
+    print("║                           Write your answer below                            ║")
+    print("║ Instructions:                                                               ║")
+    print("║ - Write at least 150 words                                                 ║")
+    print("║ - Type your answer, pressing Enter for new lines                           ║")
+    print("║ - When finished, type 'DONE' on a new line and press Enter                 ║")
+    print("╚════════════════════════════════════════════════════════════════════════════╝\n")
 
-# # Later, when the student has written their answer:
-# answer = """
-# [Student's answer text here]
-# """
-# feedback = agent.evaluate_answer(answer)
-# print(feedback)
+    lines = []
+    while True:
+        line = input()
+        if line.strip().upper() == 'DONE':
+            break
+        lines.append(line)
+    
+    return '\n'.join(lines)
+
+def main():
+    # Get a new question
+    agent.get_new_question()
+    
+    # Get user's answer
+    print("\nNow, write your answer. When finished, type 'DONE' on a new line.")
+    answer = get_user_answer()
+    
+    # Show word count
+    word_count = len(answer.split())
+    print(f"\nWord count: {word_count}")
+    
+    if word_count < agent.MINIMUM_WORDS:
+        print(f"\nWarning: Your answer is below the minimum requirement of {agent.MINIMUM_WORDS} words.")
+        proceed = input("Would you like to proceed with evaluation anyway? (yes/no): ")
+        if proceed.lower() != 'yes':
+            print("Evaluation cancelled. Please try again with a longer answer.")
+            return
+
+    # Evaluate the answer
+    feedback = agent.evaluate_answer(answer)
+    print(feedback)
+
+if __name__ == "__main__":
+    main()
