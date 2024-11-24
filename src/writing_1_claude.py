@@ -45,7 +45,7 @@ class IELTSWritingAgent:
         
         # Load templates and samples
         templates_path = os.path.join(parent_dir, 'writing', 'ielts_templates_writing.json')
-        samples_path = os.path.join(parent_dir, 'writing', 'writing_samples.json')
+        samples_path = os.path.join(parent_dir, 'writing', 'writing_1_samples.json')
 
         try:
             with open(templates_path, 'r') as f:
