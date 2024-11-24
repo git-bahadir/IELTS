@@ -12,6 +12,436 @@
     ],
     "question_examples": [
       {
+        "id": "19_1",
+        "type": "line graph",
+        "description": [
+          "The graph below gives information on the numbers of participants for different activities at one social centre in Melbourne, Australia for the period 2000 to 2020.",
+          "Summarise the information by selecting and reporting the main features, and make comparisons where relevant."
+        ],
+        "details": {
+          "time_span": {
+            "period": "2000-2020",
+            "intervals": "5 years"
+          },
+          "y_axis": {
+            "label": "Number of participants",
+            "range": "0-70",
+            "interval": 10
+          },
+          "activities": [
+            {
+              "name": "Film club",
+              "line_style": "solid with circles",
+              "values": {
+                "2000": 65,
+                "2005": 62,
+                "2010": 60,
+                "2015": 64,
+                "2020": 66
+              },
+              "trend": "Consistently highest participation, slight fluctuations"
+            },
+            {
+              "name": "Martial arts",
+              "line_style": "dashed with triangles",
+              "values": {
+                "2000": 35,
+                "2005": 32,
+                "2010": 38,
+                "2015": 35,
+                "2020": 36
+              },
+              "trend": "Relatively stable, minor fluctuations"
+            },
+            {
+              "name": "Amateur dramatics",
+              "line_style": "dotted with diamonds",
+              "values": {
+                "2000": 25,
+                "2005": 28,
+                "2010": 20,
+                "2015": 15,
+                "2020": 7
+              },
+              "trend": "Steady decline after 2005"
+            },
+            {
+              "name": "Table tennis",
+              "line_style": "dot-dash with squares",
+              "values": {
+                "2000": 15,
+                "2005": 20,
+                "2010": 20,
+                "2015": 35,
+                "2020": 54
+              },
+              "trend": "Dramatic increase, especially after 2010"
+            },
+            {
+              "name": "Musical performances",
+              "line_style": "solid with x marks",
+              "values": {
+                "2000": 0,
+                "2005": 0,
+                "2010": 12,
+                "2015": 15,
+                "2020": 18
+              },
+              "trend": "Started in 2010, steady growth"
+            }
+          ]
+        },
+        "key_features": [
+          "Film club maintained highest participation throughout",
+          "Table tennis showed most dramatic growth",
+          "Amateur dramatics experienced continuous decline",
+          "Musical performances introduced after 2005",
+          "Martial arts maintained steady participation",
+          "Significant changes in activity preferences over time",
+          "Most dramatic changes occurred after 2010"
+        ],
+        "data_characteristics": {
+          "type": "Time series data",
+          "visualization": "Multiple line graph",
+          "time_period": "20 years",
+          "measurement": "Number of participants"
+        },
+        "answers": {
+          "example_answer": {
+            "text": [
+              "The line graph highlights data about how many people participated in 5 various activities at one social club in Melbourne, Australia for the first two decades of XXI century.",
+              "Overall, over the years more participants got involved in activities on Table tennis and Musical plays, while Amateur dramatics lost its interest for public. Being analytical, two types of activities which are Film club and Martial arts levelled off. Another striking point is that over a twenty - year period between 2000 and 2020, the Film club kept its position as the most popular activity.",
+              "Looking at the details of Table tennis, in 2000, there were about 15 participants in club for it. In the next 10 years, it attracted 5 more members, before dramatic surge from 20 to below 60 participants. In 2005, the activity on Musical performances introduced and over the following 15 years, it saw a steady increase on the number of participants by about 20 in the last year.",
+              "Regarding next two activities, Film club and Martial arts, the saw fluctuations, but without any changes in the overall position. Film club started the process with about 60 members and finished it just below 40, while the participants of Martial arts kept their numbers at around 35.",
+              "The number of participants of amateurs on draturgy was about 25 and it saw a steady decrease then by 10."
+            ],
+            "score": "6.5"
+          },
+          "examiner_comments": [
+            "Here is the examiner's comment:",
+            "This good response begins with an introduction, then in the second paragraph summarises the main trends. The next few paragraphs contain the data and cover each of the participant groups. The information is organised logically and a range of linking devices are used [Overall | Another striking point | In the next 10 years]. There is also some flexible reference and substitution [while | which | it | their] with a few inaccuracies.",
+            "Vocabulary is generally good [got involved in | levelled off | dramatic surge], but there are some errors [fluctuated | fluctuations | amateurs on draturgy | amateur dramatics]. This response has a variety of grammatical structures and the past simple tense is well controlled. There are sentences with multiple clauses, including superlatives [most popular], but also some errors in verb forms [introduced / was introduced], some missing articles [public / the public | dramatic surge / a dramatic surge | next two / the next two], some errors with prepositions [in club for it | in the club | by about 20 / to about 20] and inconsistent capitalization. The candidate should work on avoiding confusion between similar vocabulary and structures."
+          ]
+        }
+      },
+      {
+        "id": "19_2",
+        "type": "map",
+        "description": [
+          "The plans below show a harbour in 2000 and how it looks today.",
+          "Summarise the information by selecting and reporting the main features, and make comparisons where relevant."
+        ],
+        "details": {
+          "time_periods": {
+            "past": "2000",
+            "present": "today"
+          },
+          "layout_2000": {
+            "facilities": [
+              {
+                "name": "Showers & toilets",
+                "location": "Western edge"
+              },
+              {
+                "name": "Car park",
+                "location": "Two separate areas on western side"
+              },
+              {
+                "name": "Marina (private yachts)",
+                "location": "Northwest area"
+              },
+              {
+                "name": "Fishing boats",
+                "location": "Central north area"
+              },
+              {
+                "name": "Dock",
+                "location": "Northeast area"
+              },
+              {
+                "name": "Passenger ferries",
+                "location": "Northeast area"
+              },
+              {
+                "name": "Lifeboat",
+                "location": "South of road"
+              },
+              {
+                "name": "Castle (disused)",
+                "location": "Southeast peninsula"
+              },
+              {
+                "name": "Public beach",
+                "location": "Northern edge"
+              }
+            ]
+          },
+          "layout_today": {
+            "changes": [
+              {
+                "type": "New facilities",
+                "items": [
+                  "Additional showers & toilets block",
+                  "Marina (private yachts) relocated",
+                  "Cafes & shops added",
+                  "Hotel replacing castle",
+                  "Car parks rearranged"
+                ]
+              },
+              {
+                "type": "Modifications",
+                "items": [
+                  "Fishing boats area modified",
+                  "Dock and passenger ferries reorganized",
+                  "Road and public access maintained"
+                ]
+              }
+            ]
+          }
+        },
+        "key_features": [
+                "Significant modernization of facilities",
+                "Enhanced commercial development",
+                "Improved visitor amenities",
+                "Maintained maritime functions",
+                "Better organization of space",
+                "Historical structure replaced",
+                "Expanded public facilities"
+        ],
+        "data_characteristics": {
+                "type": "Comparative maps",
+                "visualization": "Architectural plan",
+                "time_comparison": "Approximately 20+ years",
+                "layout_style": "Harbor plan with facilities marked"
+        },
+        "answers": {
+          "example_answer": {
+            "text": [
+              "The maps give the information about the improvement of the Porth Harbour from 2000 to today. The first impression is that the Harbour today made use of more areas than in the past.",
+              "It can be seen that there are several areas that still stay the same today as in 2000. These include the Carpark and the Showers and Toilets which are located in the north west of the map. However, one more Showers and Toilets was built between the two Carpark today. Besides, the Porth Harbour today also has one more Passenger ferries which right next to the left of the existing one from 2000. Moreover, an area for Cafés and shops is added next to the Lifeboat one. Another significant difference is the relocation of the Marina (private yachts) and the fishing boats areas. Today, the Marina is moved down to the place of the old Fishing boats area to have more space and vice-versa, the Fishing boats area is relocated at the old Marina area. The last noticeable change in this Harbour is the Construction in the South East. The disused old Castle was destroyed and a new Hotel was built there today and another Hotel is also added in the Private beach area.",
+              "Overall, even that the harbour still keeps some areas unchanged, there are many reconstructions and improvements for the Porth Harbour today."
+            ],
+            "score": "6.5"
+          },
+          "examiner_comments": [
+            "Here is the examiner's comment:",
+            "Overall, this is a strong response. The candidate has covered the main features of the changes and has included an overview to summarise the changes, in the first and the last paragraph. The main details are accurate, apart from the addition of [another Hotel] in the private beach area.",
+            "The reader can follow the ideas as they are logically organised. This is due to the linking words [However | Besides | also | Another | Overall] and cohesive features [existing one | vice-versa], but there are some errors.",
+            "Vocabulary demonstrates some flexibility [first impression | relocated | noticeable change], but there is also some inaccuracy and repetition. The weakest area, though, is the use of grammatical structures. There is a mix of sentence forms, with some good complex use [made use of | can be seen that | These include ... which are] but some errors, such as inaccurate use of the plural form [one more Showers | boats areas] (because the candidate has copied the plural form from the question) and incorrect verb form [is moved down | has been moved down].",
+            "To achieve a higher score, the candidate should present an overview to summarise the main stages, for example: The changes to the harbour between 2000 and now focus on improvements that are targeted towards attracting visitors or tourists to the harbour, and include a new hotel, with private beach, more capacity for the passenger ferries and expanded facilities."
+          ]
+        }
+      },
+      {
+        "id": "19_3",
+        "type": "process diagram",
+        "description": [
+          "The diagram below shows how a biofuel called ethanol is produced.",
+          "Summarise the information by selecting and reporting the main features, and make comparisons where relevant."
+        ],
+        "details": {
+          "process_title": "Biofuel production: how ethanol is made",
+          "stages": [
+            {
+              "name": "Initial growth",
+              "components": {
+                "inputs": [
+                  "Energy (sunlight)",
+                  "Carbon dioxide"
+                ],
+                "process": "Plants and trees grow"
+              }
+            },
+            {
+              "name": "Harvesting",
+              "components": {
+                "equipment": "Harvesting vehicles",
+                "output": "Raw plant material"
+              }
+            },
+            {
+              "name": "Pre-processing",
+              "components": {
+                "input": "Harvested material",
+                "output": "Cellulose"
+              }
+            },
+            {
+              "name": "Processing",
+              "components": {
+                "input": "Cellulose",
+                "output": "Sugars",
+                "facility": "Processing plant"
+              }
+            },
+            {
+              "name": "Fermentation",
+              "components": {
+                "input": [
+                  "Sugars",
+                  "Microbes added"
+                ],
+                "output": "Ethanol"
+              }
+            },
+            {
+              "name": "Usage and emissions",
+              "components": {
+                "applications": [
+                  "Cars",
+                  "Trucks",
+                  "Aircraft"
+                ],
+                "byproduct": "Carbon dioxide"
+              }
+            }
+          ],
+          "cycle_characteristics": {
+            "type": "Circular process",
+            "key_element": "Carbon dioxide recycling",
+            "continuous_nature": "Renewable cycle"
+          }
+        },
+        "key_features": [
+          "Circular nature of production process",
+          "Multiple stages of transformation",
+          "Various end-use applications",
+          "Carbon dioxide recycling in process",
+          "Biological and industrial processes combined",
+          "Renewable energy aspects",
+          "Multiple transport applications"
+        ],
+        "data_characteristics": {
+          "type": "Process diagram",
+          "visualization": "Circular flow chart",
+          "process_type": "Biological and industrial",
+          "diagram_style": "Step-by-step illustration"
+        },
+        "answers": {
+          "example_answer": {
+            "text": [
+              "The given diagram illustrates the various stages in the process of producing ethanol, a kind of biofuel.",
+              "Overall, there are about 9 main phrases in the ethanol production, starting with growing plants and tress, and finishing with supplying ethanol for transportation and gas mission.",
+              "At the first stage in the process of making ethanol, a large number of trees and plants are grown. Thanks to the source of energy from sunlight and carbon dioxide from humman and transportatlin, plants and trees grow up and are harvested when they are mature enough. After being collected by machine, they are put into another machine where slice them into pieces to form cellulose. This step is call pre-processing.",
+              "In the following stage, cellulose are taken to a factory where 'processing' stage occurs. Subsequently, Sugars are extracted from original cellulose before microbes are added to make ethanol. It is then used as a tupe of fuel for a lot of means of transportation such as cars, trucks, airplanes. Finally, a huge amount of carbon dioxide which is released into the air become energy for process of 'photosynthesis' of plants and trees."
+            ],
+            "score": "6.5"
+          },
+          "examiner_comments": [
+            "Here is the examiner's comment:",
+            "This is a strong response. The first short paragraph is an introduction, then the second paragraph contains an overview of the process [starting with growing plants] and [finishing with supplying ethanol]. This is sufficient as an overview, but the candidate should also summarise the main stages. The rest of the response presents and highlights the process.",
+            "Ideas are logically organised and the response follows the order given in the diagram. There is good use of linking words to describe a process [At the first stage | After being | Subsequently] and other linking devices, including reference and substitution [they | then used].",
+            "The candidate uses vocabulary well with some flexibility [extracted | photosynthesis], but there are a handful of errors [phrases | phases | tress | trees | humman | human | transportatlin | transportation | tupe | type]. These errors do not get in the way of the meaning.",
+            "Grammatical range is quite broad and there is a variety of complex structures and sentences with multiple clauses. There are a few errors [where slice them | which slices them].",
+            "To achieve a higher score, an overview which summarises the main stages should be presented, for example: This cycle for biofuel production involves three main stages: harvesting and preparing plant material for processing, producing ethanol by chemical processing, then using the fuel for transportation, before the cycle begins again."
+          ]
+        }
+      },
+      {
+        "id": "19_4",
+        "type": "combined charts",
+        "description": [
+          "The charts below give information on the location and types of dance classes young people in a town in Australia are currently attending.",
+          "Summarise the information by selecting and reporting the main features, and make comparisons where relevant."
+        ],
+        "details": {
+          "pie_chart": {
+            "title": "Location of dance classes",
+            "segments": [
+              {
+                "location": "Private studios",
+                "percentage": 48,
+                "position": "Largest segment"
+              },
+              {
+                "location": "School halls (after-school)",
+                "percentage": 24,
+                "position": "Second largest"
+              },
+              {
+                "location": "Community halls & other",
+                "percentage": 18,
+                "position": "Third largest"
+              },
+              {
+                "location": "College-based studios",
+                "percentage": 10,
+                "position": "Smallest segment"
+              }
+            ]
+          },
+          "bar_chart": {
+            "title": "Types of dance classes (by age group)",
+            "dance_styles": [
+              {
+                "type": "Ballet",
+                "students": {
+                  "Under 11": 650,
+                  "11-16": 300
+                }
+              },
+              {
+                "type": "Tap",
+                "students": {
+                  "Under 11": 450,
+                  "11-16": 400
+                }
+              },
+              {
+                "type": "Modern",
+                "students": {
+                  "Under 11": 300,
+                  "11-16": 500
+                }
+              }
+            ],
+            "scale": {
+              "range": "0-700",
+              "unit": "Number of students",
+              "interval": 100
+            }
+          }
+        },
+        "key_features": [
+          "Private studios dominate class locations",
+          "School halls significant for after-school classes",
+          "Age groups show different preferences",
+          "Ballet most popular among under 11s",
+          "Modern dance preferred by 11-16 age group",
+          "Tap dancing shows similar popularity across ages",
+          "Institutional venues account for 34% combined"
+        ],
+        "data_characteristics": {
+          "type": "Mixed visualization",
+          "components": [
+            "Pie chart for locations",
+            "Bar chart for dance types and age groups"
+          ],
+          "measurement": [
+            "Percentages for locations",
+            "Absolute numbers for students"
+          ]
+        },
+        "answers": {
+          "example_answer": {
+            "text": [
+              "The table and chart provide information about the location and different types of dance class undertaken by young people in Australia.",
+              "The chart says In Private Studios 48% young people are taking dance classes.",
+              "And in community halls and other 18% folks are taking dance classes And other location. After school classes 24% people are taking classes and other last one location college based studies these are 10% percent people Taking classes. The table reveal in Ballet type dance 600 students under age of 11 learning. And 300 age of 11-16 are learning. And 420 students age of 11-16 learning and last type of Dance Modern these are 515 students are learning who are under age of 11 and 300 other students who are age of 11-16.",
+              "To conclusion in Private Studio the numbers of people much higher than other locations. And type of ballet dance classes number of student Much higher in under age of 11 than other type of dance classes."
+            ],
+            "score": "5.0"
+          },
+          "examiner_comments": [
+            "Here is the examiner's comment:",
+            "This candidate has worked hard to report all data contained in the graphs. The key areas are covered, but the overall effect is rather mechanical, as each point is presented in a linear sequence.",
+            "The ideas are set out in the correct order, following the order of the graphs in the question, but linking between and within the sentences is not strong. The format is quite repetitive [taking classes | learning] because of the lack of linking devices.",
+            "Similarly, vocabulary is limited and a wider range would be needed for a higher score. Grammatical range is also minimal. There is a noticeable level of error, but the reader is still able to understand the message.",
+            "To improve the score, this candidate should use a wider range of linking devices and take a less mechanical approach. A stronger and wider range of vocabulary and grammar would also be beneficial."
+          ]
+        }
+      },
+      {
         "id": "18_1",
         "type": "line graph",
         "description": [

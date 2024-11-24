@@ -3,6 +3,124 @@
         "description": "In Task 2, students are given a point of view, argument or problem which they need to discuss. Students need to write at least 250 words in about 40 minutes.",
         "question_examples": [
             {
+                "id": "19_1",
+                "description": [
+                    "You should spend about 40 minutes on this task.",
+                    "Write about the following topic:",
+                    "Some people think that competition at work, at school and in daily life is a good thing. Others believe that we should try to cooperate more, rather than competing against each other.",
+                    "Discuss both these views and give your own opinion.",
+                    "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+                    "Write at least 250 words."
+                ],
+                "answers": {
+                    "example_answer": {
+                        "text": [
+                            "In my opinion competition at work, at school and in daily life can both be a good thing and a bad thing. Why? because I think too much of anything can be destructive. Yes, it's a very good thing to be competitive but don't overdo it! Having no competition in your life at all can be very depressing, because you have no motivation, no goals you want to achieve, everytime you wake up in the morning. I don't believe that there is such thing as 'co-operating' too much, when you work with someone you should work together as a team and co-operate, but also do things for yourself, like something career-wise. You should think of your future in your work. That goes the same if you are still in school, take my school life for example. If I am very good at one subject in particular, lots of other student may come up to me and ask for pointers. I would be very glad to help them. If there is any homework, school mates may come over to do it together, this is also fine and very good for building relationship. But sometimes there are people who think you are so nice and ask you to do their work for them. This is where you should draw the line, yes you are friends and you should help each other, but that doesn't mean that you have to do their homework or give them answer when there is a test. Remember life is a competition, be a winner."
+                        ],
+                        "score": "6.0"
+                    },
+                    "examiner_comments": [
+                        "Here is the examiner's comment:",
+                        "This response covers the task and is engaging to read. The candidate starts by saying competition can be good and bad, too much can be [destructive] and too little can be [depressing] as you would have [no motivation, no goals]. No specific examples are given, and they would improve the response. The rest of the response addresses 'cooperation' but is mostly about how people can cooperate rather than comparing 'cooperation' with 'competition' in line with the question. The conclusion [. . . be a winner] slightly contradicts the earlier point [I don't believe that there is such thing as 'co-operating' too much].",
+                        "Unfortunately, there is no paragraphing to group ideas together or indicate main topics. This affects the rating for coherence and cohesion.",
+                        "There is some higher-level vocabulary [destructive | motivation | career-wise] with some idiomatic use [draw the line] which makes vocabulary the strongest area in this response. A wider range would be needed for a higher score. There is a range of grammatical structures, including comparative forms and conditional [if] structures.",
+                        "Although they do address the task and present relevant ideas, to achieve a higher score, the candidate should organise the response into paragraphs and discuss both views. They could also demonstrate a greater level of accuracy with vocabulary and grammatical structures."
+                    ]
+                }
+            },
+            {
+                "id": "19_2",
+                "description": [
+                    "You should spend about 40 minutes on this task.",
+                    "Write about the following topic:",
+                    "The working week should be shorter and workers should have a longer weekend.",
+                    "Do you agree or disagree?",
+                    "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+                    "Write at least 250 words."
+                ],
+                "answers": {
+                    "example_answer": {
+                        "text": [
+                            "I personally disagree with the issue whether the working days should be one day less. By no means should we make the weekend three days long. There are two aspects that support my point of view.",
+                            "First of all, now all over the world are facing an unprecedented economic recession caused by COVID-19. Many factories are forced to close and the shops shut down. The economic loss is substantial. Nevertheless, with the advent of vaccine, I perceive that now people can go back to their work. This would certainly be conducive to our economy. If we reduce one day from work, even just from a week, it would cause repercussions on our society in terms of the development of economy.",
+                            "Secondly, I am used to do my leisure activities in Saturday and Sunday. If there is one day more, I would wonder what to do on that day, and that means I have to rearrange my weekend plans. I think it would be tiring. Most importantly, I come to admit that, too some degree, I am a workaholic. I cannot even image if I am separated from my favourite place - my office. It is the place where I retreat to when I feel anxious and want to get rid of everything. Working, indeed, gives me a sense of achievement and contentment. I, therefore, would oppose to the idea of cutting one working day.",
+                            "Though some people may argue that they need one day more in the week to reduce their stress from work, it could be harmful to our economic growth in this harsh time. Also, I believe that many people are used to the current working system, which provides two days for break. The sudden change will make people confused. Unless the government enacts a comprehensive policy for this new system, I think the idea does not work, and it would surely brings chaos in our society."
+                        ],
+                        "score": "6.0"
+                    },
+                    "examiner_comments": [
+                        "Here is the examiner's comment:",
+                        "In this good response, the candidate presents their opinion at the start, then gives two main points about why the current working week should not change: economic development and the disruption to our existing pattern of a two-day weekend. In the final paragraph, they consider the other side of the argument and people who might like an additional day off. (However, a counter argument is not necessary for this type of question.)",
+                        "Overall, ideas are presented in a clear order, and there is some good use of linking words and expressions [First of all | Nevertheless | Most importantly | Unless].",
+                        "The response contains some good vocabulary with effective collocation [unprecedented economic recession | conducive to | sense of achievement], and there is a range of structures including conditionals [if], modals [would | may | could] and multi-clause sentences. There are some errors in prepositions and other structures [I am used to do | I am used to doing], but the impact is not disruptive.",
+                        "To achieve a higher score, ideas could be more fully extended, for example, by giving more detail on how removing a working day could be negative for the economy or for workers."
+                    ]
+                }
+            },
+            {
+                "id": "19_3",
+                "description": [
+                    "You should spend about 40 minutes on this task.",
+                    "Write about the following topic:",
+                    "It is important for everyone, including young people, to save money for their future.",
+                    "To what extent do you agree or disagree with this statement?",
+                    "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+                    "Write at least 250 words."
+                ],
+                "answers": {
+                    "example_answer": {
+                        "text": [
+                            "Saving money for the future is always a very good idea. First of all money is something that is needed in almost all areas in life. Whether you are young or old you need money to buy everyday things like food, clothing, etc. living etc.",
+                            "young people are usually often full of enthusiasm about life their future. They are looking forward to their first job, to meeting new people or to getting to know as much of the world as they can. Many tend to live in the present rather than in the future so that they don't always plan ahead.",
+                            "When you people get older and settle down they realize that buying a house, starting a family or caring for your health takes up a good considerable amount of money and everybody who began saving money in younger years is glad to have done so. However, saving money is not always possible when you are young. Sometimes unforeseen expenses cannot be avoided, life situations are suddenly changing or there is never even enough money available even for the most necessary things. So so how could you save money for the future in this case? In general, you have to ask yourself what your priorities in life are. What are the things you cherish most? Is it more important for you to plan ahead or do you prefer to just enjoy the moment and live it?",
+                            "Everybody has to make own choices and to consider what is really essential for him or herself.",
+                            "In any age taking a moment to t reflect on your life and looking back at the choices you things you have already done is always a good thing to do.",
+                            "If you know yourself well and all about all the things that really make you happy you will be able to make the right decisions in financial issues as well as life other areas in life.",
+                            "In what way money plays an important role will be easy to be found out then. Perhaps you need less than you first thought years ago."
+                        ],
+                        "score": "7.0"
+                    },
+                    "examiner_comments": [
+                        "Here is the examiner's comment:",
+                        "This is a strong response to the task. In the first paragraph, the candidate makes their view clear, agreeing with the statement that saving money for the future is a good idea. In the next two paragraphs, they present ideas on how saving money is actually quite challenging: young people can [tend to live in the present], so [don't always plan ahead], the cost of housing, starting families and health care can be high, and [unforeseen expenses cannot be avoided]. The rest of the response is about how people can decide how much to spend and how much to save. The last line [Perhaps you need less than you first thought years ago] suggests that saving is not the answer for everyone. The ending gives advice to the reader, rather than summarising the main ideas.",
+                        "Ideas are easy to follow and logically organised. Linking expressions are well integrated [Whether | Sometimes | Perhaps] and generally accurate, and cohesive devices are used well [Many tend to | everybody who] with some errors [own choices | their own choices]. Paragraphing at the start is appropriate, but the last four sentences are set out separately and inappropriately, which affects the score.",
+                        "There is some higher-level vocabulary, with effective collocation [full of enthusiasm | tend to live in the present | settle down | unforeseen expenses]. The candidate uses a variety of structures, including comparative forms [rather than | do you prefer], conditionals [if] and a range of multi-clause sentences. Errors remain, with some missing punctuation and incorrect tenses [be found out | find out] and prepositions [In any age | At any age], but this does not affect the reader's understanding.",
+                        "To achieve a higher score, the candidate should ensure that the conclusion summarises the main ideas, and use effective paragraphing, especially in the second half of the response."
+                    ]
+                }
+            },
+            {
+                "id": "19_4",
+                "description": [
+                    "You should spend about 40 minutes on this task.",
+                    "Write about the following topic:",
+                    "In many countries nowadays, consumers can go to a supermarket and buy food produced all over the world.",
+                    "Do you think this is a positive or negative development?",
+                    "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+                    "Write at least 250 words."
+                ],
+                "answers": {
+                    "example_answer": {
+                        "text": [
+                            "Today there are a lot of different shops where we can buy all kind of stuff produced all over the world. Is it right to buy food produced in other countries? Is this idea useful for people nowadays?",
+                            "I suppose this to be a good idea. When supermarkets and even small shops provide people food from abroad then there are much more possibilities for us to choose something. When shops have only food and things produced in our country, it is really hard to make a good choice. Sometimes people want to try something new and interesting maybe even something extraordinary which they never buy before. In this cases food which is produced in other countries will help them to be satisfied with their demands. When supermarkets have a good suply of different food produced anywhere than people can find delicious things depending on their tastes. For example, people who like French products can buy some kinds of french cheese or wine not only in France.",
+                            "Food from other countries is also very good when you want to buy some fresh vegetables and fruits in winter. It is really useful thing because some people are vegetarians and they need vegetables and fruits during the whole year.",
+                            "The only disadvantage of food which is produced in other countries is the way how it has been delivered. in some cases products can be not so fresh especialy in summer, when it is very hot outside.",
+                            "To sum it up, I can surely say that buying products from other countries is a good thing to become more closer to other cultures. You can certainly cook something unusual at home and it will taste like in very good expensive restaurant somewhere abroad."
+                        ],
+                        "score": "6.0"
+                    },
+                    "examiner_comments": [
+                        "Here is the examiner's comment:",
+                        "This is a good response to the task. The candidate clearly agrees with the idea that people should be able to buy international food in supermarkets. The main reason given is that people want to try something [new and interesting] and different. Examples are given of French products and seasonal produce for vegetarians. One disadvantage is given, related to the impact of hot weather on transportation. The conclusion includes bringing cultures together through food but does not summarise the points made in the full answer. A more relevant conclusion would help the candidate achieve a higher score, as well as further extending the ideas.",
+                        "Generally, the candidate organises the ideas well, and we can follow them clearly. Some good linking devices are used [where | maybe even | which | who], but some errors remain [this cases | these cases | than | then]. The response is set out across five paragraphs, but three of them have only two sentences. These are short paragraphs and could be extended to illustrate the central topic in more detail.",
+                        "Again, vocabulary is generally appropriate for the question, with some strong examples [extraordinary | depending on their tastes], but there is a lack of precision [stuff] and frequent minor spelling errors [choise | suply | especialy | cutluries | unusual]. However, we can still understand what is meant.",
+                        "There are attempts at a wider range of structures and a number of multi-clause sentences. However, the level of error [which they never buy before | which they have never bought before | the way how it has been delivered | the way it has been delivered] detracts from the score.",
+                        "Overall, a more comprehensive conclusion, longer paragraphs, a wider range of vocabulary and fewer grammatical slips would improve the response and achieve a higher score."
+                    ]
+                }
+            },
+            {
                 "id": "18_1",
                 "description": [
                     "You should spend about 40 minutes on this task.",
