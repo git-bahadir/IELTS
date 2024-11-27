@@ -38,6 +38,10 @@ class IELTSWritingTask2Agent:
     def __init__(self):
         """Initialize the IELTS Writing Task 2 agent"""
         self.anthropic = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
+
+        # Add token tracking
+        self.total_input_tokens = 0
+        self.total_output_tokens = 0
         
         # Get paths using os.path for better cross-platform compatibility
         current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -64,6 +68,14 @@ class IELTSWritingTask2Agent:
         
         self.current_question = None
 
+    def track_token_usage(self, message):
+        """Track token usage from API response"""
+        if hasattr(message, 'usage'):
+            self.total_input_tokens += message.usage.input_tokens
+            self.total_output_tokens += message.usage.output_tokens
+            logger.info(f"Message tokens - Input: {message.usage.input_tokens}, Output: {message.usage.output_tokens}")
+            logger.info(f"Total tokens - Input: {self.total_input_tokens}, Output: {self.total_output_tokens}")
+
     def generate_question(self, question_type=None):
         """Generate a new IELTS Writing Task 2 question"""
         if not question_type:
@@ -82,6 +94,12 @@ class IELTSWritingTask2Agent:
                 temperature=self.TEMPERATURE,
                 messages=[{"role": "user", "content": prompt}]
             )
+            # Track token usage
+            self.track_token_usage(response)
+            
+            # Add debug logging
+            logger.debug("Raw response from Claude:")
+            logger.debug(response.content)
             
             question_data = self._parse_question_response(response)
             self.current_question = question_data
@@ -146,6 +164,8 @@ class IELTSWritingTask2Agent:
                 max_tokens=self.MAXIMUM_TOKENS,
                 messages=[{"role": "user", "content": score_prompt}]
             )
+            # Track token usage
+            self.track_token_usage(score_response)
             
             # Get feedback
             feedback_response = self.anthropic.messages.create(
@@ -153,6 +173,8 @@ class IELTSWritingTask2Agent:
                 max_tokens=self.MAXIMUM_TOKENS,
                 messages=[{"role": "user", "content": feedback_prompt}]
             )
+            # Track token usage
+            self.track_token_usage(feedback_response)
 
             # Extract content
             score_content = score_response.content[0].text if isinstance(score_response.content, list) else score_response.content
@@ -192,53 +214,115 @@ class IELTSWritingTask2Agent:
         else:
             return "discuss_both_views"  # default type
 
-    def _create_question_prompt(self, question_type, sample_questions):
-        """Create a prompt for generating a new question"""
-        sample = random.choice(sample_questions) if sample_questions else None
+    def get_sample_questions(self, question_type):
+        """Get a curated set of sample questions for the given type"""
         
-        prompt = f"""You are an IELTS Writing Task 2 question generator. Create a new unique question of type: {question_type}.
+        # Filter questions by type
+        relevant_questions = [
+            q for q in self.samples['ielts_writing_task_2']['question_examples'] 
+            if self._determine_question_type(q['description']) == question_type
+        ]
+        
+        # If we have too many samples, randomly select a subset
+        MAX_SAMPLES = 3  # We can adjust this based on token limits
+        if len(relevant_questions) > MAX_SAMPLES:
+            return random.sample(relevant_questions, MAX_SAMPLES)
+        
+        return relevant_questions
 
-        Here's a sample question structure:
-        {json.dumps(sample['description'], indent=2) if sample else 'No sample available'}
+    def format_sample_for_prompt(self, sample):
+        """Format a single sample question with its answer and comments"""
+        formatted = {
+            'question': sample['description'],
+            'example_answer': sample['answers']['example_answer']['text'],
+            'examiner_comments': sample['answers']['examiner_comments'],
+            'score': sample['answers']['example_answer']['score']
+        }
+        return formatted
 
-        Create a novel question following these requirements:
-        1. Follow the {question_type} format but with a completely new topic
-        2. Choose contemporary and engaging topics that test candidates' ability to:
-           - Present and develop arguments
-           - Show balanced viewpoints
-           - Provide relevant examples
-        3. Avoid controversial or culturally sensitive topics
-        4. Include clear instructions about word count (minimum 250 words)
-        5. Maintain academic style and clarity
+    def prepare_samples_for_prompt(self, question_type):
+        """Prepare formatted samples for the prompt"""
+        samples = self.get_sample_questions(question_type)
+        
+        formatted_samples = []
+        total_tokens = 0  # We'll need to implement token counting
+        
+        for sample in samples:
+            formatted = self.format_sample_for_prompt(sample)
+            
+            # Estimate tokens (we can implement a proper token counter)
+            sample_tokens = len(str(formatted).split()) * 1.3  # rough estimate
+            
+            if total_tokens + sample_tokens > 2500:  # Leave room for other prompt parts
+                break
+            
+            formatted_samples.append(formatted)
+            total_tokens += sample_tokens
+        
+        return formatted_samples
 
-        Return the question in this JSON format:
+    def _create_question_prompt(self, question_type, sample_questions):
+        """Create an enhanced prompt with multiple samples and analysis requirements"""
+        
+        formatted_samples = self.prepare_samples_for_prompt(question_type)
+        
+        prompt = f"""You are an IELTS Writing Task 2 question generator. Your task is to create a new unique question of type: {question_type}.
+
+        === EXAMPLE ANALYSIS ===
+        Here are example questions with their answers and examiner feedback. For each example:
+
+        {json.dumps([{
+            "Question": sample['question'],
+            "Sample Answer": sample['example_answer'],
+            "Examiner Comments": sample['examiner_comments'],
+            "Score": sample['score']
+        } for sample in formatted_samples], indent=2, ensure_ascii=False)}
+
+        Please analyze these examples focusing on:
+        1. Question Structure: How is each question constructed? What elements make it effective?
+        2. Topic Selection: What makes these topics suitable for IELTS Task 2?
+        3. Response Requirements: What kind of analytical thinking is being tested?
+
+        === QUESTION GENERATION ===
+        Based on your analysis, create a new question that:
+        1. Follows the {question_type} format
+        2. Introduces a fresh, contemporary topic
+        3. Is universally accessible (not too technical or specialized)
+        4. Allows candidates to draw from general knowledge and personal experience
+        5. Maintains neutral stance on potentially sensitive issues
+
+        === OUTPUT FORMAT ===
+        You must respond with ONLY a JSON object in exactly this format:
+
         {{
             "question_type": "{question_type}",
-            "description": [
-                "You should spend about 40 minutes on this task.",
-                "Write about the following topic:",
-                "YOUR_QUESTION_HERE",
-                "YOUR_TASK_INSTRUCTION_HERE",
-                "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
-                "Write at least 250 words."
-            ],
-            "expected_elements": [
-                "introduction with clear position",
-                "main argument points",
-                "supporting examples",
-                "counter-arguments (if applicable)",
-                "conclusion"
-            ],
-            "key_themes": [
-                "theme1",
-                "theme2"
-            ],
-            "suggested_structure": {{
-                "introduction": "What should be included",
-                "body_paragraphs": "How to organize main points",
-                "conclusion": "How to summarize"
+            "analysis": {{
+                "reasoning": "Your explanation of why you chose this topic and how it meets IELTS requirements",
+                "effectiveness_factors": "Your explanation of what makes this question effective for testing writing skills"
+            }},
+            "metadata": {{
+                "topic_category": "Your topic category (e.g., education/technology/society)",
+                "main_themes": ["theme1", "theme2"],
+                "reasoning_type": "Your reasoning type (e.g., compare-contrast/cause-effect)"
+            }},
+            "question": {{
+                "description": [
+                    "You should spend about 40 minutes on this task.",
+                    "Write about the following topic:",
+                    "YOUR_QUESTION_HERE",
+                    "YOUR_TASK_INSTRUCTION_HERE",
+                    "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
+                    "Write at least 250 words."
+                ]
             }}
-        }}"""
+        }}
+
+        CRITICAL REQUIREMENTS:
+        1. Respond ONLY with the JSON object - no additional text or explanations
+        2. Include ALL fields exactly as shown above
+        3. Ensure "question_type" is exactly "{question_type}"
+        4. Make sure the JSON is properly formatted and valid
+        5. Do not add any fields not shown in the format above"""
 
         return prompt
 
@@ -606,7 +690,7 @@ class IELTSWritingTask2Agent:
         prompt = f"""As an IELTS Writing Task 2 expert tutor, provide specific, actionable improvement suggestions for this essay.
 
         Original Question:
-        {json.dumps(self.current_question['description'], indent=2)}
+        {json.dumps(self.current_question['question']['description'], indent=2)}
 
         Student's Answer:
         {answer_text}
@@ -641,6 +725,8 @@ class IELTSWritingTask2Agent:
                 temperature=0.7,
                 messages=[{"role": "user", "content": prompt}]
             )
+            # Track token usage
+            self.track_token_usage(response)
             
             return self._format_improvement_suggestions(response)
             
@@ -692,6 +778,8 @@ class IELTSWritingTask2Agent:
                 temperature=0.7,
                 messages=[{"role": "user", "content": prompt}]
             )
+            # Track token usage
+            self.track_token_usage(response)
             
             return self._format_sample_improvements(response)
             
@@ -736,6 +824,8 @@ class IELTSWritingTask2Agent:
                 temperature=0.7,
                 messages=[{"role": "user", "content": prompt}]
             )
+            # Track token usage
+            self.track_token_usage(response)
             
             return self._format_vocabulary_suggestions(response)
             
@@ -819,10 +909,24 @@ class IELTSWritingTask2Agent:
                 raise ValueError("No valid JSON found in response")
 
             # Validate required fields
-            required_fields = ['question_type', 'description', 'expected_elements']
+            required_fields = {
+                'question_type': None,
+                'analysis': ['reasoning', 'effectiveness_factors'],
+                'metadata': ['topic_category', 'main_themes', 'reasoning_type'],
+                'question': ['description']
+            }
+            
+            # Check top-level fields
             for field in required_fields:
                 if field not in question_data:
                     raise ValueError(f"Missing required field: {field}")
+                
+                # Check nested fields if any
+                if required_fields[field] is not None:
+                    nested_fields = required_fields[field]
+                    for nested_field in nested_fields:
+                        if nested_field not in question_data[field]:
+                            raise ValueError(f"Missing required nested field: {field}.{nested_field}")
 
             return question_data
 
@@ -844,11 +948,12 @@ class IELTSWritingTask2Agent:
 ║ Type: {self.current_question['question_type']}
 ║
 ║ Task:
-║ {self._format_description(self.current_question['description'])}
+║ {self._format_description(self.current_question['question']['description'])}
 ║
-║ Expected Elements:
-{self._format_elements(self.current_question['expected_elements'])}
-
+║ Topic Category: {self.current_question['metadata']['topic_category']}
+║ Main Themes: {', '.join(self.current_question['metadata']['main_themes'])}
+║ Reasoning Type: {self.current_question['metadata']['reasoning_type']}
+║
 ║ Remember:
 ║ • Write at least {self.MINIMUM_WORDS} words
 ║ • Spend about 40 minutes on this task
@@ -861,6 +966,7 @@ class IELTSWritingTask2Agent:
 
         except Exception as e:
             logger.error(f"Error formatting question display: {str(e)}")
+            logger.debug(f"Current question data: {self.current_question}")  # Add debug logging
             return "Error formatting question"
 
     def _format_description(self, description):
@@ -947,6 +1053,16 @@ class IELTSWritingTask2Agent:
         
         return feedback
 
+    def get_token_usage_report(self):
+        """Get a formatted report of token usage"""
+        return f"""
+╔════════════════ Token Usage Report ════════════════╗
+║ Total Input Tokens:  {self.total_input_tokens:,}
+║ Total Output Tokens: {self.total_output_tokens:,}
+║ Total Tokens:        {self.total_input_tokens + self.total_output_tokens:,}
+╚═══════════════════════════════════════════════════╝
+"""
+
 def get_user_answer():
     """
     Get answer input from user with proper instructions and formatting.
@@ -1008,6 +1124,10 @@ def main():
     print("\nGenerating vocabulary suggestions...")
     vocab_suggestions = agent.generate_vocabulary_suggestions(answer)
     print(vocab_suggestions)
+
+    # Display token usage report at the end
+    print("\nToken Usage Summary:")
+    print(agent.get_token_usage_report())
 
 if __name__ == "__main__":
     main()
