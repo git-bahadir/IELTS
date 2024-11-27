@@ -19,7 +19,7 @@ ANTHROPIC_API_KEY = os.getenv('ANTHROPIC_API_KEY')
 if not ANTHROPIC_API_KEY:
     raise ValueError("ANTHROPIC_API_KEY not found in environment variables")
 
-MODEL = "claude-3-opus-20240229"
+MODEL = "claude-3-5-sonnet-20241022"
 
 class IELTSWritingTask2Agent:
     # Class constants
