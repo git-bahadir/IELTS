@@ -225,22 +225,65 @@
                 "minimum_words": 150
             },
             "academic_writing_task_2": {
+                "band_descriptors": {
+                    "task_response": {
+                        "9": "Fully addresses all parts of the task with fully developed positions, ideas and arguments",
+                        "8": "Sufficiently addresses all parts of the task with well-developed ideas and position",
+                        "7": "Addresses all parts of the task with relevant position and ideas, though some may be less fully developed",
+                        "6": "Addresses all parts of the task although some parts may be more fully covered than others",
+                        "5": "Addresses the task only partially; format may be inappropriate in places",
+                        "4": "Responds to the task only in a minimal way or the answer is tangential",
+                        "3": "Does not adequately address any part of the task",
+                        "2": "Barely responds to the task",
+                        "1": "Answer is completely unrelated to the task"
+                    },
+                    "coherence_cohesion": {
+                        "9": "Uses cohesion in such a way that it attracts no attention; skillfully manages paragraphing",
+                        "8": "Sequences information and ideas logically; manages all aspects of cohesion well",
+                        "7": "Logically organizes information and ideas; clear progression throughout",
+                        "6": "Arranges information and ideas coherently and there is a clear overall progression",
+                        "5": "Presents information with some organization but there may be lack of overall progression",
+                        "4": "Presents information and ideas but these are not arranged coherently",
+                        "3": "Does not organize ideas logically",
+                        "2": "Has very little control of organizational features",
+                        "1": "Fails to communicate any message"
+                    },
+                    "lexical_resource": {
+                        "9": "Uses a wide range of vocabulary with very natural and sophisticated control",
+                        "8": "Uses a wide range of vocabulary fluently and flexibly to convey precise meanings",
+                        "7": "Uses a sufficient range of vocabulary to allow some flexibility and precision",
+                        "6": "Uses an adequate range of vocabulary for the task with some errors in word choice",
+                        "5": "Uses a limited range of vocabulary, but this is minimally adequate for the task",
+                        "4": "Uses only basic vocabulary which may be used repetitively",
+                        "3": "Uses only a very limited range of words and expressions",
+                        "2": "Uses an extremely limited range of vocabulary",
+                        "1": "Can only use a few isolated words"
+                    },
+                    "grammatical_range": {
+                        "9": "Uses a wide range of structures with full flexibility and accuracy",
+                        "8": "Uses a wide range of structures with rare minor errors",
+                        "7": "Uses a variety of complex structures with good control and only occasional errors",
+                        "6": "Uses mix of simple and complex sentence forms with some errors",
+                        "5": "Uses only a limited range of structures with some errors",
+                        "4": "Uses only a very limited range of structures with frequent errors",
+                        "3": "Attempts sentence forms but with numerous errors",
+                        "2": "Cannot use sentence forms except in memorized phrases",
+                        "1": "Cannot use sentence forms at all"
+                    }
+                },
                 "what_is_involved": [
-                    "In Academic Writing Task 2, students are given a topic to write about. Students' answer should discuss the most relevant issues. Students must read the task carefully so that they can write a full answer that is relevant. For example, if the topic is a particular aspect of the wider topic of computers, students should focus on this aspect only in their answer. Students should not simply write about computers in general.",
-                    "Students should write in an academic or semi-formal/neutral style. Students will need to organise their ideas clearly and make sure they use relevant examples (which can be from their own experience, if relevant) or evidence.",
-                    "Students should spend no more than 40 minutes on this task. Students must write at least 250 words and will be penalised if their answer is too short. While students will not be penalised for writing more than 250 words, if they write a very long answer they may not have time for checking and correcting at the end, and some ideas may not be directly relevant to the question. Students may also produce handwriting which is unclear.",
-                    "Students should remember that they will be penalised if what they write is not related to the topic. They will also be penalised if their answer is not written as a whole piece of connected text (i.e. they must not use notes or bullet points). They will be severely penalised if their writing is plagiarised (i.e. copied from another source).",
-                    "Students must write their answer on the answer sheet."
+                    "In Academic Writing Task 2, candidates write an essay in response to a point of view, argument or problem.",
+                    "Responses should be written in an academic or semi-formal/neutral style.",
+                    "The essay should be at least 250 words."
                 ],
                 "tested_skills": [
-                    "This task tests if students can write a clear, relevant, well-organised argument, giving evidence or examples to support their ideas, and use language accurately.",
-                    "Depending on the task type, students will be assessed on their ability to:",
-                    "present a solution to a problem",
-                    "present and justify an opinion",
-                    "compare and contrast evidence, opinions and implications",
-                    "evaluate and challenge ideas, evidence or an argument."
+                    "The ability to present a clear position throughout the response",
+                    "The ability to present, extend and support key ideas",
+                    "The ability to write in an academic style using appropriate tone and register",
+                    "The ability to organize ideas coherently and use cohesive devices effectively"
                 ],
-                "minimum_words": 250
+                "minimum_words": 250,
+                "time_allowed": 40
             }
         }
     }
