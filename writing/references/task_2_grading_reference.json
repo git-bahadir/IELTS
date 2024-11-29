@@ -1,0 +1,516 @@
+{
+  "6.0": {
+    "patterns": [
+      "Examiner consistently notes potential for improvement through better organization and extended ideas",
+      "Vocabulary is often highlighted as the strongest element",
+      "Grammar errors are noted but described as not impeding understanding",
+      "Balance between addressing task requirements and maintaining coherence is frequently mentioned"
+    ],
+    "requirements": [
+      "Clear position or view on the topic",
+      "Basic paragraph organization with introduction and conclusion",
+      "Mix of simple and complex sentences",
+      "Sufficient topic-relevant vocabulary",
+      "Ideas that are generally relevant but may lack full development"
+    ],
+    "common_features": [
+      "Some good vocabulary but with occasional errors",
+      "Attempts at complex sentences with mixed success",
+      "Basic paragraph structure present but sometimes mechanical",
+      "Ideas are relevant but not fully developed",
+      "Use of linking words though sometimes with errors"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Addresses main parts of task but may be uneven",
+        "Position is clear but support may be limited",
+        "Relevant ideas but not fully extended"
+      ],
+      "coherence_cohesion": [
+        "Basic paragraph organization",
+        "Uses common linking words",
+        "Some logical progression of ideas",
+        "May have mechanical arrangement"
+      ],
+      "lexical_resource": [
+        "Adequate range for topic",
+        "Some good collocations",
+        "Noticeable spelling errors",
+        "Mix of basic and attempted sophisticated vocabulary"
+      ],
+      "grammatical_range": [
+        "Mix of simple and complex structures",
+        "Errors present but meaning usually clear",
+        "Attempts at varied sentence forms",
+        "Some accuracy in basic sentences"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 6.0,
+      "max_score": 6.5,
+      "variance": 0.25
+    }
+  },
+  "7.0": {
+    "patterns": [
+      "Emphasis on clear position and logical organization",
+      "Recognition of both strengths and areas for improvement",
+      "Focus on effective use of cohesive devices",
+      "Attention to vocabulary range and accuracy"
+    ],
+    "requirements": [
+      "Clear position/view maintained throughout response",
+      "Logical paragraph organization with clear progression",
+      "Range of cohesive devices with occasional errors acceptable",
+      "Mix of complex and simple sentences with good accuracy",
+      "Relevant examples and support for main ideas"
+    ],
+    "common_features": [
+      "4-5 paragraphs with clear topic focus",
+      "Introduction of opposing viewpoints",
+      "Personal examples or real-world scenarios",
+      "Clear conclusion that summarizes main points",
+      "Use of less common vocabulary items"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Clear position throughout essay",
+        "Ideas fully developed with relevant support",
+        "All parts of task addressed",
+        "Balanced coverage of different aspects"
+      ],
+      "coherence_cohesion": [
+        "Logical paragraph organization",
+        "Range of cohesive devices used appropriately",
+        "Clear central topic in each paragraph",
+        "Occasional inappropriate/inaccurate use acceptable"
+      ],
+      "lexical_resource": [
+        "Less common vocabulary items present",
+        "Good use of collocations",
+        "Occasional errors acceptable if meaning clear",
+        "Flexibility in word choice demonstrated"
+      ],
+      "grammatical_range": [
+        "Mix of simple and complex structures",
+        "Generally accurate grammar",
+        "Some errors remain but don't impede understanding",
+        "Various sentence types used effectively"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 6.5,
+      "max_score": 7.5,
+      "variance": 0.25
+    }
+  },
+  "8.5": {
+    "patterns": [
+      "Examiner notes focus on development and balance of arguments",
+      "Comments highlight both strengths and potential improvements",
+      "Emphasis on full task coverage and clear position"
+    ],
+    "requirements": [
+      "Well-developed paragraphs with clear central topics",
+      "Sophisticated vocabulary without errors",
+      "Complex grammatical structures with variety",
+      "Balanced discussion of multiple viewpoints",
+      "Clear position with supporting examples"
+    ],
+    "common_features": [
+      "4-paragraph structure with introduction and conclusion",
+      "Use of specific examples to support arguments",
+      "Natural transition between ideas",
+      "Mix of complex and simple sentences",
+      "Academic vocabulary with precise word choice"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Fully addresses all parts of the task",
+        "Clear position with well-developed arguments",
+        "Relevant, extended examples",
+        "Balanced coverage of different aspects"
+      ],
+      "coherence_cohesion": [
+        "Logical paragraph organization",
+        "Clear central topic in each paragraph",
+        "Appropriate use of cohesive devices",
+        "Smooth progression of ideas"
+      ],
+      "lexical_resource": [
+        "Natural and sophisticated vocabulary",
+        "No spelling errors",
+        "Precise word choice",
+        "Good control of collocations"
+      ],
+      "grammatical_range": [
+        "Wide range of structures",
+        "Multiple tense forms",
+        "Complex sentences with good control",
+        "Appropriate use of modals and conditionals"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 8.0,
+      "max_score": 8.5,
+      "variance": 0.25
+    }
+  },
+  "8.0": {
+    "patterns": [
+      "Focus on balanced argument presentation",
+      "Identification of both strengths and weaknesses",
+      "Emphasis on comprehensive coverage of all question parts",
+      "Recognition of sophisticated vocabulary use"
+    ],
+    "requirements": [
+      "Clear position statement on the issue",
+      "Logical organization of ideas",
+      "Natural and sophisticated vocabulary control",
+      "Flexible and accurate grammar",
+      "Coverage of all aspects of the question prompt"
+    ],
+    "common_features": [
+      "Multi-paragraph structure with clear progression",
+      "Use of specific examples to support arguments",
+      "Mix of complex and simple sentence structures",
+      "Topic-specific vocabulary with sophisticated transitions",
+      "Concluding paragraph with personal opinion"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Addresses both sides of the argument",
+        "Clear position statement",
+        "Relevant supporting examples",
+        "Complete coverage of prompt elements"
+      ],
+      "coherence_cohesion": [
+        "Logical paragraph organization",
+        "Clear progression of ideas",
+        "Effective use of linking words",
+        "Well-structured arguments"
+      ],
+      "lexical_resource": [
+        "Sophisticated vocabulary control",
+        "Topic-specific terminology",
+        "Natural word combinations",
+        "Minimal vocabulary errors"
+      ],
+      "grammatical_range": [
+        "Flexible grammar usage",
+        "Accurate complex structures",
+        "Mix of sentence patterns",
+        "Few grammatical errors"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 8.0,
+      "max_score": 8.5,
+      "variance": 0.25
+    }
+  },
+  "9.0": {
+    "patterns": [
+      "Emphasis on well-developed and extended ideas",
+      "Focus on clear position and justification",
+      "Recognition of sophisticated language and complex structures",
+      "Appreciation of balanced arguments with detailed support"
+    ],
+    "requirements": [
+      "Clear position stated from the beginning",
+      "Multiple perspectives thoroughly explored",
+      "Sophisticated vocabulary without errors",
+      "Complex grammatical structures used accurately",
+      "Logical progression of ideas",
+      "Relevant examples and specific details"
+    ],
+    "common_features": [
+      "4-5 paragraphs with clear introduction and conclusion",
+      "Balanced exploration of multiple viewpoints",
+      "Topic-specific vocabulary and academic phrases",
+      "Various complex sentence structures",
+      "Cohesive devices throughout",
+      "Extended examples and explanations"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Clear position maintained throughout",
+        "Fully developed ideas with extensions",
+        "Relevant examples and justifications",
+        "Comprehensive coverage of all parts of the task"
+      ],
+      "coherence_cohesion": [
+        "Logical paragraph organization",
+        "Smooth transitions between ideas",
+        "Clear referencing",
+        "Effective use of linking devices"
+      ],
+      "lexical_resource": [
+        "Topic-specific vocabulary",
+        "Sophisticated word choices",
+        "Natural collocations",
+        "No spelling errors"
+      ],
+      "grammatical_range": [
+        "Complex conditional structures",
+        "Various sentence patterns",
+        "Perfect grammar accuracy",
+        "Advanced punctuation usage"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 8.5,
+      "max_score": 9.0,
+      "variance": 0.25
+    }
+  },
+  "6.5": {
+    "patterns": [
+      "Examiner notes consistently mention 'room for further development'",
+      "Balance of positive observations with specific error identification",
+      "Focus on both strengths and limitations in each criterion",
+      "Recognition of attempt at complex structures despite errors"
+    ],
+    "requirements": [
+      "Address all parts of the question with clear position",
+      "Maintain logical organization with clear progression",
+      "Use a mix of simple and complex structures",
+      "Demonstrate sufficient vocabulary range",
+      "Achieve minimum 250 words"
+    ],
+    "common_features": [
+      "Clear paragraph structure with introduction and conclusion",
+      "Mix of accurate and inaccurate complex sentences",
+      "Use of cohesive devices (sometimes mechanical)",
+      "Relevant examples supporting main points",
+      "Some less common vocabulary with occasional errors"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Addresses main parts of task but may need fuller coverage",
+        "Presents relevant main ideas with some support",
+        "Position is clear but may need more development",
+        "Uses relevant examples but could be more specific"
+      ],
+      "coherence_cohesion": [
+        "Logical organization with clear progression",
+        "Basic cohesive devices used (sometimes mechanical)",
+        "Generally appropriate paragraphing",
+        "Adequate referencing but may have some errors"
+      ],
+      "lexical_resource": [
+        "Sufficient vocabulary range for flexibility",
+        "Some less common items attempted",
+        "Occasional errors in word choice/spelling",
+        "Generally appropriate style and collocation"
+      ],
+      "grammatical_range": [
+        "Mix of simple and complex structures",
+        "Frequent error-free simple sentences",
+        "Some errors in complex structures",
+        "Meaning generally clear despite errors"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 6.0,
+      "max_score": 6.5,
+      "variance": 0.25
+    }
+  },
+  "4.5": {
+    "patterns": [
+      "Tangential responses that don't directly address the question",
+      "Mixed quality in grammar despite communication being maintained",
+      "Irrelevant examples and explanations"
+    ],
+    "requirements": [
+      "Basic attempt to answer the question",
+      "Some paragraph organization, though not always effective",
+      "Minimal use of relevant vocabulary",
+      "Basic grammatical structures with some attempts at complexity"
+    ],
+    "common_features": [
+      "Personal examples that don't relate well to the topic",
+      "Limited development of ideas",
+      "Simple vocabulary with repetition",
+      "Mix of simple and complex sentences with errors"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Only partially addresses the task",
+        "Limited position/development",
+        "Irrelevant examples",
+        "Superficial treatment of topic"
+      ],
+      "coherence_cohesion": [
+        "Basic paragraph organization",
+        "Ineffective use of connectors",
+        "Ideas not arranged coherently",
+        "Inadequate paragraph development"
+      ],
+      "lexical_resource": [
+        "Limited vocabulary range",
+        "Inappropriate word choice",
+        "Repetitive vocabulary use",
+        "Basic word forms"
+      ],
+      "grammatical_range": [
+        "Mix of simple and complex structures",
+        "Noticeable errors but meaning clear",
+        "Limited range of tenses",
+        "Some attempt at sophisticated structures"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 4.0,
+      "max_score": 4.5,
+      "variance": 0.25
+    }
+  },
+  "4.0": {
+    "patterns": [
+      "High frequency of basic errors noted by examiner",
+      "Limited relevance to actual question topic",
+      "Attempts at structure but lacks coherence"
+    ],
+    "requirements": [
+      "Must show basic attempt to address task",
+      "Need minimal organization of ideas",
+      "Should use some basic cohesive devices",
+      "Must form simple sentences at minimum"
+    ],
+    "common_features": [
+      "Frequent spelling errors",
+      "Limited vocabulary range",
+      "Basic cohesive devices only",
+      "Ideas lack clear progression",
+      "Irrelevant content"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Mostly irrelevant ideas with minimal position",
+        "Limited understanding of task requirements",
+        "Position only clear in conclusion"
+      ],
+      "coherence_cohesion": [
+        "Basic markers like 'First of all' and 'Finally'",
+        "Limited paragraph organization",
+        "Poor idea progression"
+      ],
+      "lexical_resource": [
+        "High density of spelling errors",
+        "Incorrect word choices",
+        "Very limited vocabulary range"
+      ],
+      "grammatical_range": [
+        "Basic sentence structures",
+        "Limited use of subordinate clauses",
+        "Frequent grammatical errors"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 3.5,
+      "max_score": 4.5,
+      "variance": 0.5
+    }
+  },
+  "5.5": {
+    "patterns": [
+      "Clear position but with basic development",
+      "Mix of effective and faulty language use",
+      "Adequate but inconsistent control of basics"
+    ],
+    "requirements": [
+      "Clear position on the topic",
+      "Some relevant examples",
+      "Basic paragraph organization",
+      "Attempt at complex sentences",
+      "Generally adequate vocabulary"
+    ],
+    "common_features": [
+      "Personal examples and experiences",
+      "Simple supporting ideas",
+      "Basic cohesive devices",
+      "Spelling and grammar errors",
+      "Mixed success with complex structures"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Clear but simple position",
+        "Relevant but underdeveloped examples",
+        "Basic addressing of main points"
+      ],
+      "coherence_cohesion": [
+        "Basic paragraph organization",
+        "Some effective cohesive devices",
+        "Logical but simple progression"
+      ],
+      "lexical_resource": [
+        "Adequate general vocabulary",
+        "Noticeable spelling errors",
+        "Limited precision in word choice"
+      ],
+      "grammatical_range": [
+        "Attempts at complex sentences with errors",
+        "Inconsistent punctuation",
+        "Basic grammar errors in complex structures"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 5.0,
+      "max_score": 5.5,
+      "variance": 0.25
+    }
+  },
+  "7.5": {
+    "patterns": [
+      "Examiner notes both strengths and minor weaknesses",
+      "Focus on variety and range in vocabulary and grammar",
+      "Emphasis on logical progression and organization"
+    ],
+    "requirements": [
+      "Well-developed response with clear progression",
+      "Wide range of vocabulary including less common items",
+      "Variety of complex structures used accurately",
+      "Clear paragraph organization with central topics",
+      "Minimal errors that don't impede communication"
+    ],
+    "common_features": [
+      "Clear introduction and conclusion",
+      "Topic-focused paragraphs",
+      "Mix of simple and complex structures",
+      "Use of cohesive devices",
+      "Academic vocabulary with some sophisticated terms"
+    ],
+    "criteria_indicators": {
+      "task_response": [
+        "Well-developed ideas with clear position",
+        "Relevant examples and explanations",
+        "Complete coverage of all parts of the task"
+      ],
+      "coherence_cohesion": [
+        "Logical paragraph progression",
+        "Effective use of cohesive devices",
+        "Clear central topic in each paragraph",
+        "Smooth transitions between ideas"
+      ],
+      "lexical_resource": [
+        "Less common vocabulary items used appropriately",
+        "Good collocations",
+        "Minimal vocabulary errors",
+        "Style-appropriate word choices"
+      ],
+      "grammatical_range": [
+        "Complex structures used flexibly",
+        "Good control of grammar and punctuation",
+        "Frequent error-free sentences",
+        "Only occasional minor errors"
+      ]
+    },
+    "confidence_thresholds": {
+      "min_score": 7.0,
+      "max_score": 7.5,
+      "variance": 0.25
+    }
+  }
+}
