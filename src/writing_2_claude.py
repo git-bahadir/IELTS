@@ -38,22 +38,26 @@ class IELTSWritingTask2Agent:
     def __init__(self):
         """Initialize the IELTS Writing Task 2 agent"""
         self.anthropic = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
-
+        
         # Add token tracking
         self.total_input_tokens = 0
         self.total_output_tokens = 0
         
         # Get paths using os.path for better cross-platform compatibility
-        current_dir = os.path.dirname(os.path.abspath(__file__))
-        parent_dir = os.path.dirname(current_dir)
+        self.current_dir = os.path.dirname(os.path.abspath(__file__))
+        self.parent_dir = os.path.dirname(self.current_dir)
         
         try:
             # Load templates and samples
-            with open(os.path.join(parent_dir, 'standards', 'ielts_templates.json'), 'r') as f:
+            templates_path = os.path.join(self.parent_dir, 'standards', 'ielts_templates.json')
+            samples_path = os.path.join(self.parent_dir, 'writing', 'writing_2_samples.json')
+            standards_path = os.path.join(self.parent_dir, 'standards', 'cefr_standards.json')
+            
+            with open(templates_path, 'r') as f:
                 self.templates = json.load(f)
-            with open(os.path.join(parent_dir, 'writing', 'writing_2_samples.json'), 'r') as f:
+            with open(samples_path, 'r') as f:
                 self.samples = json.load(f)
-            with open(os.path.join(parent_dir, 'standards', 'cefr_standards.json'), 'r') as f:
+            with open(standards_path, 'r') as f:
                 self.standards = json.load(f)
         except FileNotFoundError as e:
             logger.error(f"Required data file not found: {e}")
@@ -80,35 +84,47 @@ class IELTSWritingTask2Agent:
         """Generate a new IELTS Writing Task 2 question"""
         if not question_type:
             question_type = random.choice(self.QUESTION_TYPES)
-            
-        # Get sample questions of the same type
-        sample_questions = [q for q in self.samples['ielts_writing_task_2']['question_examples'] 
-                          if self._determine_question_type(q['description']) == question_type]
         
+        # Prepare sample questions for the prompt
+        sample_questions = self.prepare_samples_for_prompt(question_type)
+        
+        # Create the question prompt
         prompt = self._create_question_prompt(question_type, sample_questions)
         
         try:
+            # Generate the question using the LLM
             response = self.anthropic.messages.create(
                 model=MODEL,
                 max_tokens=self.MAXIMUM_TOKENS,
                 temperature=self.TEMPERATURE,
                 messages=[{"role": "user", "content": prompt}]
             )
+            
             # Track token usage
             self.track_token_usage(response)
             
             # Add debug logging
-            logger.debug("Raw response from Claude:")
-            logger.debug(response.content)
+            logger.debug(f"Raw response from Claude: {response.content}")
             
+            # Parse the response to get the question data
             question_data = self._parse_question_response(response)
+            
+            # Add debug logging
+            logger.debug(f"Parsed question data: {question_data}")
+            
+            # Update topic tracker
+            if question_data and 'topic_category' in question_data:
+                self._update_topic_tracker(question_data['topic_category'])
+            
+            # Store the current question
             self.current_question = question_data
             
             return self._format_question_display()
-            
+
         except Exception as e:
             logger.error(f"Error generating question: {e}")
-            return None
+            traceback.print_exc()
+            return "Error generating question"
 
     def evaluate_answer(self, answer_text):
         """Evaluate a submitted answer for the current question"""
@@ -262,134 +278,56 @@ class IELTSWritingTask2Agent:
         return formatted_samples
 
     def _create_question_prompt(self, question_type, sample_questions):
-        """Create an enhanced prompt with multiple samples and analysis requirements"""
+        """Create an enhanced prompt with focus on creativity and topic diversity"""
         
-        formatted_samples = self.prepare_samples_for_prompt(question_type)
+        # Load topic history
+        try:
+            # Get paths using os.path for better cross-platform compatibility
+            current_dir = os.path.dirname(os.path.abspath(__file__))
+            parent_dir = os.path.dirname(current_dir)
+            
+            with open(os.path.join(parent_dir, 'writing', 'topic_tracker.json'), 'r') as f:
+                topic_data = json.load(f)
+                recent_topics = topic_data['used_topics'][-5:]  # Last 5 topics
+        except (FileNotFoundError, json.JSONDecodeError):
+            recent_topics = []
+
+        prompt = f"""You are an IELTS Writing Task 2 question generator. Create a unique, thought-provoking question that:
+        1. Follows the {question_type} format exactly
+        2. Explores a fresh topic NOT related to these recent topics: {', '.join(recent_topics)}
+        3. Maintains IELTS academic standards while being creative
+        4. Draws from your broad knowledge of global issues, trends, and debates
+        5. Avoids controversial or inappropriate topics
+
+        Remember:
+        - Be creative but relevant to IELTS academic context
+        - Questions should be universally understandable
+        - Focus on topics that allow candidates to draw from general knowledge
+        - Maintain neutral stance on sensitive issues
         
-        prompt = f"""You are an IELTS Writing Task 2 question generator. Your task is to create a new unique question of type: {question_type}.
-
-        === EXAMPLE ANALYSIS ===
-        Here are example questions with their answers and examiner feedback. For each example:
-
-        {json.dumps([{
-            "Question": sample['question'],
-            "Sample Answer": sample['example_answer'],
-            "Examiner Comments": sample['examiner_comments'],
-            "Score": sample['score']
-        } for sample in formatted_samples], indent=2, ensure_ascii=False)}
-
-        Please analyze these examples focusing on:
-        1. Question Structure: How is each question constructed? What elements make it effective?
-        2. Topic Selection: What makes these topics suitable for IELTS Task 2?
-        3. Response Requirements: What kind of analytical thinking is being tested?
-
-        === QUESTION GENERATION ===
-        Based on your analysis, create a new question that:
-        1. Follows the {question_type} format
-        2. Introduces a fresh, contemporary topic
-        3. Is universally accessible (not too technical or specialized)
-        4. Allows candidates to draw from general knowledge and personal experience
-        5. Maintains neutral stance on potentially sensitive issues
+        Here are a few example questions for structure reference ONLY:
+        {json.dumps([sample['question'] for sample in sample_questions[:2]], indent=2)}
 
         === OUTPUT FORMAT ===
-        You must respond with ONLY a JSON object in exactly this format:
-
+        Respond with ONLY a JSON object in this format:
         {{
             "question_type": "{question_type}",
-            "analysis": {{
-                "reasoning": "Your explanation of why you chose this topic and how it meets IELTS requirements",
-                "effectiveness_factors": "Your explanation of what makes this question effective for testing writing skills"
-            }},
+            "topic_category": "one of: technology/education/environment/culture/health/society/media/urban_development/arts/science/sports/communication",
             "metadata": {{
-                "topic_category": "Your topic category (e.g., education/technology/society)",
                 "main_themes": ["theme1", "theme2"],
-                "reasoning_type": "Your reasoning type (e.g., compare-contrast/cause-effect)"
+                "reasoning_type": "compare-contrast/cause-effect/problem-solution"
             }},
             "question": {{
                 "description": [
                     "You should spend about 40 minutes on this task.",
                     "Write about the following topic:",
-                    "YOUR_QUESTION_HERE",
+                    "YOUR_CREATIVE_QUESTION_HERE",
                     "YOUR_TASK_INSTRUCTION_HERE",
                     "Give reasons for your answer and include any relevant examples from your own knowledge or experience.",
                     "Write at least 250 words."
                 ]
             }}
-        }}
-
-        CRITICAL REQUIREMENTS:
-        1. Respond ONLY with the JSON object - no additional text or explanations
-        2. Include ALL fields exactly as shown above
-        3. Ensure "question_type" is exactly "{question_type}"
-        4. Make sure the JSON is properly formatted and valid
-        5. Do not add any fields not shown in the format above"""
-
-        return prompt
-
-    def _create_evaluation_prompt(self, answer_text):
-        """Create a prompt for evaluating an answer"""
-        # Try to get sample answers, use empty list if not available
-        try:
-            sample_answers = self.samples.get('ielts_writing_task_2', {}).get('answer_examples', [])
-            calibration_examples = [
-                ans for ans in sample_answers 
-                if ans.get('band_score') in [6.5, 7.0, 7.5]
-            ][:2]  # Use 2 examples for calibration
-        except (KeyError, AttributeError):
-            calibration_examples = []
-        
-        # Get band descriptors with safe access
-        try:
-            band_descriptors = self.templates.get('writing', {}).get('types_of_questions', {}).get(
-                'academic_writing_task_2', {}).get('band_descriptors', {})
-        except (KeyError, AttributeError):
-            band_descriptors = {}
-        
-        # Format band descriptors for the prompt if available
-        band_descriptor_text = ""
-        if band_descriptors:
-            band_descriptor_text = "\nBand Descriptors:\n"
-            for criterion, levels in band_descriptors.items():
-                band_descriptor_text += f"\n{criterion.title()}:\n"
-                for band, descriptor in levels.items():
-                    band_descriptor_text += f"Band {band}: {descriptor}\n"
-        
-        prompt = (
-            "You are an experienced IELTS examiner evaluating a Writing Task 2 answer.\n\n"
-            f"Question:\n{self.current_question.get('description', '')}\n\n"
-            f"Student's answer ({len(answer_text.split())} words):\n{answer_text}\n\n"
-            + """Evaluate using official IELTS criteria. You MUST provide numerical scores for each criterion.
-            
-            Your response MUST include these exact sections with numerical scores (0.0-9.0):
-
-            Overall Band Score: [numerical score]
-
-            Detailed Scores:
-            Task Response: [numerical score]
-            Coherence and Cohesion: [numerical score]
-            Lexical Resource: [numerical score]
-            Grammatical Range and Accuracy: [numerical score]
-
-            Then provide:
-            Strengths:
-            • [specific strength 1]
-            • [specific strength 2]
-            • [specific strength 3]
-
-            Areas for Improvement:
-            • [specific area 1]
-            • [specific area 2]
-            • [specific area 3]
-
-            Detailed Analysis:
-            [Provide a detailed paragraph-by-paragraph analysis]
-
-            Remember:
-            1. All scores MUST be numerical values between 0.0 and 9.0
-            2. Scores must be in 0.5 increments (e.g., 6.0, 6.5, 7.0)
-            3. Be specific and detailed in your feedback
-            4. Provide concrete examples from the text"""
-        )
+        }}"""
 
         return prompt
 
@@ -399,7 +337,7 @@ class IELTSWritingTask2Agent:
             formatted_report = f"""
 ╔════════════════════════ IELTS Writing Task 2 Evaluation ════════════════════════╗
 ║ Overall Assessment
-╠════════════════════════════════════════════════════════════════════════════════╣
+╠══════════════════════════════════════════════════════════════════════════════╣
 ║ Overall Band Score: {evaluation.get('band_score', 'N/A')}
 ║
 ║ Detailed Criteria Scores:
@@ -410,13 +348,13 @@ class IELTSWritingTask2Agent:
 ╠════════════════════════════════════════════════════════════════════════════════╣
 ║ Key Strengths
 ║ {self._format_bullet_points(evaluation.get('strengths', ['No specific strengths identified']))}
-╠════════════════════════════════════════════════════════════════════════════════╣
+╠═══════════════════════════════════════════��════════════════════════════════════╣
 ║ Areas for Improvement
 ║ {self._format_bullet_points(evaluation.get('improvements', ['No specific improvements identified']))}
-╠════════════════════════════════════════════════════════════════════════════════╣
+╠══════════════════════════════════════════════════════════════════════════════╣
 ║ Detailed Analysis
 ║ {self._format_paragraph(evaluation.get('detailed_feedback', 'No detailed feedback provided'))}
-╚════════════════════════════════════════════════════════════════════════════════╝
+╚═══════════════════════════════════════════════════════════════════════════════╝
 """
             return formatted_report
         
@@ -491,78 +429,6 @@ class IELTSWritingTask2Agent:
             logger.error(f"Error parsing evaluation content: {e}")
             logger.debug(f"Content being parsed: {content}")
             return {}
-
-    def _calibrate_scores(self, evaluation):
-        """Calibrate scores based on IELTS standards and sample answers"""
-        try:
-            # Add null checks for scores
-            scores = {
-                'band_score': float(evaluation.get('band_score', 0) or 0),
-                'tr_score': float(evaluation.get('tr_score', 0) or 0),
-                'cc_score': float(evaluation.get('cc_score', 0) or 0),
-                'lr_score': float(evaluation.get('lr_score', 0) or 0),
-                'gra_score': float(evaluation.get('gra_score', 0) or 0)
-            }
-            
-            # Get reference scores from sample answers
-            sample_answers = self.samples.get('ielts_writing_task_2', {}).get('answer_examples', [])
-            
-            def adjust_score(score, criterion):
-                if score == 0:  # If no score was provided
-                    return None
-                    
-                # Get comparable sample answers
-                comparable_samples = [
-                    s for s in sample_answers 
-                    if abs(float(s.get('band_score', 0)) - score) <= 1.0
-                ]
-                
-                if not comparable_samples:
-                    return score
-                    
-                # Calculate average difference for this criterion
-                criterion_diffs = []
-                for sample in comparable_samples:
-                    criterion_score = sample.get('criteria_scores', {}).get(criterion)
-                    if criterion_score is not None:
-                        criterion_diffs.append(
-                            float(criterion_score) - float(sample.get('band_score', 0))
-                        )
-                
-                if not criterion_diffs:
-                    return score
-                    
-                # Apply adjustment based on historical differences
-                avg_diff = sum(criterion_diffs) / len(criterion_diffs)
-                adjusted_score = round((score + avg_diff) * 2) / 2  # Round to nearest 0.5
-                
-                # Ensure score is within valid range
-                return max(4.0, min(9.0, adjusted_score))
-            
-            # Adjust individual scores
-            calibrated = {
-                'band_score': scores['band_score'],
-                'tr_score': adjust_score(scores['tr_score'], 'task_response'),
-                'cc_score': adjust_score(scores['cc_score'], 'coherence_cohesion'),
-                'lr_score': adjust_score(scores['lr_score'], 'lexical_resource'),
-                'gra_score': adjust_score(scores['gra_score'], 'grammatical_range')
-            }
-            
-            # Recalculate overall band score if all component scores are present
-            if all(calibrated[k] is not None for k in ['tr_score', 'cc_score', 'lr_score', 'gra_score']):
-                weighted_score = (
-                    calibrated['tr_score'] * 0.3 +
-                    calibrated['cc_score'] * 0.3 +
-                    calibrated['lr_score'] * 0.2 +
-                    calibrated['gra_score'] * 0.2
-                )
-                calibrated['band_score'] = round(weighted_score * 2) / 2  # Round to nearest 0.5
-                
-            return calibrated
-            
-        except Exception as e:
-            logger.error(f"Error calibrating scores: {e}")
-            return None
 
     def _format_bullet_points(self, items):
         """Format a list of items as bullet points"""
@@ -735,17 +601,13 @@ class IELTSWritingTask2Agent:
             return None
 
     def _format_improvement_suggestions(self, response):
-        """Format the improvement suggestions in a clear, structured way"""
-        content = response.content[0].text if isinstance(response.content, list) else response.content.text
-        
-        formatted_suggestions = f"""
-╔═══════════════════ IELTS Writing Task 2 Improvement Guide ══════════════════╗
-║                         Personalized Suggestions                            ║
-╠══════════════════════════════════════════════════════════════════════════════╣
-{self._format_suggestion_section(content)}
-╚════════════════════════════════════════════════════════════════════════════╝
-"""
-        return formatted_suggestions
+        """Format improvement suggestions using the unified formatter"""
+        try:
+            content = response.content[0].text if isinstance(response.content, list) else response.content
+            return self._format_suggestions(content, "IELTS Writing Task 2 Improvement Guide")
+        except Exception as e:
+            logger.error(f"Error formatting improvement suggestions: {e}")
+            return "Error formatting improvement suggestions"
 
     def generate_sample_improvements(self, answer_text, weak_areas):
         """Generate specific sample improvements for weak areas"""
@@ -833,51 +695,71 @@ class IELTSWritingTask2Agent:
             logger.error(f"Error generating vocabulary suggestions: {e}")
             return None
 
-    def _format_suggestion_section(self, content):
-        """Format a section of suggestions with proper spacing and borders"""
-        sections = {
-            'Structure and Organization': [],
-            'Argument Development': [],
-            'Language Enhancement': [],
-            'Academic Style': [],
-            'Specific Examples': []
-        }
-        
-        current_section = None
-        current_content = []
-        
-        # Parse content into sections
-        for line in content.split('\n'):
-            line = line.strip()
-            if not line:
-                continue
+    def _format_vocabulary_suggestions(self, response):
+        """Format vocabulary suggestions using the unified formatter"""
+        try:
+            content = response.content[0].text if isinstance(response.content, list) else response.content
+            return self._format_suggestions(content, "Vocabulary Improvement Suggestions")
+        except Exception as e:
+            logger.error(f"Error formatting vocabulary suggestions: {e}")
+            return "Error formatting vocabulary suggestions"
+
+    def _format_suggestions(self, content, title="Suggestions"):
+        """Format suggestions in a clear, structured way with customizable title"""
+        try:
+            sections = {
+                'Structure and Organization': [],
+                'Argument Development': [],
+                'Language Enhancement': [],
+                'Academic Style': [],
+                'Specific Examples': []
+            }
             
-            # Check if this is a section header
-            for section in sections.keys():
-                if section.lower() in line.lower():
-                    if current_section and current_content:
-                        sections[current_section] = current_content
-                    current_section = section
-                    current_content = []
-                    break
-            else:
-                if current_section:
-                    current_content.append(line)
-        
-        # Add the last section
-        if current_section and current_content:
-            sections[current_section] = current_content
-        
-        # Format each section
-        formatted_content = ""
-        for section, suggestions in sections.items():
-            if suggestions:
-                formatted_content += f"║ {section}\n║ {'═' * len(section)}\n"
-                for suggestion in suggestions:
-                    formatted_content += self._wrap_suggestion_text(suggestion)
-                formatted_content += "║\n"
-        
-        return formatted_content
+            current_section = None
+            current_content = []
+            
+            # Parse content into sections
+            for line in content.split('\n'):
+                line = line.strip()
+                if not line:
+                    continue
+                
+                # Check if this is a section header
+                for section in sections.keys():
+                    if section.lower() in line.lower():
+                        if current_section and current_content:
+                            sections[current_section] = current_content
+                        current_section = section
+                        current_content = []
+                        break
+                else:
+                    if current_section:
+                        current_content.append(line)
+            
+            # Add the last section
+            if current_section and current_content:
+                sections[current_section] = current_content
+            
+            # Format the output
+            formatted_output = f"""
+╔═══════════════════ {title} ══════════════════╗
+║                                                                        ║
+"""
+            # Format each section
+            for section, suggestions in sections.items():
+                if suggestions:
+                    formatted_output += f"║ {section}\n║ {'═' * len(section)}\n"
+                    for suggestion in suggestions:
+                        formatted_output += self._wrap_suggestion_text(suggestion)
+                    formatted_output += "║\n"
+                
+            formatted_output += "╚════════════════════════════════════════════════════════════════════════╝"
+            
+            return formatted_output
+            
+        except Exception as e:
+            logger.error(f"Error formatting suggestions: {str(e)}")
+            return "Error formatting suggestions"
 
     def _wrap_suggestion_text(self, text, width=76):
         """Wrap suggestion text to fit within the specified width"""
@@ -911,19 +793,18 @@ class IELTSWritingTask2Agent:
             # Validate required fields
             required_fields = {
                 'question_type': None,
-                'analysis': ['reasoning', 'effectiveness_factors'],
-                'metadata': ['topic_category', 'main_themes', 'reasoning_type'],
+                'metadata': ['main_themes', 'reasoning_type'],
+                'topic_category': None,
                 'question': ['description']
             }
             
             # Check top-level fields
-            for field in required_fields:
+            for field, nested_fields in required_fields.items():
                 if field not in question_data:
                     raise ValueError(f"Missing required field: {field}")
                 
                 # Check nested fields if any
-                if required_fields[field] is not None:
-                    nested_fields = required_fields[field]
+                if nested_fields:
                     for nested_field in nested_fields:
                         if nested_field not in question_data[field]:
                             raise ValueError(f"Missing required nested field: {field}.{nested_field}")
@@ -945,14 +826,14 @@ class IELTSWritingTask2Agent:
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                           IELTS Writing Task 2                              ║
 ╠════════════════════════════════════════════════════════════════════════════╣
-║ Type: {self.current_question['question_type']}
+║ Type: {self.current_question.get('question_type', 'Not specified')}
 ║
 ║ Task:
-║ {self._format_description(self.current_question['question']['description'])}
+║ {self._format_description(self.current_question.get('question', {}).get('description', ['No description available']))}
 ║
-║ Topic Category: {self.current_question['metadata']['topic_category']}
-║ Main Themes: {', '.join(self.current_question['metadata']['main_themes'])}
-║ Reasoning Type: {self.current_question['metadata']['reasoning_type']}
+║ Topic Category: {self.current_question.get('topic_category', 'Not specified')}
+║ Main Themes: {', '.join(self.current_question.get('metadata', {}).get('main_themes', ['Not specified']))}
+║ Reasoning Type: {self.current_question.get('metadata', {}).get('reasoning_type', 'Not specified')}
 ║
 ║ Remember:
 ║ • Write at least {self.MINIMUM_WORDS} words
@@ -974,29 +855,6 @@ class IELTSWritingTask2Agent:
         if isinstance(description, list):
             return '\n║ '.join(description)
         return str(description)
-
-    def _format_elements(self, elements):
-        """Format the expected elements"""
-        if isinstance(elements, list):
-            return ''.join([f"║ • {element}\n" for element in elements])
-        return f"║ • {str(elements)}\n"
-
-    def _format_vocabulary_suggestions(self, response):
-        """Format vocabulary suggestions in a clear structure"""
-        try:
-            content = response.content[0].text if isinstance(response.content, list) else response.content.text
-            
-            formatted_output = f"""
-╔═══════════════════ Vocabulary Improvement Suggestions ══════════════════╗
-║                                                                        ║
-{self._format_suggestion_section(content)}
-╚════════════════════════════════════════════════════════════════════════╝
-"""
-            return formatted_output
-            
-        except Exception as e:
-            logger.error(f"Error formatting vocabulary suggestions: {e}")
-            return "Error formatting vocabulary suggestions"
 
     def _parse_scores(self, content):
         """Parse only the numerical scores from content"""
@@ -1060,21 +918,51 @@ class IELTSWritingTask2Agent:
 ║ Total Input Tokens:  {self.total_input_tokens:,}
 ║ Total Output Tokens: {self.total_output_tokens:,}
 ║ Total Tokens:        {self.total_input_tokens + self.total_output_tokens:,}
-╚═══════════════════════════════════════════════════╝
+╚═════════════════════════════════════════════════════╝
 """
+
+    def _update_topic_tracker(self, new_topic):
+        """Update the topic tracking file"""
+        try:
+            tracker_path = os.path.join(self.parent_dir, 'writing', 'topic_tracker.json')
+            
+            if os.path.exists(tracker_path):
+                with open(tracker_path, 'r+') as f:
+                    data = json.load(f)
+                    data['used_topics'].append(new_topic)
+                    # Keep only last 20 topics
+                    data['used_topics'] = data['used_topics'][-20:]
+                    f.seek(0)
+                    json.dump(data, f, indent=2)
+                    f.truncate()
+            else:
+                # Create new file if doesn't exist
+                with open(tracker_path, 'w') as f:
+                    json.dump({
+                        'used_topics': [new_topic],
+                        'topic_categories': [
+                            "technology", "education", "environment", 
+                            "culture", "health", "society", "media", 
+                            "urban_development", "arts", "science", 
+                            "sports", "communication"
+                        ]
+                    }, f, indent=2)
+        except Exception as e:
+            logger.error(f"Error updating topic tracker: {e}")
+            return f"Error updating topic tracker: {str(e)}"
 
 def get_user_answer():
     """
     Get answer input from user with proper instructions and formatting.
     Allows for multiple lines of input until user indicates they're done.
     """
-    print("\n╔════════════════════════════════════════════════════════════════════════════╗")
+    print("\n╔════════════════════════════════════════════════════════════════════════════")
     print("║                           Write your answer below                            ║")
     print("║ Instructions:                                                               ║")
     print("║ - Write at least 250 words                                                 ║")
     print("║ - Type your answer, pressing Enter for new lines                           ║")
     print("║ - When finished, type 'DONE' on a new line and press Enter                 ║")
-    print("╚════════════════════════════════════════════════════════════════════════════╝\n")
+    print("╚═══════════════════════════════════════════════════════════════════════════════╝\n")
 
     lines = []
     while True:
